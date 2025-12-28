@@ -1,14 +1,21 @@
 import Image from "next/image";
 import Link from "next/link";
 import HeroSlider from "./components/HeroSlider";
+import { sendContactMail } from "./actions/sendContactMail";
 
 const heroImage =
   "https://images.unsplash.com/photo-1501696461415-6bd6660c6743?auto=format&fit=crop&w=1600&q=80";
 
-const corridorImages = [
-  "/cargo-movement.jpeg",
-  "/cutoms-singlewindow.webp",
-  "/training-and-development.jpg",
+const partnerLogos = [
+  { src: "/partners/partener1.png", alt: "Partner logo 1" },
+  { src: "/partners/partener2.png", alt: "Partner logo 2" },
+  { src: "/partners/partener3.png", alt: "Partner logo 3" },
+  { src: "/partners/partener4.png", alt: "Partner logo 4" },
+  { src: "/partners/partener5.png", alt: "Partner logo 5" },
+  { src: "/partners/partener6.png", alt: "Partner logo 6" },
+  { src: "/partners/partener7.png", alt: "Partner logo 7" },
+  { src: "/partners/partner8.png", alt: "Partner logo 8" },
+  { src: "/partners/partener9.png", alt: "Partner logo 9" },
 ];
 
 const services = [
@@ -74,7 +81,14 @@ const steps = [
   },
 ];
 
-export default function Home() {
+export default async function Home({
+  searchParams,
+}: {
+  searchParams?: Promise<Record<string, string>>;
+}) {
+  const params = (await searchParams) || {};
+  const sent = params.sent === "1";
+  const error = params.error === "1";
   return (
     <div className="space-y-16 pb-12">
       {/* Full-width hero slider */}
@@ -82,13 +96,13 @@ export default function Home() {
 
       {/* Trusted by */}
       <section className="relative isolate w-full overflow-hidden bg-white py-10">
-        <div className="pointer-events-none absolute inset-0 opacity-60 bg-dots-slate animate-dots" />
-        <div className="pointer-events-none absolute inset-0 opacity-35 bg-lines-slate animate-lines" />
         <div className="relative mx-auto flex max-w-6xl flex-col items-center gap-5 px-6">
           <p className="text-sm font-semibold uppercase tracking-[0.3em] text-slate-500">Trusted by</p>
           <div className="flex flex-wrap items-center justify-center gap-x-10 gap-y-6 opacity-90">
-            {Array.from({ length: 6 }).map((_, i) => (
-              <Image key={i} src="/logo3.png" alt="Partner" width={150} height={46} className="object-contain" />
+            {partnerLogos.map((logo) => (
+              <span key={logo.src} suppressHydrationWarning>
+                <Image src={logo.src} alt={logo.alt} width={150} height={46} className="object-contain" />
+              </span>
             ))}
           </div>
         </div>
@@ -99,7 +113,9 @@ export default function Home() {
         <div className="pointer-events-none absolute inset-4 rounded-[32px] opacity-50 bg-dots-slate animate-dots" />
         <div className="pointer-events-none absolute inset-4 rounded-[32px] opacity-30 bg-lines-slate animate-lines" />
         <div className="relative overflow-hidden rounded-3xl bg-slate-900 text-white shadow-2xl ring-1 ring-slate-200/70">
-          <Image src="/services-background.webp" alt="Services background" fill className="object-cover" priority sizes="100vw" />
+          <span suppressHydrationWarning>
+            <Image src="/services-background.webp" alt="Services background" fill className="object-cover" priority sizes="100vw" />
+          </span>
           <div className="absolute inset-0 bg-slate-900/80" />
           <div className="relative mx-auto flex max-w-6xl flex-col gap-8 px-6 py-10 sm:px-10">
             <div className="space-y-2">
@@ -135,6 +151,12 @@ export default function Home() {
 
       {/* Corridor + Capabilities */}
       <section className="relative isolate w-full overflow-hidden bg-slate-50/70 py-12">
+        <div className="absolute inset-0">
+          <span suppressHydrationWarning>
+            <Image src="/cargo-movement.jpeg" alt="Training backdrop" fill className="object-cover blur-md scale-110" sizes="100vw" />
+          </span>
+          <div className="absolute inset-0 bg-white/82" />
+        </div>
         <div className="pointer-events-none absolute inset-0 opacity-60 bg-dots-slate animate-dots" />
         <div className="pointer-events-none absolute inset-0 opacity-35 bg-lines-slate animate-lines" />
         <div className="relative mx-auto flex max-w-6xl flex-col gap-10 px-6">
@@ -161,13 +183,12 @@ export default function Home() {
               </Link>
             </div>
 
-            <div className="relative grid gap-4 sm:grid-cols-2">
-              {corridorImages.map((src) => (
-                <div key={src} className="relative h-44 overflow-hidden rounded-2xl shadow-lg ring-1 ring-slate-200 sm:h-48">
-                  <Image src={src} alt="Logistics scene" fill className="object-cover" sizes="(min-width: 1024px) 280px, 45vw" />
-                  <div className="absolute inset-0 bg-gradient-to-t from-slate-900/35 to-transparent" />
-                </div>
-              ))}
+            <div className="relative rounded-2xl bg-white/75 p-6 shadow-xl ring-1 ring-slate-200 backdrop-blur">
+              <h3 className="text-xl font-semibold text-slate-900">Focused training delivery</h3>
+              <p className="mt-2 text-sm text-slate-700">
+                One backdrop—many cohorts. We simplify trade by tailoring playbooks and checklists to your operators, finance, and leadership teams.
+              </p>
+              <p className="mt-3 text-sm font-semibold text-slate-900">We simplify trade.</p>
             </div>
           </div>
         </div>
@@ -206,9 +227,9 @@ export default function Home() {
                 Send your route, commodity, and deadline. We reply within one business day with a plan.
               </p>
               <div className="mt-4 grid gap-2 text-sm text-white">
-                <span>hello@optimumlogistics.com</span>
-                <span>+251 • +971 • +86</span>
-                <span>Offices: Addis · China · Djibouti · UAE</span>
+                <span>contact@optimumlogisticsplc.com • info@optimumlogisticsplc.com</span>
+                <span>+251 11 125 0386 • +251 913 335 596 • +251 711 335 596 • +251 962 083 792</span>
+                <span>Office: Addis Ababa</span>
               </div>
               <div className="mt-5 flex gap-3">
                 <Link href="/contact" className="inline-flex items-center rounded-full bg-white px-4 py-2 text-sm font-semibold text-slate-900 shadow-md transition hover:-translate-y-0.5">
@@ -233,9 +254,13 @@ export default function Home() {
             <h3 className="text-2xl font-bold text-slate-900">Let’s plan your next shipment</h3>
             <p className="text-sm text-slate-700">Email us your route, commodity, and timing. We respond within one business day.</p>
             <div className="flex flex-wrap gap-3 text-sm text-slate-800">
-              <span className="rounded-full bg-slate-100 px-3 py-1">hello@optimumlogistics.com</span>
-              <span className="rounded-full bg-slate-100 px-3 py-1">+251 • +971 • +86</span>
-              <span className="rounded-full bg-slate-100 px-3 py-1">Offices: Addis · China · Djibouti · UAE</span>
+              <span className="rounded-full bg-slate-100 px-3 py-1">contact@optimumlogisticsplc.com</span>
+              <span className="rounded-full bg-slate-100 px-3 py-1">info@optimumlogisticsplc.com</span>
+              <span className="rounded-full bg-slate-100 px-3 py-1">+251 11 125 0386</span>
+              <span className="rounded-full bg-slate-100 px-3 py-1">+251 913 335 596</span>
+              <span className="rounded-full bg-slate-100 px-3 py-1">+251 711 335 596</span>
+              <span className="rounded-full bg-slate-100 px-3 py-1">+251 962 083 792</span>
+              <span className="rounded-full bg-slate-100 px-3 py-1">Office: Addis Ababa</span>
             </div>
             <div className="flex gap-3">
               <Link href="/contact" className="inline-flex items-center rounded-full bg-[var(--brand-navy)] px-5 py-3 text-sm font-semibold text-white shadow-lg transition hover:-translate-y-0.5">Full contact page</Link>
@@ -243,13 +268,18 @@ export default function Home() {
             </div>
           </div>
 
-          <form className="w-full space-y-4 rounded-2xl bg-slate-50 p-6 shadow-inner ring-1 ring-slate-200">
+          <form action={sendContactMail} className="w-full space-y-4 rounded-2xl bg-slate-50 p-6 shadow-inner ring-1 ring-slate-200">
+            <input type="hidden" name="redirect" value="/" />
+            <input type="hidden" name="source" value="Home contact section" />
+            {sent && <div className="rounded-lg bg-emerald-50 px-3 py-2 text-sm font-semibold text-emerald-700">Message sent. We will reply within one business day.</div>}
+            {error && <div className="rounded-lg bg-rose-50 px-3 py-2 text-sm font-semibold text-rose-700">We could not send right now. Please try again or email contact@optimumlogisticsplc.com.</div>}
             <div className="grid gap-3 sm:grid-cols-2">
               <label className="text-sm text-slate-700">
                 Name
                 <input
                   className="mt-2 w-full rounded-lg border border-slate-200 bg-white px-3 py-2 text-sm text-slate-900 outline-none transition focus:border-slate-400"
                   type="text"
+                  name="name"
                   placeholder="Your name"
                 />
               </label>
@@ -258,6 +288,7 @@ export default function Home() {
                 <input
                   className="mt-2 w-full rounded-lg border border-slate-200 bg-white px-3 py-2 text-sm text-slate-900 outline-none transition focus:border-slate-400"
                   type="text"
+                  name="company"
                   placeholder="Business name"
                 />
               </label>
@@ -266,6 +297,8 @@ export default function Home() {
                 <input
                   className="mt-2 w-full rounded-lg border border-slate-200 bg-white px-3 py-2 text-sm text-slate-900 outline-none transition focus:border-slate-400"
                   type="email"
+                  name="email"
+                  required
                   placeholder="you@example.com"
                 />
               </label>
@@ -274,6 +307,7 @@ export default function Home() {
                 <input
                   className="mt-2 w-full rounded-lg border border-slate-200 bg-white px-3 py-2 text-sm text-slate-900 outline-none transition focus:border-slate-400"
                   type="tel"
+                  name="phone"
                   placeholder="Addis / intl"
                 />
               </label>
@@ -282,12 +316,14 @@ export default function Home() {
               What do you need?
               <textarea
                 className="mt-2 h-28 w-full rounded-lg border border-slate-200 bg-white px-3 py-2 text-sm text-slate-900 outline-none transition focus:border-slate-400"
+                name="message"
+                required
                 placeholder="Customs clearing, cargo move, training, or consulting"
               />
             </label>
             <button
               className="w-full rounded-full bg-[var(--brand-navy)] px-4 py-3 text-sm font-semibold text-white shadow-lg shadow-slate-900/10 transition hover:-translate-y-0.5"
-              type="button"
+              type="submit"
             >
               Send message
             </button>

@@ -27,7 +27,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
         <div className="page-shell">
           <HeaderNav />
@@ -37,18 +37,23 @@ export default function RootLayout({
           <footer className="content-grid pb-10">
             <div className="glass-panel mt-10 grid gap-8 px-6 py-6 sm:grid-cols-2 lg:grid-cols-4">
               <div className="space-y-2">
-                <Image src="/logo2.png" alt="Optimum Logistics" width={140} height={52} />
-                <p className="text-sm text-slate-600">Cargo from China to Addis, customs cleared, teams trained.</p>
+                <span suppressHydrationWarning>
+                  <Image src="/logo2.png" alt="Optimum Logistics" width={140} height={52} />
+                </span>
+                <p className="text-sm text-slate-600">Cargo from China to Addis, customs cleared, teams trained. We simplify trade.</p>
               </div>
               <div className="text-sm text-slate-700">
                 <p className="font-semibold text-slate-900">Offices</p>
                 <p>Addis Ababa</p>
-                <p>China · Djibouti · UAE</p>
               </div>
               <div className="text-sm text-slate-700">
                 <p className="font-semibold text-slate-900">Contact</p>
-                <p>hello@optimumlogistics.com</p>
-                <p>+251 • +971 • +86</p>
+                <p>contact@optimumlogisticsplc.com</p>
+                <p>info@optimumlogisticsplc.com</p>
+                <p>+251 11 125 0386</p>
+                <p>+251 913 335 596</p>
+                <p>+251 711 335 596</p>
+                <p>+251 962 083 792</p>
               </div>
               <div className="text-sm text-slate-700">
                 <p className="font-semibold text-slate-900">Fast links</p>

@@ -60,7 +60,9 @@ export default function AboutPage() {
     <div className="space-y-14 pb-14">
       {/* Hero */}
       <section className="relative overflow-hidden bg-slate-900 text-white shadow-2xl">
-        <Image src={hero} alt="Warehouse and logistics operations" fill priority className="absolute inset-0 h-full w-full object-cover" />
+        <span suppressHydrationWarning>
+          <Image src={hero} alt="Warehouse and logistics operations" fill priority className="absolute inset-0 h-full w-full object-cover" />
+        </span>
         <div className="absolute inset-0 bg-gradient-to-br from-slate-950/85 via-slate-900/75 to-emerald-900/70" />
         <div className="relative z-10 grid gap-10 px-6 py-16 lg:grid-cols-[1.05fr_0.95fr] lg:items-center lg:px-12 lg:py-20 xl:px-16">
           <div className="space-y-5">
@@ -73,7 +75,10 @@ export default function AboutPage() {
               <Link href="/services" className="inline-flex items-center rounded-full bg-white px-5 py-3 text-sm font-semibold text-slate-900 shadow-lg shadow-black/25 transition hover:-translate-y-0.5">
                 Explore services
               </Link>
-              <Link href="/trainings" className="inline-flex items-center rounded-full border border-white/70 px-5 py-3 text-sm font-semibold text-white transition hover:-translate-y-0.5">
+              <Link
+                href="/trainings"
+                className="inline-flex items-center rounded-full border border-white/70 bg-white/10 px-5 py-3 text-sm font-semibold text-white backdrop-blur-sm transition hover:-translate-y-0.5"
+              >
                 View trainings
               </Link>
             </div>
@@ -163,9 +168,13 @@ export default function AboutPage() {
             <p className="text-base text-slate-700 max-w-3xl">We respond within one business day with steps, documents, and cost scenarios.</p>
           </div>
           <div className="flex flex-wrap gap-3 text-sm text-slate-700">
-            <span className="rounded-full bg-slate-100 px-3 py-1">hello@optimumlogistics.com</span>
-            <span className="rounded-full bg-slate-100 px-3 py-1">+251 • +971 • +86</span>
-            <span className="rounded-full bg-slate-100 px-3 py-1">Offices: Addis · China · Djibouti · UAE</span>
+            <span className="rounded-full bg-slate-100 px-3 py-1">contact@optimumlogisticsplc.com</span>
+            <span className="rounded-full bg-slate-100 px-3 py-1">info@optimumlogisticsplc.com</span>
+            <span className="rounded-full bg-slate-100 px-3 py-1">+251 11 125 0386</span>
+            <span className="rounded-full bg-slate-100 px-3 py-1">+251 913 335 596</span>
+            <span className="rounded-full bg-slate-100 px-3 py-1">+251 711 335 596</span>
+            <span className="rounded-full bg-slate-100 px-3 py-1">+251 962 083 792</span>
+            <span className="rounded-full bg-slate-100 px-3 py-1">Office: Addis Ababa</span>
           </div>
           <div className="flex gap-3">
             <Link href="/contact" className="inline-flex items-center rounded-full bg-[var(--brand-navy)] px-5 py-3 text-sm font-semibold text-white shadow-lg shadow-slate-900/10 transition hover:-translate-y-0.5">

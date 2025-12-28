@@ -5,6 +5,11 @@ import { useEffect, useMemo, useState } from "react";
 
 const slides = [
   {
+    image: "/partner-banner.png",
+    title: "Guangzhou Sapphire Trading × Optimum Logistics & Training",
+    text: "We move cargo from China to Addis with bonded transit, single-window handling, and door delivery.",
+  },
+  {
     image: "/cargo-movement.jpeg",
     title: "We move cargo from China to Addis",
     text: "Sea, air, and land freight with bonded transit through Djibouti and UAE.",
@@ -28,7 +33,7 @@ export default function HeroSlider() {
   useEffect(() => {
     const t = setInterval(() => {
       setIdx((i) => (i + 1) % total);
-    }, 6000);
+    }, 9000);
     return () => clearInterval(t);
   }, [total]);
 
@@ -78,7 +83,9 @@ export default function HeroSlider() {
               className={`absolute inset-0 transform-gpu transition duration-700 ease-out will-change-transform`}
               style={styles[i]}
             >
-              <Image src={s.image} alt={s.title} fill priority={i === 0} className="object-cover" />
+              <span suppressHydrationWarning>
+                <Image src={s.image} alt={s.title} fill priority={i === 0} className="object-cover" />
+              </span>
               <div className="absolute inset-0 bg-gradient-to-br from-[rgba(35,29,79,0.72)] via-[rgba(20,113,62,0.6)] to-[rgba(203,37,41,0.5)]" />
               <div className="pointer-events-none absolute left-0 right-0 top-0 flex justify-center p-6 sm:p-8">
                 <p className="text-center text-2xl font-bold uppercase tracking-[0.18em] text-white drop-shadow-[0_4px_12px_rgba(0,0,0,0.55)] sm:text-4xl">
@@ -107,11 +114,11 @@ export default function HeroSlider() {
                   <div className="mt-4 flex flex-wrap items-center gap-4 text-sm font-semibold text-white/90">
                     <span className="inline-flex items-center gap-2 rounded-full bg-white/10 px-3 py-2 ring-1 ring-white/20">
                       <span className="text-white">☎</span>
-                      <span>+251 • +971 • +86</span>
+                      <span>+251 11 125 0386 • +251 913 335 596 • +251 711 335 596 • +251 962 083 792</span>
                     </span>
                     <span className="inline-flex items-center gap-2 rounded-full bg-white/10 px-3 py-2 ring-1 ring-white/20">
                       <span className="text-white">✉</span>
-                      <span>hello@optimumlogistics.com</span>
+                      <span>contact@optimumlogisticsplc.com • info@optimumlogisticsplc.com</span>
                     </span>
                   </div>
                 </div>

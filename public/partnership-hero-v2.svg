@@ -1,0 +1,89 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1800" height="900" viewBox="0 0 1800 900">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#f6f7fb" />
+      <stop offset="100%" stop-color="#e8edf7" />
+    </linearGradient>
+    <pattern id="dots" x="0" y="0" width="22" height="22" patternUnits="userSpaceOnUse">
+      <circle cx="2.6" cy="2.6" r="2.6" fill="#c4cedd" opacity="0.35" />
+    </pattern>
+    <linearGradient id="flagCN" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#d8001d" />
+      <stop offset="100%" stop-color="#b30016" />
+    </linearGradient>
+    <linearGradient id="flagET" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#0f7c3f" />
+      <stop offset="50%" stop-color="#f2c300" />
+      <stop offset="100%" stop-color="#d71920" />
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1800" height="900" fill="url(#bg)" />
+  <rect width="1800" height="900" fill="url(#dots)" opacity="0.6" />
+
+  <!-- World map silhouette (lower) -->
+  <g fill="#0f172a" opacity="0.18">
+    <path d="M120 610 Q220 560 320 590 Q400 610 480 590 Q560 570 640 600 Q700 620 760 610 Q840 600 900 620 Q960 640 1040 620 Q1120 600 1200 620 Q1300 640 1400 630 Q1500 620 1560 650 Q1620 680 1570 720 Q1500 770 1360 770 Q1220 770 1100 760 Q980 750 860 760 Q700 770 560 750 Q420 730 320 730 Q200 730 140 700 Q80 670 120 610 Z" />
+  </g>
+
+  <!-- Top quotes -->
+  <g font-family="Inter, ui-sans-serif, system-ui" font-size="46" font-weight="700" fill="#1f2937">
+    <text x="120" y="120">“</text>
+    <text x="180" y="120">We Simplify Trade</text>
+    <text x="640" y="120">”</text>
+
+    <text x="1120" y="120">“</text>
+    <text x="1180" y="120">Logistics Is the Brain of International Trade</text>
+    <text x="1740" y="120">”</text>
+  </g>
+
+  <!-- Flag poles -->
+  <g stroke="#cbd5e1" stroke-width="9" stroke-linecap="round">
+    <line x1="880" y1="180" x2="740" y2="520" />
+    <line x1="920" y1="180" x2="1060" y2="520" />
+  </g>
+
+  <!-- Flags -->
+  <g>
+    <rect x="660" y="180" width="240" height="150" fill="url(#flagCN)" rx="14" ry="14" stroke="#8f0a16" stroke-width="5" />
+    <polygon points="700,220 730,235 715,265" fill="#f8d647" />
+    <polygon points="750,205 770,220 755,240" fill="#f8d647" />
+    <polygon points="780,240 800,255 785,275" fill="#f8d647" />
+    <polygon points="740,270 765,290 745,300" fill="#f8d647" />
+
+    <rect x="920" y="180" width="240" height="150" fill="url(#flagET)" rx="14" ry="14" stroke="#0b5130" stroke-width="5" />
+    <circle cx="1040" cy="255" r="40" fill="#215e9c" stroke="#f2c300" stroke-width="4" />
+    <polygon points="1040,212 1048,246 1084,246 1054,266 1064,298 1040,278 1016,298 1026,266 996,246 1032,246" fill="#f2c300" />
+  </g>
+
+  <!-- Containers -->
+  <g>
+    <rect x="760" y="360" width="200" height="120" fill="#c9242f" stroke="#921822" stroke-width="5" rx="8" ry="8" />
+    <rect x="775" y="380" width="80" height="85" fill="#cbd5e1" opacity="0.85" />
+    <rect x="865" y="380" width="80" height="85" fill="#cbd5e1" opacity="0.85" />
+    <text x="805" y="430" fill="#1f2937" font-size="22" font-weight="800">CN</text>
+    <text x="895" y="430" fill="#1f2937" font-size="22" font-weight="800">ET</text>
+
+    <rect x="980" y="375" width="220" height="130" fill="#f97316" stroke="#c2410c" stroke-width="5" rx="10" ry="10" transform="skewX(-10)" />
+    <text x="1015" y="445" fill="#0f172a" font-size="22" font-weight="800">OPTIMUM</text>
+    <text x="1015" y="470" fill="#0f172a" font-size="18" font-weight="700">LOGISTICS</text>
+  </g>
+
+  <!-- Logos bottom row -->
+  <g>
+    <rect x="120" y="500" width="320" height="120" fill="#ffffff" opacity="0.82" rx="18" ry="18" />
+    <rect x="1360" y="500" width="320" height="120" fill="#ffffff" opacity="0.82" rx="18" ry="18" />
+    <image href="/Guangzhou.png" x="135" y="515" height="90" width="290" preserveAspectRatio="xMidYMid meet" />
+    <image href="/logo-main.png" x="1375" y="515" height="90" width="290" preserveAspectRatio="xMidYMid meet" />
+  </g>
+
+  <!-- Container shadow base -->
+  <ellipse cx="900" cy="560" rx="260" ry="26" fill="#0f172a" opacity="0.12" />
+
+  <!-- Lower caption (optional) -->
+  <g font-family="Inter, ui-sans-serif, system-ui" text-anchor="middle" fill="#1f2937">
+    <text x="900" y="640" font-size="30" font-weight="800">Guangzhou Sapphire Trading × Optimum Logistics & Training</text>
+    <text x="900" y="682" font-size="22" font-weight="700">We move cargo from China to Addis</text>
+  </g>
+</svg>
