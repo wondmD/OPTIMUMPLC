@@ -1,5 +1,13 @@
 import Image from "next/image";
 import Link from "next/link";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Services | Optimum Logistics",
+  description:
+    "Customs clearing, freight forwarding, port clearance, foreign purchase, packaging/warehousing, duty-free, single-window, consulting, marketing/sales, EIA, and tax auditing handled by Optimum Logistics.",
+  alternates: { canonical: "/services" },
+};
 
 const hero = "/service-hero.svg";
 

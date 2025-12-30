@@ -1,6 +1,13 @@
 import Image from "next/image";
 import Link from "next/link";
+import type { Metadata } from "next";
 import GallerySlider from "../components/GallerySlider";
+
+export const metadata: Metadata = {
+  title: "About | Optimum Logistics",
+  description: "Who is Optimum Logistics? Corridor-focused logistics and consulting partner with customs clearing, freight, duty-free, and training expertise across China → Djibouti → Addis.",
+  alternates: { canonical: "/about" },
+};
 
 const hero = "/cargo-movement.jpeg";
 
