@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
+import Script from "next/script";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import HeaderNav from "./components/HeaderNav";
@@ -15,10 +16,71 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+const siteName = "Optimum Logistics";
+const siteUrl = "https://www.optimumlogisticsplc.com";
+const defaultDescription =
+  "Optimum Logistics moves cargo from China to Addis and beyond, simplifying customs, duty-free, single-window submissions, freight, consulting, and team training.";
+
 export const metadata: Metadata = {
-  title: "Optimum Logistics | We Simplify Trade",
-  description:
-    "Optimum Logistics moves cargo from China to Addis and beyond, simplifies customs, and trains teams on trade, finance, and leadership.",
+  metadataBase: new URL(siteUrl),
+  title: {
+    default: "Optimum Logistics | We Simplify Trade",
+    template: "%s | Optimum Logistics",
+  },
+  description: defaultDescription,
+  keywords: [
+    "customs clearing",
+    "freight forwarding",
+    "port clearance",
+    "duty free",
+    "single window",
+    "bonded warehouse",
+    "logistics Ethiopia",
+    "China to Addis",
+    "Djibouti corridor",
+    "Addis Ababa",
+    "training",
+    "consulting",
+  ],
+  authors: [{ name: siteName }],
+  applicationName: siteName,
+  openGraph: {
+    type: "website",
+    title: "Optimum Logistics | We Simplify Trade",
+    description: defaultDescription,
+    url: siteUrl,
+    siteName,
+    images: [
+      {
+        url: "/partner-banner.png",
+        width: 1600,
+        height: 900,
+        alt: "Optimum Logistics freight and consulting",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Optimum Logistics | We Simplify Trade",
+    description: defaultDescription,
+    images: ["/partner-banner.png"],
+  },
+  icons: {
+    icon: [
+      { url: "/logo.png", type: "image/png", sizes: "32x32" },
+      { url: "/logo.png", type: "image/png", sizes: "96x96" },
+      { url: "/logo.png", type: "image/png", sizes: "192x192" },
+    ],
+    shortcut: "/logo.png",
+    apple: "/logo.png",
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
+  alternates: {
+    canonical: siteUrl,
+  },
 };
 
 export default function RootLayout({
@@ -67,6 +129,25 @@ export default function RootLayout({
             </div>
           </footer>
         </div>
+        <Script id="org-schema" type="application/ld+json" strategy="afterInteractive">
+          {JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'Organization',
+            name: siteName,
+            url: siteUrl,
+            logo: `${siteUrl}/logo-main.png`,
+            sameAs: [],
+            contactPoint: [
+              {
+                '@type': 'ContactPoint',
+                telephone: '+251111250386',
+                contactType: 'customer service',
+                areaServed: 'ET',
+                availableLanguage: ['en'],
+              },
+            ],
+          })}
+        </Script>
       </body>
     </html>
   );
