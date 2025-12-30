@@ -23,13 +23,15 @@ const links: NavLink[] = [
 ];
 
 const serviceItems = [
+  { label: "Customs Clearing", href: "/services#customs-clearing" },
+  { label: "Freight Forwarding", href: "/services#freight-forwarding" },
+  { label: "Port Clearance", href: "/services#port-clearance" },
+  { label: "Foreign Purchase (China, Djibouti, UAE, Others)", href: "/services#foreign-purchase" },
+  { label: "Packaging, Moving & Warehousing", href: "/services#packaging-moving-warehousing" },
   { label: "Duty-free Processes Support", href: "/services#duty-free-processes-support" },
   { label: "Single Window Registrations & Data Submissions", href: "/services#single-window-registrations-data-submissions" },
-  { label: "Foreign Purchase (China, Djibouti, UAE, Others)", href: "/services#foreign-purchase" },
-  { label: "Customs Clearing", href: "/services#customs-clearing" },
   { label: "Consulting (Business, Tax, Import/Export, Investment)", href: "/services#consulting" },
   { label: "Marketing & Sales", href: "/services#marketing-sales" },
-  { label: "Short-term Training", href: "/services#short-term-training" },
   { label: "Environmental Impact Assessment (EIA)", href: "/services#environmental-impact-assessment" },
   { label: "Tax Auditing", href: "/services#tax-auditing" },
 ];
@@ -107,20 +109,17 @@ export default function HeaderNav() {
 
   return (
     <header className="sticky top-0 z-50 w-full bg-white/95 text-[var(--brand-navy)] shadow-lg ring-1 ring-slate-200/80 backdrop-blur-md">
-      <div className="flex h-16 w-full items-center justify-between px-4 sm:px-6">
-        <Link href="/" className="flex items-center gap-3">
+      <div className="flex h-20 w-full items-center justify-between px-4 sm:px-6">
+        <Link href="/" className="flex items-center gap-4">
           <span suppressHydrationWarning>
             <Image
               src="/logo-main.png"
               alt="Optimum Logistics"
-              width={146}
-              height={50}
+              width={176}
+              height={60}
               priority
-              className="h-12 w-auto sm:h-14"
+              className="h-14 w-auto sm:h-16"
             />
-          </span>
-          <span className="hidden sm:block text-[12px] font-bold uppercase tracking-[0.08em] text-[var(--brand-navy)]">
-            We simplify trade
           </span>
         </Link>
 

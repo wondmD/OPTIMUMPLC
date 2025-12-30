@@ -1,10 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
-import HeroSlider from "./components/HeroSlider";
 import { sendContactMail } from "./actions/sendContactMail";
 
-const heroImage =
-  "https://images.unsplash.com/photo-1501696461415-6bd6660c6743?auto=format&fit=crop&w=1600&q=80";
+const heroImage = "/cargo-movement.jpeg";
 
 const partnerLogos = [
   { src: "/partners/partener1.png", alt: "Partner logo 1" },
@@ -91,8 +89,20 @@ export default async function Home({
   const error = params.error === "1";
   return (
     <div className="space-y-16 pb-12">
-      {/* Full-width hero slider */}
-      <HeroSlider />
+      {/* Single hero image with clear title */}
+      <section className="relative w-full overflow-hidden">
+        <div className="relative h-[72vh] md:h-[78vh]">
+          <span suppressHydrationWarning>
+            <Image src={heroImage} alt="Logistics process" fill priority className="object-cover" sizes="100vw" />
+          </span>
+          <div className="absolute inset-0 bg-gradient-to-b from-black/45 via-black/15 to-transparent" />
+          <div className="pointer-events-none absolute left-0 right-0 top-0 flex justify-center p-6 sm:p-10">
+            <p className="text-center text-3xl font-bold uppercase tracking-[0.18em] text-white drop-shadow-[0_6px_18px_rgba(0,0,0,0.55)] sm:text-4xl">
+              Optimum Logistics and Consulting
+            </p>
+          </div>
+        </div>
+      </section>
 
       {/* Trusted by */}
       <section className="relative isolate w-full overflow-hidden bg-white py-10">
