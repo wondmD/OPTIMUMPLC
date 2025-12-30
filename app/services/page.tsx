@@ -5,17 +5,87 @@ const hero = "/service-hero.svg";
 
 const services = [
   {
+    slug: "customs-clearing",
+    title: "Customs Clearing",
+    highlight: "Accurate entries • faster release • compliance",
+    detail:
+      "We prepare compliant declarations, align HS classifications, manage duty/tax calculations, and coordinate inspections. Proactive query handling and reconciled files reduce audits and delays.",
+    bullets: [
+      "HS code validation, valuation support, and duty/tax computation",
+      "Declaration prep, queries handling, and inspection coordination",
+      "Release, payments, and audit-ready file closure",
+    ],
+    image: "/service-covers/custom-clearing.webp",
+    accent: "from-sky-500/15 via-indigo-500/10 to-slate-900/15",
+  },
+  {
+    slug: "freight-forwarding",
+    title: "Freight Forwarding",
+    highlight: "Sea • Air • Land routing",
+    detail:
+      "We plan and book freight windows across sea, air, and land, balancing speed, cost, and reliability. Milestones are tracked end-to-end with exception playbooks agreed upfront.",
+    bullets: [
+      "Mode and route design with balanced transit time vs. cost",
+      "Carrier and slot booking with pre-alerts to origin and destination",
+      "Milestone tracking, exception playbooks, and POD reconciliation",
+    ],
+    image: "/service-covers/Freight-forwarding.png",
+    accent: "from-emerald-500/15 via-sky-500/10 to-indigo-600/15",
+  },
+  {
+    slug: "port-clearance",
+    title: "Port Clearance",
+    highlight: "Berth to gate • fewer holds",
+    detail:
+      "Hands-on port coordination to reduce dwell: berth scheduling, manifest checks, terminal handling, and quick resolution of gate and yard issues so cargo exits on time.",
+    bullets: [
+      "Manifest validation, terminal liaison, and handling oversight",
+      "Gate pass coordination, yard moves, and congestion mitigation",
+      "Dwell monitoring with daily actions to prevent storage penalties",
+    ],
+    image: "/service-covers/Port-clearance.webp",
+    accent: "from-amber-500/15 via-emerald-500/10 to-slate-700/15",
+  },
+  {
+    slug: "foreign-purchase",
+    title: "Foreign Purchase (China, Djibouti, UAE, Others)",
+    highlight: "Supplier vetting • QC • secured payment",
+    detail:
+      "We source and vet suppliers, validate proformas, negotiate clear INCOTERMS, and manage factory/third‑party inspections. Payments run on defined milestones with clean export docs.",
+    bullets: [
+      "Supplier scouting, reference checks, and sample evaluation",
+      "Factory or 3rd‑party inspections with photo/video evidence",
+      "Packing lists, consolidation plans, and milestone payments",
+    ],
+    image: "/service-covers/Foreign-Purchase.png",
+    accent: "from-indigo-500/15 via-emerald-500/10 to-amber-500/15",
+  },
+  {
+    slug: "packaging-moving-warehousing",
+    title: "Packaging, Moving & Warehousing",
+    highlight: "Protected cargo • ready inventory",
+    detail:
+      "We pack, palletize, and label to spec, arrange local moves, and manage bonded or free-zone storage. Inventory stays organized and dispatch-ready with clear documentation.",
+    bullets: [
+      "Packing, crating, and labeling for multimodal moves",
+      "Local haulage coordination and last-mile drop-offs",
+      "Bonded/free-zone warehousing with inventory visibility",
+    ],
+    image: "/service-covers/Packaging-Moving-Warehousing.webp",
+    accent: "from-emerald-600/15 via-slate-500/10 to-amber-500/15",
+  },
+  {
     slug: "duty-free-processes-support",
     title: "Duty-free Processes Support",
     highlight: "Permits • bonded moves • audit-ready",
     detail:
-      "We handle end-to-end duty-free program setup and renewals: assess eligibility, assemble evidence, prepare exemption letters, and manage submissions and follow-ups. Our trackers keep approvals moving and ensure an audit-ready trail for inspections and renewals.",
+      "We handle duty-free program setup and renewals: assess eligibility, assemble evidence, prepare exemption letters, and manage submissions with audit-ready tracking.",
     bullets: [
-      "Eligibility review and documentation checklist (projects, NGOs, manufacturers)",
-      "Permit drafting, exemption letters, and bonded warehouse filings",
-      "Variance handling, reconciliations, and renewal preparation",
+      "Eligibility review and documentation checklist",
+      "Permit drafting, exemption letters, and bonded filings",
+      "Variance handling, reconciliations, and renewal prep",
     ],
-    image: "/service-placeholder.svg",
+    image: "/service-covers/Duty-free-Processes-Support.jpg",
     accent: "from-red-500/15 via-emerald-500/10 to-indigo-700/15",
   },
   {
@@ -23,55 +93,27 @@ const services = [
     title: "Single Window Registrations & Data Submissions",
     highlight: "Account setup • HS code accuracy • fewer rejects",
     detail:
-      "We register your entity, configure user roles, validate product and HS code data, and submit via the single window with templates that reduce rework. We actively monitor statuses, resolve exceptions, and hand over approvals cleanly.",
+      "We register your entity, configure roles, validate HS codes, and submit via the single window with templates that reduce rework. We monitor statuses and resolve exceptions fast.",
     bullets: [
       "Entity onboarding, role mapping, and access hygiene",
       "Data templates to capture mandatory fields correctly",
       "Status monitoring and quick fixes for rejections",
     ],
-    image: "/service-placeholder.svg",
+    image: "/service-covers/Single-Window-Registrations.png",
     accent: "from-emerald-500/15 via-amber-400/10 to-sky-500/15",
-  },
-  {
-    slug: "foreign-purchase",
-    title: "Foreign Purchase (China, Djibouti, UAE, Others)",
-    highlight: "Supplier vetting • QC • secured payment",
-    detail:
-      "We source and vet suppliers, validate proformas, negotiate clear INCOTERMS, and manage factory/third‑party inspections. Payments run on defined milestones, with consolidation and export docs aligned to your route and mode.",
-    bullets: [
-      "Supplier scouting, reference checks, and sample evaluation",
-      "Factory or 3rd‑party inspections with photo/video evidence",
-      "Packing lists, consolidation plans, and milestone payments",
-    ],
-    image: "/service-placeholder.svg",
-    accent: "from-indigo-500/15 via-emerald-500/10 to-amber-500/15",
-  },
-  {
-    slug: "customs-clearing",
-    title: "Customs Clearing",
-    highlight: "Accurate entries • faster release • compliance",
-    detail:
-      "We prepare compliant declarations, align HS classifications, manage duty/tax calculations, and coordinate inspections. Our focus is predictability—proactive queries handling, variance explanations, and clean file closure to reduce future audits.",
-    bullets: [
-      "HS code review and valuation documentation",
-      "Declaration preparation, queries handling, and inspection support",
-      "Duty/tax payments, release, and file reconciliation",
-    ],
-    image: "/service-placeholder.svg",
-    accent: "from-sky-500/15 via-indigo-500/10 to-slate-900/15",
   },
   {
     slug: "consulting",
     title: "Consulting (Business, Tax, Import/Export, Investment)",
     highlight: "Process design • licensing • risk reduction",
     detail:
-      "We assess your operating model and exposure across customs, tax, and investment rules. Then we design practical controls and help you obtain licenses and approvals so growth doesn’t outpace compliance.",
+      "We assess your operating model across customs, tax, and investment rules, then design controls and licenses so growth stays compliant and cash flow predictable.",
     bullets: [
       "Customs/tax process audits with prioritized improvements",
       "Import/export licensing and regulator liaison",
       "Cash‑flow, duty planning, and internal controls",
     ],
-    image: "/service-placeholder.svg",
+    image: "/service-covers/consulting.png",
     accent: "from-amber-500/15 via-rose-500/10 to-indigo-600/15",
   },
   {
@@ -79,41 +121,27 @@ const services = [
     title: "Marketing & Sales",
     highlight: "Pipeline clarity • enablement • retention",
     detail:
-      "We build a lean commercial engine: ICP definition, messaging, and offers; funnel design and CRM hygiene; and enablement content that helps teams convert and retain customers.",
+      "We build a lean commercial engine: ICP definition, messaging, offers, funnel design, CRM hygiene, and enablement content that helps teams convert and retain customers.",
     bullets: [
       "Ideal customer profiles, value propositions, and offers",
       "Funnel setup, CRM workflows, and performance dashboards",
       "Enablement: decks, one‑pagers, case studies, and SLAs",
     ],
-    image: "/service-placeholder.svg",
+    image: "/service-covers/sales-marketing.jpg",
     accent: "from-fuchsia-500/10 via-amber-500/10 to-emerald-500/10",
-  },
-  {
-    slug: "short-term-training",
-    title: "Short-term Training",
-    highlight: "Trade ops • finance basics • leadership",
-    detail:
-      "Short, practical workshops tailored to roles—covering trade documentation, single‑window workflows, HS codes, finance and tax basics, leadership, ethics, and Kaizen execution.",
-    bullets: [
-      "Role‑based tracks with templates and checklists",
-      "Hands‑on casework using real documents and systems",
-      "On‑site or virtual delivery with post‑session support",
-    ],
-    image: "/service-placeholder.svg",
-    accent: "from-emerald-500/15 via-sky-500/10 to-violet-500/15",
   },
   {
     slug: "environmental-impact-assessment",
     title: "Environmental Impact Assessment (EIA)",
     highlight: "Scoping • studies • approvals",
     detail:
-      "We coordinate complete EIA workflows: scoping with stakeholders, baseline studies, impact analysis, mitigation plans, and submission to authorities—through to conditions tracking after approval.",
+      "We coordinate full EIA workflows: scoping, baseline studies, impact analysis, mitigation plans, submissions, and tracking of conditions after approval.",
     bullets: [
       "Scoping, stakeholder mapping, and terms of reference",
       "Baseline and impact studies with mitigation measures",
       "Submission, review responses, and approval conditions tracking",
     ],
-    image: "/service-placeholder.svg",
+    image: "/service-covers/Environmental-Impact-Assessment.jpg",
     accent: "from-emerald-600/15 via-slate-500/10 to-sky-600/15",
   },
   {
@@ -121,13 +149,13 @@ const services = [
     title: "Tax Auditing",
     highlight: "Readiness • representation • remediation",
     detail:
-      "We prepare audit-ready files, reconcile declarations vs. books, and represent you during audits. After closure we implement control improvements to prevent repeat findings.",
+      "We prepare audit-ready files, reconcile declarations vs. books, represent you during audits, and implement control improvements after closure.",
     bullets: [
       "Pre‑audit health check and documentation pack",
       "Representation and responses during audits",
       "Post‑audit remediation and control design",
     ],
-    image: "/service-placeholder.svg",
+    image: "/service-covers/tax-auditing.webp",
     accent: "from-slate-600/15 via-amber-500/10 to-rose-500/10",
   },
 ];
@@ -213,38 +241,47 @@ export default function ServicesPage() {
       </section>
 
       {/* Service stack */}
-      <section id="services" className="mx-auto flex max-w-7xl flex-col gap-6 px-6 lg:px-10">
+      <section id="services" className="mx-auto flex max-w-7xl flex-col gap-10 px-6 lg:px-10">
         <div className="flex flex-col gap-2">
           <p className="text-xs font-semibold uppercase tracking-[0.35em] text-slate-600">What we deliver</p>
           <h2 className="text-3xl font-bold text-slate-900 sm:text-4xl">Services built to ship faster and cleaner.</h2>
-          <p className="max-w-3xl text-base text-slate-700">Each card is a package you can pick up standalone—or string together as one accountable corridor plan.</p>
+          <p className="max-w-3xl text-base text-slate-700">Each service is a focused package—stack them together for one accountable plan.</p>
         </div>
-        <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
-          {services.map((item) => (
+
+        <div className="space-y-8">
+          {services.map((item, idx) => (
             <article
-              key={item.title}
+              key={item.slug}
               id={item.slug}
-              className="group relative overflow-hidden rounded-2xl border border-slate-200/70 bg-white shadow-lg shadow-slate-900/5 transition hover:-translate-y-1 hover:shadow-xl"
+              className="relative overflow-hidden rounded-[28px] border border-slate-200/80 bg-white shadow-lg shadow-slate-900/10"
             >
-              <div className="absolute inset-0 bg-gradient-to-br from-white via-white to-white" />
-              <div className={`absolute -right-16 -top-20 h-56 w-56 rounded-full blur-3xl bg-gradient-to-br ${item.accent}`} />
-              <div className="relative flex flex-col gap-3 p-6">
-                <div className="inline-flex w-fit items-center gap-2 rounded-full bg-slate-900/80 px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.18em] text-white shadow-sm">
-                  <span>{item.highlight}</span>
+              <div className={`pointer-events-none absolute -right-24 -top-24 h-72 w-72 rounded-full blur-3xl bg-gradient-to-br ${item.accent}`} />
+              <div className="grid gap-8 p-6 lg:grid-cols-[1.1fr_0.9fr] lg:items-center lg:p-10">
+                <div className="relative space-y-4">
+                  <div className="inline-flex w-fit items-center gap-2 rounded-full bg-slate-900/85 px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.18em] text-white shadow-sm">
+                    <span>{item.highlight}</span>
+                  </div>
+                  <h3 className="text-2xl font-semibold text-slate-900 sm:text-3xl">{idx + 1}. {item.title}</h3>
+                  <p className="text-sm text-slate-700 sm:text-base">{item.detail}</p>
+                  <ul className="space-y-2 text-sm text-slate-800">
+                    {item.bullets.map((b) => (
+                      <li key={b} className="flex gap-2">
+                        <span className="mt-1 inline-block h-1.5 w-1.5 rounded-full bg-[var(--brand-green)]" />
+                        <span>{b}</span>
+                      </li>
+                    ))}
+                  </ul>
+                  <div className="flex flex-wrap gap-3 pt-2">
+                    <Link href="/contact" className="inline-flex items-center rounded-full bg-[var(--brand-navy)] px-4 py-2 text-sm font-semibold text-white shadow-md transition hover:-translate-y-0.5">Talk to us</Link>
+                    <Link href="#top" className="inline-flex items-center rounded-full border border-slate-300 px-4 py-2 text-sm font-semibold text-slate-800 transition hover:-translate-y-0.5">Back to top</Link>
+                  </div>
                 </div>
-                <h3 className="text-2xl font-semibold text-slate-900">{item.title}</h3>
-                <p className="text-sm text-slate-700">{item.detail}</p>
-                <ul className="mt-2 space-y-2 text-sm text-slate-800">
-                  {item.bullets.map((b) => (
-                    <li key={b} className="flex gap-2">
-                      <span className="mt-1 inline-block h-1.5 w-1.5 rounded-full bg-[var(--brand-green)]" />
-                      <span>{b}</span>
-                    </li>
-                  ))}
-                </ul>
-                <div className="mt-4 flex flex-wrap gap-2">
-                  <Link href="/contact" className="inline-flex items-center rounded-full bg-[var(--brand-navy)] px-4 py-2 text-sm font-semibold text-white shadow-md transition hover:-translate-y-0.5">Talk to us</Link>
-                  <Link href="#top" className="inline-flex items-center rounded-full border border-slate-300 px-4 py-2 text-sm font-semibold text-slate-800 transition hover:-translate-y-0.5">Back to top</Link>
+                <div className="relative h-64 w-full overflow-hidden rounded-2xl bg-slate-100 sm:h-72 lg:h-80">
+                  <span suppressHydrationWarning>
+                    <Image src={item.image} alt={item.title} fill className="object-contain" sizes="45vw" />
+                  </span>
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/35 via-black/15 to-transparent" />
+                  <p className="absolute left-4 bottom-4 text-2xl font-bold text-white drop-shadow-lg">{item.title}</p>
                 </div>
               </div>
             </article>
