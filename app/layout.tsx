@@ -19,12 +19,12 @@ const geistMono = Geist_Mono({
 const siteName = "Optimum Logistics";
 const siteUrl = "https://www.optimumlogisticsplc.com";
 const defaultDescription =
-  "Optimum Logistics moves cargo from China to Addis and beyond, simplifying customs, duty-free, single-window submissions, freight, consulting, and team training.";
+  "Request a quote in 1 business day. Optimum Logistics moves cargo from China to Addis and beyond, simplifying customs, duty-free, single-window submissions, freight, consulting, and team training.";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: "Optimum Logistics | We Simplify Trade",
+    default: "Optimum Logistics | Freight, Customs, Duty-Free & Training",
     template: "%s | Optimum Logistics",
   },
   description: defaultDescription,
@@ -46,7 +46,7 @@ export const metadata: Metadata = {
   applicationName: siteName,
   openGraph: {
     type: "website",
-    title: "Optimum Logistics | We Simplify Trade",
+    title: "Optimum Logistics | Freight, Customs, Duty-Free & Training",
     description: defaultDescription,
     url: siteUrl,
     siteName,
@@ -55,13 +55,13 @@ export const metadata: Metadata = {
         url: "/partner-banner.png",
         width: 1600,
         height: 900,
-        alt: "Optimum Logistics freight and consulting",
+        alt: "Optimum Logistics freight, customs, and training",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Optimum Logistics | We Simplify Trade",
+    title: "Optimum Logistics | Freight, Customs, Duty-Free & Training",
     description: defaultDescription,
     images: ["/partner-banner.png"],
   },
