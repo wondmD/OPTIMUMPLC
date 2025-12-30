@@ -52,10 +52,10 @@ export const metadata: Metadata = {
     siteName,
     images: [
       {
-        url: "/partner-banner.png",
-        width: 1600,
-        height: 900,
-        alt: "Optimum Logistics freight, customs, and training",
+        url: "/logo-main.png",
+        width: 1200,
+        height: 630,
+        alt: "Optimum Logistics logo",
       },
     ],
   },
@@ -63,7 +63,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Optimum Logistics | Freight, Customs, Duty-Free & Training",
     description: defaultDescription,
-    images: ["/partner-banner.png"],
+    images: ["/logo-main.png"],
   },
   icons: {
     icon: [
