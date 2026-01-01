@@ -5,7 +5,7 @@ import GallerySlider from "../components/GallerySlider";
 
 export const metadata: Metadata = {
   title: "About | Optimum Logistics",
-  description: "Who is Optimum Logistics? Corridor-focused logistics and consulting partner with customs clearing, freight, duty-free, and training expertise across China → Djibouti → Addis.",
+  description: "Who is Optimum Logistics? Global logistics and consulting partner with customs clearing, freight, duty-free, and training expertise across Asia, Middle East, Europe, and Africa into Addis and regional hubs.",
   alternates: { canonical: "/about" },
 };
 
@@ -18,28 +18,68 @@ const stats = [
   { label: "Team trainings", value: "1,200+", note: "Trade • finance • leadership" },
 ];
 
-const missionVision = [
+const coreSolutions = [
+  "Single Window Registration",
+  "HS Code Alignment",
+  "Duty-Free Facilitation",
+  "Multi-Modal Logistics (Sea • Air • Land)",
+  "Professional Training & Consultancy",
+];
+
+const valuesInPractice = [
+  "We simplify trade with clear steps.",
+  "Transparent paperwork every stage.",
+  "Proactive communication with honest timelines.",
+  "Continuous improvement and Kaizen mindset.",
+  "We partner with you, not just for you.",
+];
+
+const methodSteps = [
   {
-    title: "Mission",
-    detail: "Make cross-border logistics predictable and transparent for every client we serve.",
+    title: "Assess",
+    points: [
+      "Analyze cargo type, INCOTERMS, and HS codes.",
+      "Identify required permits and compute duty/tax exposure upfront.",
+      "Spot bottlenecks along the route before they happen.",
+    ],
   },
   {
-    title: "Vision",
-    detail: "Be the most trusted corridor partner for African trade, from sourcing to last-mile delivery.",
+    title: "Prepare",
+    points: [
+      "Compile invoices, certificates, and packing lists.",
+      "Register single-window accounts and align all stakeholders.",
+      "Lock sailing or uplift windows to guarantee carrier space.",
+    ],
   },
   {
-    title: "Values",
-    bullets: [
-      "We simplify trade with clear steps and honest timelines.",
-      "We practice operational excellence through documented SOPs and Kaizen.",
-      "We act as partners—protecting your cost, compliance, and customer promise.",
+    title: "Move",
+    points: [
+      "Coordinate loading and consolidation professionally.",
+      "Manage sea, air, and land routes with the right balance of speed and cost.",
+      "Provide real-time updates as cargo crosses key checkpoints.",
+    ],
+  },
+  {
+    title: "Clear",
+    points: [
+      "Port clearance with secure movement under customs seal.",
+      "Exception management with predefined playbooks.",
+      "Tight document hygiene to prevent rework or penalties.",
+    ],
+  },
+  {
+    title: "Handover",
+    points: [
+      "Final delivery to warehouse or customer site.",
+      "Post-move analysis to improve speed for the next order.",
+      "Capacity building so your team sustains performance.",
     ],
   },
 ];
 
 const uniqueness = [
   "Single-window expertise for duty-free and bonded moves",
-  "China → Djibouti → Addis corridor specialists with live milestone tracking",
+  "Multi-origin corridors (Asia, ME, EU, Africa) with live milestone tracking",
   "Embedded consulting and training so improvements stick after go-live",
   "Transparent communication and reconciled paperwork for every shipment",
 ];
@@ -95,29 +135,29 @@ export default function AboutPage() {
         <div className="absolute inset-0 bg-gradient-to-br from-slate-950/85 via-slate-900/75 to-emerald-900/70" />
         <div className="relative z-10 grid gap-10 px-6 py-16 lg:grid-cols-[1.05fr_0.95fr] lg:items-center lg:px-12 lg:py-20 xl:px-16">
           <div className="space-y-5">
-            <p className="text-sm font-semibold uppercase tracking-[0.35em] text-emerald-200">About</p>
-            <h1 className="text-5xl font-bold leading-[1.05] sm:text-6xl">Who is Optimum Logistics?</h1>
+            <p className="text-sm font-semibold uppercase tracking-[0.35em] text-emerald-200">About Optimum Logistics</p>
+            <h1 className="text-5xl font-bold leading-[1.05] sm:text-6xl">We Make Cross-Border Trade Predictable</h1>
             <p className="text-lg text-white/85 max-w-2xl">
-              We run end-to-end logistics and consulting so your cargo, paperwork, and teams stay aligned. From supplier scouting to bonded transit and training, we keep trade predictable.
+              In a global market where delays are costly and regulations are complex, we bridge international suppliers and the Ethiopian market by managing the entire logistics stack. Our mission is simple: we handle the complexity so you can focus on your customers.
             </p>
             <div className="flex flex-wrap gap-3">
-              <Link href="/services" className="inline-flex items-center rounded-full bg-white px-5 py-3 text-sm font-semibold text-slate-900 shadow-lg shadow-black/25 transition hover:-translate-y-0.5">
+              <Link href="/services" className="inline-flex items-center rounded-full bg-[var(--brand-red)] px-5 py-3 text-sm font-semibold text-white shadow-lg shadow-black/25 transition hover:-translate-y-0.5">
                 Explore services
               </Link>
               <Link
                 href="/trainings"
-                className="inline-flex items-center rounded-full border border-white/70 bg-white/10 px-5 py-3 text-sm font-semibold text-white backdrop-blur-sm transition hover:-translate-y-0.5"
+                className="inline-flex items-center rounded-full border border-white/80 bg-white px-5 py-3 text-sm font-semibold text-[var(--brand-navy)] shadow-md shadow-black/10 transition hover:-translate-y-0.5"
               >
                 View trainings
               </Link>
             </div>
           </div>
           <div className="glass-panel grid gap-4 bg-white/12 p-7 text-slate-900 backdrop-blur">
-            <p className="text-base font-semibold text-slate-900">At a glance</p>
+            <p className="text-base font-semibold text-slate-900">What we deliver</p>
             <ul className="grid gap-3 text-sm text-slate-800">
-              <li className="rounded-xl bg-white/90 px-3 py-2 font-semibold text-slate-900">China → Djibouti → Addis specialists</li>
-              <li className="rounded-xl bg-white/90 px-3 py-2 font-semibold text-slate-900">Single-window, bonded transit, duty-free</li>
-              <li className="rounded-xl bg-white/90 px-3 py-2 font-semibold text-slate-900">Consulting and training alongside operations</li>
+              <li className="rounded-xl bg-white/90 px-3 py-2 font-semibold text-slate-900">Single-window, bonded transit, and duty-free handling</li>
+              <li className="rounded-xl bg-white/90 px-3 py-2 font-semibold text-slate-900">Sea, air, and land moves with transparent milestones</li>
+              <li className="rounded-xl bg-white/90 px-3 py-2 font-semibold text-slate-900">Consulting and training that sustain performance</li>
             </ul>
           </div>
         </div>
@@ -131,7 +171,7 @@ export default function AboutPage() {
             <p className="text-xs font-semibold uppercase tracking-[0.35em] text-slate-500">Who we are</p>
             <h2 className="text-3xl font-bold text-slate-900 sm:text-4xl">An accountable partner for modern trade.</h2>
             <p className="text-base text-slate-700 max-w-3xl">
-              Optimum Logistics scouts suppliers, validates documents, secures bookings, and manages bonded transit with transparent trackers. Our consulting and trainings keep your teams aligned long after go-live.
+              Optimum Logistics is your accountable partner for modern trade. We scout reliable partners, validate every document, secure bookings, and manage bonded transit and clearance with total transparency. Beyond moving cargo, we build capacity through consulting and training so your teams stay high-performing long after delivery.
             </p>
             <ul className="mt-2 space-y-2 text-[15px] text-slate-800">
               {uniqueness.map((item) => (
@@ -155,29 +195,63 @@ export default function AboutPage() {
           </div>
         </section>
 
-        {/* Mission, Vision, Values */}
+        {/* Core solutions */}
         <section className="space-y-6">
           <div className="inner flex flex-col gap-2 px-2">
-            <p className="text-xs font-semibold uppercase tracking-[0.35em] text-slate-500">Mission • Vision • Values</p>
-            <h2 className="text-3xl font-bold text-slate-900">How we operate and why.</h2>
-            <p className="text-base text-slate-700 max-w-3xl">Clarity, accountability, and continuous improvement guide every shipment and engagement.</p>
+            <p className="text-xs font-semibold uppercase tracking-[0.35em] text-slate-500">Core Solutions</p>
+            <h2 className="text-3xl font-bold text-slate-900">The logistics stack we manage.</h2>
+            <p className="text-base text-slate-700 max-w-3xl">From single-window readiness to multimodal execution and training, we cover the full stack that keeps cargo and teams moving.</p>
+          </div>
+          <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+            {coreSolutions.map((item) => (
+              <div key={item} className="flex items-start gap-3 rounded-2xl border border-slate-200 bg-white px-4 py-3 shadow-sm">
+                <span className="mt-1 h-2 w-2 rounded-full bg-emerald-500" />
+                <p className="text-sm font-medium text-slate-900">{item}</p>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        {/* Values in practice */}
+        <section className="space-y-6">
+          <div className="inner flex flex-col gap-2 px-2">
+            <p className="text-xs font-semibold uppercase tracking-[0.35em] text-slate-500">Values in practice</p>
+            <h2 className="text-3xl font-bold text-slate-900">Standards we live by.</h2>
+            <p className="text-base text-slate-700 max-w-3xl">Integrity and precision drive every document, timeline, and handoff we manage.</p>
           </div>
           <div className="grid gap-6 lg:grid-cols-3">
-            {missionVision.map((item) => (
-              <article key={item.title} className="relative overflow-hidden rounded-2xl bg-white p-6 shadow-xl ring-1 ring-slate-200/90">
+            {valuesInPractice.map((value) => (
+              <article key={value} className="relative overflow-hidden rounded-2xl bg-white p-6 shadow-xl ring-1 ring-slate-200/90">
                 <div className="pointer-events-none absolute -right-10 -top-14 h-36 w-36 rounded-full bg-gradient-to-br from-emerald-500/15 via-amber-400/10 to-sky-500/15" />
-                <h3 className="text-xl font-semibold text-slate-900">{item.title}</h3>
-                {item.detail && <p className="mt-2 text-sm text-slate-700">{item.detail}</p>}
-                {item.bullets && (
-                  <ul className="mt-3 space-y-2 text-sm text-slate-700">
-                    {item.bullets.map((b) => (
-                      <li key={b} className="flex gap-2">
-                        <span className="mt-1 inline-block h-1.5 w-1.5 rounded-full bg-emerald-500" />
-                        <span>{b}</span>
-                      </li>
-                    ))}
-                  </ul>
-                )}
+                <h3 className="text-lg font-semibold text-slate-900">{value}</h3>
+                <p className="mt-2 text-sm text-slate-700">We apply this on every engagement—from document hygiene to proactive communication.</p>
+              </article>
+            ))}
+          </div>
+        </section>
+
+        {/* Method */}
+        <section className="space-y-6">
+          <div className="inner flex flex-col gap-2 px-2">
+            <p className="text-xs font-semibold uppercase tracking-[0.35em] text-slate-500">Our method</p>
+            <h2 className="text-3xl font-bold text-slate-900">From assessment to handover.</h2>
+            <p className="text-base text-slate-700 max-w-3xl">A disciplined five-step lifecycle keeps cargo moving without hidden costs or surprises.</p>
+          </div>
+          <div className="grid gap-4 lg:grid-cols-5">
+            {methodSteps.map((step, idx) => (
+              <article key={step.title} className="flex flex-col gap-3 rounded-2xl bg-white p-5 text-slate-900 shadow-lg ring-1 ring-slate-200/90">
+                <div className="flex items-center justify-between">
+                  <p className="text-sm font-semibold text-emerald-700">{idx + 1}. {step.title}</p>
+                  <span className="inline-flex h-8 w-8 items-center justify-center rounded-lg bg-slate-900 text-sm font-bold text-white">{step.title[0]}</span>
+                </div>
+                <ul className="space-y-2 text-sm text-slate-700">
+                  {step.points.map((point) => (
+                    <li key={point} className="flex gap-2">
+                      <span className="mt-1 inline-block h-1.5 w-1.5 rounded-full bg-emerald-500" />
+                      <span>{point}</span>
+                    </li>
+                  ))}
+                </ul>
               </article>
             ))}
           </div>
@@ -234,7 +308,8 @@ export default function AboutPage() {
             <span className="rounded-full bg-slate-100 px-3 py-1">+251 913 335 596</span>
             <span className="rounded-full bg-slate-100 px-3 py-1">+251 711 335 596</span>
             <span className="rounded-full bg-slate-100 px-3 py-1">+251 962 083 792</span>
-            <span className="rounded-full bg-slate-100 px-3 py-1">Office: Addis Ababa</span>
+            <span className="rounded-full bg-slate-100 px-3 py-1">Office: East Shewa, Adama—Soreti Mall, Ground Office 32 A2</span>
+            <span className="rounded-full bg-slate-100 px-3 py-1">Office: Addis Ababa—Takilahayimanot, Sumale Tera Business Center, 6th Floor, Office 608</span>
           </div>
           <div className="flex gap-3">
             <Link href="/contact" className="inline-flex items-center rounded-full bg-[var(--brand-navy)] px-5 py-3 text-sm font-semibold text-white shadow-lg shadow-slate-900/10 transition hover:-translate-y-0.5">

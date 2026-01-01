@@ -26,7 +26,7 @@ const serviceItems = [
   { label: "Customs Clearing", href: "/services#customs-clearing" },
   { label: "Freight Forwarding", href: "/services#freight-forwarding" },
   { label: "Port Clearance", href: "/services#port-clearance" },
-  { label: "Foreign Purchase (China, Djibouti, UAE, Others)", href: "/services#foreign-purchase" },
+  { label: "Global Purchase (Asia, ME, EU, Africa)", href: "/services#foreign-purchase" },
   { label: "Packaging, Moving & Warehousing", href: "/services#packaging-moving-warehousing" },
   { label: "Duty-free Processes Support", href: "/services#duty-free-processes-support" },
   { label: "Single Window Registrations & Data Submissions", href: "/services#single-window-registrations-data-submissions" },
@@ -119,6 +119,7 @@ export default function HeaderNav() {
               height={60}
               priority
               className="h-14 w-auto sm:h-16"
+              style={{ filter: "invert(0)" }}
             />
           </span>
         </Link>
@@ -272,7 +273,7 @@ export default function HeaderNav() {
               return (
                 <div key={link.href} className="rounded-lg">
                   <button
-                    className="flex w-full items-center justify-between rounded-lg px-2 py-2"
+                    className="flex w-full items-center justify-between rounded-lg px-2 py-2 text-[var(--brand-navy)]"
                     onClick={() => setServicesOpen((v) => !v)}
                     aria-expanded={servicesOpen}
                   >
@@ -285,7 +286,7 @@ export default function HeaderNav() {
                         <Link
                           key={item.href}
                           href={item.href}
-                          className="rounded-md px-3 py-2 hover:bg-slate-100"
+                          className="rounded-md px-3 py-2 text-[var(--brand-navy)] hover:bg-slate-100"
                           onClick={() => setOpen(false)}
                         >
                           {item.label}
@@ -300,7 +301,7 @@ export default function HeaderNav() {
               return (
                 <div key={link.href} className="rounded-lg">
                   <button
-                    className="flex w-full items-center justify-between rounded-lg px-2 py-2"
+                    className="flex w-full items-center justify-between rounded-lg px-2 py-2 text-[var(--brand-navy)]"
                     onClick={() => setTrainingsOpen((v) => !v)}
                     aria-expanded={trainingsOpen}
                   >
@@ -313,7 +314,7 @@ export default function HeaderNav() {
                         <Link
                           key={item.href}
                           href={item.href}
-                          className="rounded-md px-3 py-2 hover:bg-slate-100"
+                          className="rounded-md px-3 py-2 text-[var(--brand-navy)] hover:bg-slate-100"
                           onClick={() => setOpen(false)}
                         >
                           {item.label}
@@ -328,7 +329,7 @@ export default function HeaderNav() {
               <Link
                 key={link.href}
                 href={link.href}
-                className="rounded-lg px-2 py-2 hover:bg-slate-100"
+                className="rounded-lg px-2 py-2 text-[var(--brand-navy)] hover:bg-slate-100"
                 onClick={() => setOpen(false)}
               >
                 {link.label}
