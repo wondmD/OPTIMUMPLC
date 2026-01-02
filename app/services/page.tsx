@@ -183,7 +183,7 @@ const services = [
 
 const lanes = [
   {
-    name: "Asia / ME → Djibouti → Addis",
+    name: "Asia → Djibouti → Addis",
     body: "Port coordination, export docs, Djibouti clearance, rail/truck slotting, and bonded transit into Addis with live milestone updates.",
     image: "/service-placeholder.svg",
   },
@@ -370,7 +370,7 @@ export default function ServicesPage() {
             <span className="rounded-full bg-slate-100 px-3 py-1">+251 11 125 0386</span>
             <span className="rounded-full bg-slate-100 px-3 py-1">+251 913 335 596</span>
             <span className="rounded-full bg-slate-100 px-3 py-1">+251 711 335 596</span>
-            <span className="rounded-full bg-slate-100 px-3 py-1">+251 962 083 792</span>
+            <span className="rounded-full bg-slate-100 px-3 py-1">+251 990 733 333</span>
             <span className="rounded-full bg-slate-100 px-3 py-1">Office: East Shewa, Adama—Soreti Mall, Ground Office 32 A2</span>
             <span className="rounded-full bg-slate-100 px-3 py-1">Office: Addis Ababa—Takilahayimanot, Sumale Tera Business Center, 6th Floor, Office 608</span>
           </div>
