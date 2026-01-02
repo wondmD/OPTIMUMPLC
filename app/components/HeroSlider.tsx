@@ -6,13 +6,13 @@ import { useEffect, useMemo, useState } from "react";
 const slides = [
   {
     image: "/partner-banner.png",
-    title: "Guangzhou Sapphire Trading × Optimum Logistics & Training",
-    text: "We move cargo from China to Addis with bonded transit, single-window handling, and door delivery.",
+    title: "Global sourcing with bonded transit",
+    text: "We move cargo from Asia, Middle East, Europe, and Africa into Addis with single-window handling and door delivery.",
   },
   {
     image: "/cargo-movement.jpeg",
-    title: "We move cargo from China to Addis",
-    text: "Sea, air, and land freight with bonded transit through Djibouti and UAE.",
+    title: "We move cargo worldwide to Addis",
+    text: "Sea, air, and land freight with bonded transit through key gateways and corridors.",
   },
   {
     image: "/cutoms-singlewindow.webp",
@@ -112,11 +112,11 @@ export default function HeroSlider() {
                     </a>
                   </div>
                   <div className="mt-4 flex flex-wrap items-center gap-4 text-sm font-semibold text-white/90">
-                    <span className="inline-flex items-center gap-2 rounded-full bg-white/10 px-3 py-2 ring-1 ring-white/20">
+                    <span className="inline-flex items-center gap-2 rounded-full bg-white/10 px-3 py-2 text-white ring-1 ring-white/20">
                       <span className="text-white">☎</span>
                       <span>+251 11 125 0386 • +251 913 335 596 • +251 711 335 596 • +251 962 083 792</span>
                     </span>
-                    <span className="inline-flex items-center gap-2 rounded-full bg-white/10 px-3 py-2 ring-1 ring-white/20">
+                    <span className="inline-flex items-center gap-2 rounded-full bg-white/10 px-3 py-2 text-white ring-1 ring-white/20">
                       <span className="text-white">✉</span>
                       <span>contact@optimumlogisticsplc.com • info@optimumlogisticsplc.com</span>
                     </span>

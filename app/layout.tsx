@@ -19,7 +19,7 @@ const geistMono = Geist_Mono({
 const siteName = "Optimum Logistics";
 const siteUrl = "https://www.optimumlogisticsplc.com";
 const defaultDescription =
-  "Request a quote in 1 business day. Optimum Logistics moves cargo from China to Addis and beyond, simplifying customs, duty-free, single-window submissions, freight, consulting, and team training.";
+  "Request a quote in 1 business day. Optimum Logistics moves cargo globally into Addis and regional hubs, simplifying customs, duty-free, single-window submissions, freight, consulting, and team training.";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
@@ -36,7 +36,7 @@ export const metadata: Metadata = {
     "single window",
     "bonded warehouse",
     "logistics Ethiopia",
-    "China to Addis",
+    "global to Addis",
     "Djibouti corridor",
     "Addis Ababa",
     "training",
@@ -90,7 +90,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
+      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`} suppressHydrationWarning>
         <div className="page-shell">
           <HeaderNav />
 
@@ -102,7 +102,7 @@ export default function RootLayout({
                 <span suppressHydrationWarning>
                   <Image src="/logo2.png" alt="Optimum Logistics" width={140} height={52} />
                 </span>
-                <p className="text-sm text-slate-600">Cargo from China to Addis, customs cleared, teams trained. We simplify trade.</p>
+                <p className="text-sm text-slate-600">Cargo moved globally into Addis and the region, customs cleared, teams trained. We simplify trade.</p>
               </div>
               <div className="text-sm text-slate-700">
                 <p className="font-semibold text-slate-900">Offices</p>

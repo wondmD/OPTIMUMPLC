@@ -2,7 +2,7 @@ export default function FAQPage() {
   const faqs = [
     {
       q: "What lanes do you operate?",
-      a: "Our flagship corridor is China → Djibouti → Addis with bonded transit. We also run UAE → Addis for fast air windows and China → GCC distribution with localized compliance.",
+      a: "We operate global lanes with bonded transit. Flagships include Asia, Middle East, Europe, and Africa → Djibouti/Addis, plus GCC distribution with localized compliance.",
     },
     {
       q: "Can you handle single-window and customs?",
@@ -38,7 +38,7 @@ export default function FAQPage() {
     },
     {
       q: "Can you operate with our teams on-site or virtually?",
-      a: "Yes. Operations, filings, and trainings can be run on-site in Addis/China/Djibouti/UAE or virtually, depending on lane and urgency.",
+      a: "Yes. Operations, filings, and trainings can be run on-site in Addis, Djibouti, UAE, and origin hubs across Asia/Europe/Middle East/Africa, or virtually depending on lane and urgency.",
     },
   ];
 

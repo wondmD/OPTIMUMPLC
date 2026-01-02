@@ -11,7 +11,7 @@ export default async function ContactPage({
   const error = params.error === "1";
 
   return (
-    <div className="space-y-10 pb-12">
+    <div className="space-y-10 pb-12 bg-plane-ship">
       {/* Hero background */}
       <section className="relative overflow-hidden bg-slate-900 text-white shadow-2xl">
         <span suppressHydrationWarning>
@@ -20,8 +20,8 @@ export default async function ContactPage({
         <div className="absolute inset-0 bg-gradient-to-br from-slate-900/50 via-slate-800/35 to-emerald-900/30" />
         <div className="relative z-10 mx-auto max-w-6xl px-6 py-16 sm:py-20">
           <p className="text-sm font-semibold uppercase tracking-[0.35em] text-emerald-200">Contact</p>
-          <h1 className="mt-2 text-4xl font-bold leading-tight sm:text-5xl">Optimum Logistics & Training</h1>
-          <p className="mt-3 max-w-2xl text-base text-white/85">We simplify trade — tell us your route, commodity, and timing, and we’ll reply with a plan.</p>
+          <h1 className="mt-2 text-4xl font-bold leading-tight sm:text-5xl">We make cross-border trade predictable.</h1>
+          <p className="mt-3 max-w-2xl text-base text-white/85">Tell us your route, commodity, and timing. We manage the full logistics stack—single window, duty-free, multimodal moves, and training—so you stay focused on customers.</p>
         </div>
       </section>
 
@@ -30,7 +30,7 @@ export default async function ContactPage({
           <p className="text-sm font-semibold uppercase tracking-[0.3em] text-slate-500">Contact</p>
           <h1 className="text-3xl font-bold text-slate-900">Tell us about your cargo and team.</h1>
           <p className="text-sm text-slate-700">
-            Share your route, commodity, timelines, and training needs. We&apos;ll outline customs steps, duty-free options, and the training tracks that keep your people confident. We simplify trade.
+            Share your route, commodity, timelines, and training needs. We&apos;ll outline customs steps, duty-free options, multimodal moves, and the training tracks that keep your people confident.
           </p>
           <div className="flex flex-wrap gap-3 text-sm text-slate-700">
             <span className="rounded-full bg-slate-100 px-3 py-1">Email: contact@optimumlogisticsplc.com</span>
@@ -39,7 +39,8 @@ export default async function ContactPage({
             <span className="rounded-full bg-slate-100 px-3 py-1">Phone: +251 913 335 596</span>
             <span className="rounded-full bg-slate-100 px-3 py-1">Phone: +251 711 335 596</span>
             <span className="rounded-full bg-slate-100 px-3 py-1">Phone: +251 962 083 792</span>
-            <span className="rounded-full bg-slate-100 px-3 py-1">Office: Addis Ababa</span>
+            <span className="rounded-full bg-slate-100 px-3 py-1">Office: East Shewa, Adama—Soreti Mall, Ground Office 32 A2</span>
+            <span className="rounded-full bg-slate-100 px-3 py-1">Office: Addis Ababa—Takilahayimanot, Sumale Tera Business Center, 6th Floor, Office 608</span>
           </div>
         </div>
 

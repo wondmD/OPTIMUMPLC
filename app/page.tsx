@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { sendContactMail } from "./actions/sendContactMail";
 
-const heroImage = "/cargo-movement.jpeg";
+const heroImage = "/banner.png";
 
 const partnerLogos = [
   { src: "/partners/partener1.png", alt: "Partner logo 1" },
@@ -23,7 +23,7 @@ const services = [
   },
   {
     title: "International procurement",
-    description: "Supplier coordination in China, Djibouti, UAE—quality checks and secured payments.",
+    description: "Supplier coordination across Asia, Middle East, Europe, and Africa—quality checks and secured payments.",
   },
   {
     title: "Freight & last mile",
@@ -58,8 +58,8 @@ const trainings = [
 ];
 
 const stats = [
-  { label: "Cargo corridor", value: "China → Addis" },
-  { label: "Coverage", value: "Djibouti · UAE · GCC" },
+  { label: "Cargo corridors", value: "Asia · ME · EU · Africa → Addis" },
+  { label: "Coverage", value: "Djibouti · UAE · GCC · Africa" },
   { label: "Mode", value: "Sea · Air · Land" },
   { label: "Promise", value: "We simplify trade" },
 ];
@@ -79,6 +79,29 @@ const steps = [
   },
 ];
 
+const coreSolutions = [
+  "Single Window Registration",
+  "HS Code Alignment",
+  "Duty-Free Facilitation",
+  "Multi-Modal Logistics (Sea • Air • Land)",
+  "Professional Training & Consultancy",
+];
+
+const valuesInPractice = [
+  "Clear steps and transparent paperwork",
+  "Proactive communication with honest timelines",
+  "Continuous improvement and Kaizen mindset",
+  "We work with you, not just for you",
+];
+
+const methodSteps = [
+  { title: "Assess", text: "Cargo type, INCOTERMS, HS codes, permits, and duty/tax exposure mapped upfront." },
+  { title: "Prepare", text: "Invoices, certificates, packing lists, and single-window accounts aligned; space locked." },
+  { title: "Move", text: "Sea, air, and land routes coordinated with milestone tracking and consolidation control." },
+  { title: "Clear", text: "Port clearance under customs seal with exception playbooks and document hygiene." },
+  { title: "Handover", text: "Final delivery, post-move analysis, and capacity building for your team." },
+];
+
 export default async function Home({
   searchParams,
 }: {
@@ -91,15 +114,90 @@ export default async function Home({
     <div className="space-y-16 pb-12">
       {/* Single hero image with clear title */}
       <section className="relative w-full overflow-hidden">
-        <div className="relative h-[72vh] md:h-[78vh]">
+        <div className="relative h-[82vh] md:h-[86vh] lg:h-[90vh] max-h-[980px] bg-[#0f1115]">
           <span suppressHydrationWarning>
-            <Image src={heroImage} alt="Logistics process" fill priority className="object-cover" sizes="100vw" />
+            <Image
+              src={heroImage}
+              alt="Logistics process"
+              fill
+              priority
+              className="object-cover object-top"
+              sizes="100vw"
+              style={{ filter: "invert(0)" }}
+            />
           </span>
-          <div className="absolute inset-0 bg-gradient-to-b from-black/45 via-black/15 to-transparent" />
-          <div className="pointer-events-none absolute left-0 right-0 top-0 flex justify-center p-6 sm:p-10">
-            <p className="text-center text-3xl font-bold uppercase tracking-[0.18em] text-white drop-shadow-[0_6px_18px_rgba(0,0,0,0.55)] sm:text-4xl">
+          <div className="absolute inset-0 bg-gradient-to-b from-black/45 via-black/15 to-black/55" />
+          <div className="pointer-events-none absolute inset-x-0 top-0 flex flex-col items-center gap-4 p-6 sm:p-10">
+            <p className="text-center text-3xl font-bold uppercase tracking-[0.14em] text-white drop-shadow-[0_6px_18px_rgba(0,0,0,0.55)] sm:text-4xl">
               Optimum Logistics and Consulting
             </p>
+          </div>
+          <div className="absolute inset-x-0 bottom-0 flex flex-col items-center gap-3 bg-gradient-to-t from-black/70 via-black/55 to-transparent px-6 pb-8 pt-10 sm:px-10">
+            <p className="max-w-4xl text-center text-base font-semibold uppercase tracking-[0.12em] text-white drop-shadow-[0_4px_12px_rgba(0,0,0,0.6)] sm:text-lg">
+              We simplify trade
+            </p>
+            <div className="flex flex-wrap items-center justify-center gap-3">
+              <Link href="/contact" className="rounded-full bg-[var(--brand-red)] px-5 py-2 text-sm font-semibold text-white shadow-md transition hover:-translate-y-0.5">
+                Request a quote
+              </Link>
+              <Link href="/services" className="rounded-full border border-white/70 px-5 py-2 text-sm font-semibold text-white transition hover:-translate-y-0.5 hover:bg-white/10">
+                View services
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* About snapshot */}
+      <section className="relative isolate w-full overflow-hidden bg-slate-50/80 py-12">
+        <div className="pointer-events-none absolute inset-0 opacity-40 bg-dots-slate animate-dots" />
+        <div className="pointer-events-none absolute inset-0 opacity-20 bg-lines-slate animate-lines" />
+        <div className="relative mx-auto flex max-w-6xl flex-col gap-10 px-6">
+          <div className="grid gap-8 lg:grid-cols-[1.1fr_0.9fr] lg:items-start">
+            <div className="space-y-4">
+              <p className="text-xs font-semibold uppercase tracking-[0.35em] text-slate-500">About Optimum Logistics</p>
+              <h2 className="text-3xl font-bold text-slate-900 sm:text-4xl">We handle the complexity so you can serve customers.</h2>
+              <p className="text-base text-slate-700">
+                We are the bridge between global suppliers and the Ethiopian market. We scout reliable partners, validate documents, secure bookings, and manage bonded transit and clearance with total transparency. Beyond moving cargo, we build capacity through consulting and training so your team stays high-performing long after delivery.
+              </p>
+              <div className="grid gap-3 sm:grid-cols-2">
+                {valuesInPractice.map((value) => (
+                  <div key={value} className="flex items-start gap-3 rounded-xl border border-slate-200 bg-white px-4 py-3 shadow-sm">
+                    <span className="mt-1 h-2 w-2 rounded-full bg-emerald-500" />
+                    <p className="text-sm font-medium text-slate-900">{value}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            <div className="space-y-5 rounded-3xl bg-white p-6 shadow-xl ring-1 ring-slate-200/80">
+              <div className="space-y-2">
+                <p className="text-xs font-semibold uppercase tracking-[0.3em] text-slate-500">Core solutions</p>
+                <p className="text-lg font-semibold text-slate-900">The logistics stack we manage</p>
+              </div>
+              <div className="grid gap-3 sm:grid-cols-2">
+                {coreSolutions.map((item) => (
+                  <div key={item} className="flex items-start gap-3 rounded-2xl border border-slate-200 bg-slate-50 px-4 py-3">
+                    <span className="mt-1 h-2 w-2 rounded-full bg-[var(--brand-navy)]" />
+                    <p className="text-sm font-medium text-slate-900">{item}</p>
+                  </div>
+                ))}
+              </div>
+              <div className="space-y-2">
+                <p className="text-xs font-semibold uppercase tracking-[0.25em] text-slate-500">Our method</p>
+                <div className="grid gap-2">
+                  {methodSteps.map((step) => (
+                    <div key={step.title} className="flex gap-3 rounded-xl bg-slate-900/90 px-3 py-2 text-white shadow-sm">
+                      <span className="inline-flex h-7 w-7 items-center justify-center rounded-lg bg-white text-xs font-bold text-slate-900">{step.title[0]}</span>
+                      <div>
+                        <p className="text-sm font-semibold">{step.title}</p>
+                        <p className="text-xs text-white/85">{step.text}</p>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -111,7 +209,14 @@ export default async function Home({
           <div className="flex flex-wrap items-center justify-center gap-x-10 gap-y-6 opacity-90">
             {partnerLogos.map((logo) => (
               <span key={logo.src} suppressHydrationWarning>
-                <Image src={logo.src} alt={logo.alt} width={150} height={46} className="object-contain" />
+                <Image
+                  src={logo.src}
+                  alt={logo.alt}
+                  width={150}
+                  height={46}
+                  className="object-contain"
+                  style={{ filter: "invert(0)" }}
+                />
               </span>
             ))}
           </div>
@@ -124,7 +229,15 @@ export default async function Home({
         <div className="pointer-events-none absolute inset-4 rounded-[32px] opacity-30 bg-lines-slate animate-lines" />
         <div className="relative overflow-hidden rounded-3xl bg-slate-900 text-white shadow-2xl ring-1 ring-slate-200/70">
           <span suppressHydrationWarning>
-            <Image src="/services-background.webp" alt="Services background" fill className="object-cover" priority sizes="100vw" />
+            <Image
+              src="/services-background.webp"
+              alt="Services background"
+              fill
+              className="object-cover"
+              priority
+              sizes="100vw"
+              style={{ filter: "invert(0)" }}
+            />
           </span>
           <div className="absolute inset-0 bg-slate-900/80" />
           <div className="relative mx-auto flex max-w-6xl flex-col gap-8 px-6 py-10 sm:px-10">
@@ -163,7 +276,14 @@ export default async function Home({
       <section className="relative isolate w-full overflow-hidden bg-slate-50/70 py-12">
         <div className="absolute inset-0">
           <span suppressHydrationWarning>
-            <Image src="/cargo-movement.jpeg" alt="Training backdrop" fill className="object-cover blur-md scale-110" sizes="100vw" />
+            <Image
+              src="/cargo-movement.jpeg"
+              alt="Training backdrop"
+              fill
+              className="object-cover blur-md scale-110"
+              sizes="100vw"
+              style={{ filter: "invert(0)" }}
+            />
           </span>
           <div className="absolute inset-0 bg-white/82" />
         </div>
@@ -239,7 +359,8 @@ export default async function Home({
               <div className="mt-4 grid gap-2 text-sm text-white">
                 <span>contact@optimumlogisticsplc.com • info@optimumlogisticsplc.com</span>
                 <span>+251 11 125 0386 • +251 913 335 596 • +251 711 335 596 • +251 962 083 792</span>
-                <span>Office: Addis Ababa</span>
+                <span>Office: East Shewa, Adama—Soreti Mall, Ground Office 32 A2</span>
+                <span>Office: Addis Ababa—Takilahayimanot, Sumale Tera Business Center, 6th Floor, Office 608</span>
               </div>
               <div className="mt-5 flex gap-3">
                 <Link href="/contact" className="inline-flex items-center rounded-full bg-white px-4 py-2 text-sm font-semibold text-slate-900 shadow-md transition hover:-translate-y-0.5">
@@ -270,7 +391,8 @@ export default async function Home({
               <span className="rounded-full bg-slate-100 px-3 py-1">+251 913 335 596</span>
               <span className="rounded-full bg-slate-100 px-3 py-1">+251 711 335 596</span>
               <span className="rounded-full bg-slate-100 px-3 py-1">+251 962 083 792</span>
-              <span className="rounded-full bg-slate-100 px-3 py-1">Office: Addis Ababa</span>
+              <span className="rounded-full bg-slate-100 px-3 py-1">Office: East Shewa, Adama—Soreti Mall, Ground Office 32 A2</span>
+              <span className="rounded-full bg-slate-100 px-3 py-1">Office: Addis Ababa—Takilahayimanot, Sumale Tera Business Center, 6th Floor, Office 608</span>
             </div>
             <div className="flex gap-3">
               <Link href="/contact" className="inline-flex items-center rounded-full bg-[var(--brand-navy)] px-5 py-3 text-sm font-semibold text-white shadow-lg transition hover:-translate-y-0.5">Full contact page</Link>

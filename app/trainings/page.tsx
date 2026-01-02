@@ -6,65 +6,65 @@ const listingBg = "/service-placeholder.svg";
 
 const trainings = [
   { slug: "entrepreneur-business-thinking", title: "Entrepreneurship & Business Thinking", highlight: "Mindset • models • execution", bullets: [
-    "Business models, value propositions, and market fit",
-    "Decision speed, iteration loops, and risk control",
-    "From idea to offer: scope → test → scale",
+    "Business models and market fit tuned for Ethiopia",
+    "Agility, risk control, and decision speed",
+    "Scale path: scope → test → grow",
   ]},
-  { slug: "motivational-speaking", title: "Motivational Speaking", highlight: "Inspire • align • mobilize", bullets: [
-    "Story frameworks that land the message",
-    "Energy, presence, and audience engagement",
-    "Calls to action that stick",
+  { slug: "motivational-speaking", title: "Motivational Speaking & Communication", highlight: "Inspire • align • mobilize", bullets: [
+    "Rule of Three and strong openings/closings",
+    "Power pose and presence in high-stakes rooms",
+    "Stories and CTAs that mobilize action",
   ]},
   { slug: "international-trade-basic-terms", title: "International Trade & Basic Terms", highlight: "Incoterms • HS • docs", bullets: [
-    "Incoterms responsibilities and cost/risk split",
-    "HS code basics and alignment with suppliers",
-    "Mandatory documents: invoice, PL, COO, BL/AWB",
+    "Cost/risk split across Incoterms (FOB, CIF, EXW, etc.)",
+    "HS code alignment to avoid fines",
+    "Ethiopian Customs “Golden Set”: Invoice, PL, COO, BL/AWB",
   ]},
   { slug: "import-export-mandatory-documents-concepts", title: "Import/Export Mandatory Documents & Concepts", highlight: "Compliance • accuracy • speed", bullets: [
-    "Document stack anatomy and common mistakes",
-    "Who prepares what and when",
-    "Checks to prevent rejects and delays",
+    "Document stack anatomy and critical stamps",
+    "Who prepares what and when to prevent rejects",
+    "Checks that keep storage fees off the clock",
   ]},
   { slug: "investment-marketing", title: "Investment & Marketing", highlight: "Offer • channels • ROI", bullets: [
-    "Investment cases, risk/return, and approvals",
-    "ICP, messaging, and channel selection",
-    "Measuring ROI and improving conversion",
+    "Navigate EIC permits and approvals",
+    "ICP definition and channel selection for Ethiopia",
+    "Dashboards to measure lead-to-delivery ROI",
   ]},
   { slug: "logistics-moving-cargo", title: "Logistics & Moving Cargo", highlight: "Sea • air • land", bullets: [
-    "Routing and mode choices by speed vs cost",
-    "Port coordination, clearance, and bonded transit",
-    "Milestones, exceptions, and POD handover",
+    "Routing/mode strategy for speed vs. cost",
+    "Port coordination so cargo never sits idle",
+    "Handover from Customs Release Note to POD and reconciliation",
   ]},
   { slug: "hr-management-systems-leadership", title: "HR Systems & Leadership", highlight: "SOPs • KPIs • coaching", bullets: [
-    "Role scorecards, SOPs, and rhythms",
-    "Coaching managers and feedback that sticks",
-    "Performance dashboards and reviews",
+    "Expectations via Occupational Standards (OS)",
+    "Documented workflows across sites (Addis to port)",
+    "Coaching and feedback that sticks",
   ]},
   { slug: "customer-ethics", title: "Customer Ethics", highlight: "Trust • fairness • service", bullets: [
-    "Ethical standards and escalation handling",
-    "Service recovery plays that rebuild trust",
-    "Measuring satisfaction and acting on it",
+    "Transparency and accountability in client interactions",
+    "Service recovery that rebuilds trust",
+    "Capture and act on real customer feedback",
   ]},
   { slug: "kaizen-philosophy", title: "Kaizen Philosophy", highlight: "Small wins • weekly flow", bullets: [
-    "Identify waste and break bottlenecks",
-    "Weekly standups, retros, and experiments",
-    "Document and scale improvements",
+    "Spot the 7 wastes in logistics and paperwork",
+    "Plan-Do-Check-Act with weekly standups and retros",
+    "Empower teams to propose and scale improvements",
   ]},
   { slug: "finance-tax-administration-systems", title: "Finance & Tax Administration Systems", highlight: "Landed cost • approvals", bullets: [
-    "Landed cost math and tax exposure",
-    "Approvals and evidence for audits",
-    "Cash flow planning",
+    "Landed cost math: freight, duty, surtax, levy",
+    "2025 turnover tax requirements (Cat A & B)",
+    "Bank- and customs-ready evidence packs",
   ]},
   { slug: "single-window-online-trade-applications", title: "Single Window & Online Trade Apps", highlight: "Accounts • roles • clean data", bullets: [
-    "Entity onboarding and role mapping",
-    "Templates for complete submissions",
-    "Status tracking and exception fixes",
+    "Configure roles (Trader, Declarant, LPCO) securely",
+    "Templates for complete, correct submissions",
+    "Monitor approvals across Bank, Insurance, and Customs",
   ]},
 ];
 
 export default function TrainingsPage() {
   return (
-    <div className="space-y-16 pb-16">
+    <div className="space-y-16 pb-16 bg-plane-ship">
       {/* Hero */}
       <section id="top" className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-[#0f172a] via-[#0f2f2a] to-[#1f0f2f] text-white shadow-2xl">
         <span suppressHydrationWarning>
@@ -80,10 +80,10 @@ export default function TrainingsPage() {
             <p className="max-w-2xl text-lg text-white/85">Cohorts tuned for operators, finance, leadership, and sales—so trade moves faster and compliance is second nature.</p>
             <p className="text-base font-semibold text-white/80">We simplify trade.</p>
             <div className="flex flex-wrap gap-3">
-              <Link href="/contact" className="inline-flex items-center rounded-full bg-white px-5 py-3 text-sm font-semibold text-slate-900 shadow-lg shadow-black/25 transition hover:-translate-y-0.5">Book a cohort</Link>
+              <Link href="/contact" className="inline-flex items-center rounded-full bg-[var(--brand-red)] px-5 py-3 text-sm font-semibold text-white shadow-lg shadow-black/25 transition hover:-translate-y-0.5">Book a cohort</Link>
               <Link
                 href="/services"
-                className="inline-flex items-center rounded-full border border-white/70 bg-white/10 px-5 py-3 text-sm font-semibold text-white backdrop-blur-sm transition hover:-translate-y-0.5"
+                className="inline-flex items-center rounded-full border border-white/80 bg-white px-5 py-3 text-sm font-semibold text-[var(--brand-navy)] shadow-md shadow-black/10 transition hover:-translate-y-0.5"
               >
                 See logistics services
               </Link>
