@@ -38,7 +38,7 @@ export default async function ContactPage({
             <span className="rounded-full bg-slate-100 px-3 py-1">Phone: +251 11 125 0386</span>
             <span className="rounded-full bg-slate-100 px-3 py-1">Phone: +251 913 335 596</span>
             <span className="rounded-full bg-slate-100 px-3 py-1">Phone: +251 711 335 596</span>
-            <span className="rounded-full bg-slate-100 px-3 py-1">Phone: +251 962 083 792</span>
+            <span className="rounded-full bg-slate-100 px-3 py-1">Phone: +251903168943</span>
             <span className="rounded-full bg-slate-100 px-3 py-1">Office: East Shewa, Adama—Soreti Mall, Ground Office 32 A2</span>
             <span className="rounded-full bg-slate-100 px-3 py-1">Office: Addis Ababa—Takilahayimanot, Sumale Tera Business Center, 6th Floor, Office 608</span>
           </div>

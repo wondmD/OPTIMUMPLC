@@ -12,10 +12,10 @@ export const metadata: Metadata = {
 const hero = "/cargo-movement.jpeg";
 
 const stats = [
-  { label: "Clients supported", value: "320+", note: "Manufacturers • Traders • NGOs" },
+  { label: "Clients supported", value: "900+", note: "Manufacturers • Traders • NGOs" },
   { label: "Consulting engagements", value: "540+", note: "Process, tax, and compliance" },
-  { label: "Shipments moved", value: "2,400+", note: "Sea • Air • Land" },
-  { label: "Team trainings", value: "1,200+", note: "Trade • finance • leadership" },
+  { label: "Shipments moved", value: "3,000+", note: "Sea • Air • Land" },
+  { label: "Team trainings", value: "500+", note: "Trade • finance • leadership" },
 ];
 
 const coreSolutions = [
@@ -36,7 +36,7 @@ const valuesInPractice = [
 
 const methodSteps = [
   {
-    title: "Assess",
+    title: "Review",
     points: [
       "Analyze cargo type, INCOTERMS, and HS codes.",
       "Identify required permits and compute duty/tax exposure upfront.",
@@ -138,8 +138,9 @@ export default function AboutPage() {
             <p className="text-sm font-semibold uppercase tracking-[0.35em] text-emerald-200">About Optimum Logistics</p>
             <h1 className="text-5xl font-bold leading-[1.05] sm:text-6xl">We Make Cross-Border Trade Predictable</h1>
             <p className="text-lg text-white/85 max-w-2xl">
-              In a global market where delays are costly and regulations are complex, we bridge international suppliers and the Ethiopian market by managing the entire logistics stack. Our mission is simple: we handle the complexity so you can focus on your customers.
+              In a global market where delays are costly and regulations are complex, we bridge international suppliers and the Ethiopian market by managing the entire logistics stack. 
             </p>
+            <p>Our mission is simple: we handle the complexity so you can focus on your customers.</p>
             <div className="flex flex-wrap gap-3">
               <Link href="/services" className="inline-flex items-center rounded-full bg-[var(--brand-red)] px-5 py-3 text-sm font-semibold text-white shadow-lg shadow-black/25 transition hover:-translate-y-0.5">
                 Explore services
@@ -155,7 +156,7 @@ export default function AboutPage() {
           <div className="glass-panel grid gap-4 bg-white/12 p-7 text-slate-900 backdrop-blur">
             <p className="text-base font-semibold text-slate-900">What we deliver</p>
             <ul className="grid gap-3 text-sm text-slate-800">
-              <li className="rounded-xl bg-white/90 px-3 py-2 font-semibold text-slate-900">Single-window, bonded transit, and duty-free handling</li>
+              <li className="rounded-xl bg-white/90 px-3 py-2 font-semibold text-slate-900">Customs Clearing & Freight Forwarding</li>
               <li className="rounded-xl bg-white/90 px-3 py-2 font-semibold text-slate-900">Sea, air, and land moves with transparent milestones</li>
               <li className="rounded-xl bg-white/90 px-3 py-2 font-semibold text-slate-900">Consulting and training that sustain performance</li>
             </ul>
@@ -307,7 +308,7 @@ export default function AboutPage() {
             <span className="rounded-full bg-slate-100 px-3 py-1">+251 11 125 0386</span>
             <span className="rounded-full bg-slate-100 px-3 py-1">+251 913 335 596</span>
             <span className="rounded-full bg-slate-100 px-3 py-1">+251 711 335 596</span>
-            <span className="rounded-full bg-slate-100 px-3 py-1">+251 962 083 792</span>
+            <span className="rounded-full bg-slate-100 px-3 py-1">+251903168943</span>
             <span className="rounded-full bg-slate-100 px-3 py-1">Office: East Shewa, Adama—Soreti Mall, Ground Office 32 A2</span>
             <span className="rounded-full bg-slate-100 px-3 py-1">Office: Addis Ababa—Takilahayimanot, Sumale Tera Business Center, 6th Floor, Office 608</span>
           </div>

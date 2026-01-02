@@ -102,7 +102,7 @@ export default function RootLayout({
                 <span suppressHydrationWarning>
                   <Image src="/logo2.png" alt="Optimum Logistics" width={140} height={52} />
                 </span>
-                <p className="text-sm text-slate-600">Cargo moved globally into Addis and the region, customs cleared, teams trained. We simplify trade.</p>
+                <p className="text-sm text-slate-600">We simplify trade.</p>
               </div>
               <div className="text-sm text-slate-700">
                 <p className="font-semibold text-slate-900">Offices</p>
@@ -115,7 +115,7 @@ export default function RootLayout({
                 <p>+251 11 125 0386</p>
                 <p>+251 913 335 596</p>
                 <p>+251 711 335 596</p>
-                <p>+251 962 083 792</p>
+                <p>+251903168943</p>
               </div>
               <div className="text-sm text-slate-700">
                 <p className="font-semibold text-slate-900">Fast links</p>

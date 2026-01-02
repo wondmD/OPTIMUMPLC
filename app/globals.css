@@ -57,17 +57,18 @@ a[class*="bg-[var(--brand-red)]"]:not([class*="text-"]),
 button[class*="bg-[var(--brand-green)]"]:not([class*="text-"]),
 a[class*="bg-[var(--brand-green)]"]:not([class*="text-"]),
 button[class*="bg-slate-900"]:not([class*="text-"]),
-a[class*="bg-slate-900"]:not([class*="text-"]) {
-  color: #fff;
+a[class*="bg-slate-900"]:not([class*="text-"]),
+button[class*="bg-black"]:not([class*="text-"]),
+a[class*="bg-black"]:not([class*="text-"]) {
+  color: #fff !important;
+  -webkit-text-fill-color: #fff !important;
 }
 button[class*="bg-white"]:not([class*="text-"]),
-a[class*="bg-white"]:not([class*="text-"]) {
-  color: #0f172a;
-}
-
+a[class*="bg-white"]:not([class*="text-"]),
 button[class*="bg-white/"]:not([class*="text-"]),
 a[class*="bg-white/"]:not([class*="text-"]) {
-  color: #0f172a;
+  color: #0f172a !important;
+  -webkit-text-fill-color: #0f172a !important;
 }
 
 .page-shell {

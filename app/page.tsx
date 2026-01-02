@@ -114,14 +114,14 @@ export default async function Home({
     <div className="space-y-16 pb-12">
       {/* Single hero image with clear title */}
       <section className="relative w-full overflow-hidden">
-        <div className="relative h-[82vh] md:h-[86vh] lg:h-[90vh] max-h-[980px] bg-[#0f1115]">
+        <div className="relative h-[88vh] md:h-[92vh] lg:h-[96vh] max-h-[1080px] bg-[#0f1115]">
           <span suppressHydrationWarning>
             <Image
               src={heroImage}
               alt="Logistics process"
               fill
               priority
-              className="object-cover object-top"
+              className="object-cover object-center"
               sizes="100vw"
               style={{ filter: "invert(0)" }}
             />
@@ -293,17 +293,29 @@ export default async function Home({
           <div className="grid gap-10 lg:grid-cols-[1.05fr_0.95fr] lg:items-center">
             <div className="space-y-4">
               <p className="text-sm font-semibold uppercase tracking-[0.3em] text-slate-500">Training portfolio</p>
-              <h2 className="text-3xl font-bold text-slate-900 sm:text-4xl">Optimum Company Trainings</h2>
+              <h2 className="text-3xl font-bold text-slate-900 sm:text-4xl">Short-term training & tax audit readiness</h2>
               <p className="text-base text-slate-700">
-                Scenario-based sessions for operators, founders, finance, and leadership teams. We teach international trade, documentation, tax, Kaizen, HR systems, and customer ethics.
+                Practical, role-based workshops that improve performance from day one, plus tax-audit defense that keeps your filings clean and your team calm.
               </p>
               <div className="grid gap-3 sm:grid-cols-2">
-                {trainings.map((item) => (
-                  <div key={item} className="flex items-start gap-3 rounded-xl border border-slate-200 bg-white px-4 py-3 shadow-sm">
-                    <span className="mt-1 h-2 w-2 rounded-full bg-emerald-500" />
-                    <p className="text-sm font-medium text-slate-900">{item}</p>
-                  </div>
-                ))}
+                <div className="flex flex-col gap-2 rounded-xl border border-slate-200 bg-white px-4 py-3 shadow-sm">
+                  <p className="text-sm font-semibold text-slate-900">Short-term training</p>
+                  <p className="text-xs font-semibold uppercase tracking-[0.2em] text-slate-500">Trade ops • Finance basics • Leadership</p>
+                  <ul className="space-y-2 text-sm text-slate-800">
+                    <li className="flex gap-2"><span className="mt-1 inline-block h-1.5 w-1.5 rounded-full bg-emerald-500" />Specific tracks for warehouse staff, finance teams, and logistics officers using Ethiopian documents.</li>
+                    <li className="flex gap-2"><span className="mt-1 inline-block h-1.5 w-1.5 rounded-full bg-emerald-500" />We teach teams to spot waste and improve efficiency every day.</li>
+                    <li className="flex gap-2"><span className="mt-1 inline-block h-1.5 w-1.5 rounded-full bg-emerald-500" />Integrity and civic responsibility embedded into every leadership module.</li>
+                  </ul>
+                </div>
+                <div className="flex flex-col gap-2 rounded-xl border border-slate-200 bg-white px-4 py-3 shadow-sm">
+                  <p className="text-sm font-semibold text-slate-900">Tax auditing</p>
+                  <p className="text-xs font-semibold uppercase tracking-[0.2em] text-slate-500">Readiness • Representation • Remediation</p>
+                  <ul className="space-y-2 text-sm text-slate-800">
+                    <li className="flex gap-2"><span className="mt-1 inline-block h-1.5 w-1.5 rounded-full bg-emerald-500" />We spot errors in VAT, Income Tax, and Customs files before auditors do.</li>
+                    <li className="flex gap-2"><span className="mt-1 inline-block h-1.5 w-1.5 rounded-full bg-emerald-500" />We represent you during audits with clear variance explanations.</li>
+                    <li className="flex gap-2"><span className="mt-1 inline-block h-1.5 w-1.5 rounded-full bg-emerald-500" />We fix root causes so you avoid repeat penalties.</li>
+                  </ul>
+                </div>
               </div>
               <Link
                 href="/trainings"
@@ -314,9 +326,9 @@ export default async function Home({
             </div>
 
             <div className="relative rounded-2xl bg-white/75 p-6 shadow-xl ring-1 ring-slate-200 backdrop-blur">
-              <h3 className="text-xl font-semibold text-slate-900">Focused training delivery</h3>
+              <h3 className="text-xl font-semibold text-slate-900">Role-based training that sticks</h3>
               <p className="mt-2 text-sm text-slate-700">
-                One backdrop—many cohorts. We simplify trade by tailoring playbooks and checklists to your operators, finance, and leadership teams.
+                Workshops are built for each role—warehouse, finance, logistics, leadership—and use real Ethiopian paperwork so habits change in week one.
               </p>
               <p className="mt-3 text-sm font-semibold text-slate-900">We simplify trade.</p>
             </div>
@@ -358,7 +370,7 @@ export default async function Home({
               </p>
               <div className="mt-4 grid gap-2 text-sm text-white">
                 <span>contact@optimumlogisticsplc.com • info@optimumlogisticsplc.com</span>
-                <span>+251 11 125 0386 • +251 913 335 596 • +251 711 335 596 • +251 962 083 792</span>
+                <span>+251 11 125 0386 • +251 913 335 596 • +251 711 335 596 • +251903168943</span>
                 <span>Office: East Shewa, Adama—Soreti Mall, Ground Office 32 A2</span>
                 <span>Office: Addis Ababa—Takilahayimanot, Sumale Tera Business Center, 6th Floor, Office 608</span>
               </div>
@@ -390,7 +402,7 @@ export default async function Home({
               <span className="rounded-full bg-slate-100 px-3 py-1">+251 11 125 0386</span>
               <span className="rounded-full bg-slate-100 px-3 py-1">+251 913 335 596</span>
               <span className="rounded-full bg-slate-100 px-3 py-1">+251 711 335 596</span>
-              <span className="rounded-full bg-slate-100 px-3 py-1">+251 962 083 792</span>
+              <span className="rounded-full bg-slate-100 px-3 py-1">+251903168943</span>
               <span className="rounded-full bg-slate-100 px-3 py-1">Office: East Shewa, Adama—Soreti Mall, Ground Office 32 A2</span>
               <span className="rounded-full bg-slate-100 px-3 py-1">Office: Addis Ababa—Takilahayimanot, Sumale Tera Business Center, 6th Floor, Office 608</span>
             </div>

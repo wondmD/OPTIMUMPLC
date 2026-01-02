@@ -37,17 +37,18 @@ const serviceItems = [
 ];
 
 const trainingItems = [
-  { label: "Entrepreneurship & Business Thinking", href: "/trainings#entrepreneur-business-thinking" },
-  { label: "Motivational Speaking", href: "/trainings#motivational-speaking" },
-  { label: "International Trade & Basic Terms", href: "/trainings#international-trade-basic-terms" },
+  { label: "Logistics & Cargo Moving", href: "/trainings#logistics-cargo-moving" },
   { label: "Import/Export Mandatory Documents & Concepts", href: "/trainings#import-export-mandatory-documents-concepts" },
+  { label: "International Trade & Basic Terms", href: "/trainings#international-trade-basic-terms" },
+  { label: "Single Window & Online Trade Apps", href: "/trainings#single-window-online-trade-applications" },
   { label: "Investment & Marketing", href: "/trainings#investment-marketing" },
-  { label: "Logistics & Moving Cargo", href: "/trainings#logistics-moving-cargo" },
+  { label: "Entrepreneurship & Business Thinking", href: "/trainings#entrepreneur-business-thinking" },
+  { label: "Motivational Speaking & Communication", href: "/trainings#motivational-speaking" },
   { label: "HR Systems & Leadership", href: "/trainings#hr-management-systems-leadership" },
   { label: "Customer Ethics", href: "/trainings#customer-ethics" },
   { label: "Kaizen Philosophy", href: "/trainings#kaizen-philosophy" },
   { label: "Finance & Tax Administration Systems", href: "/trainings#finance-tax-administration-systems" },
-  { label: "Single Window & Online Trade Apps", href: "/trainings#single-window-online-trade-applications" },
+  { label: "Educational Psychology Training", href: "/trainings#educational-psychology-training" },
 ];
 
 export default function HeaderNav() {
@@ -249,7 +250,7 @@ export default function HeaderNav() {
           <button
             type="button"
             aria-label="Toggle menu"
-            className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-slate-200 text-[var(--brand-navy)] shadow-sm transition hover:border-slate-300 md:hidden"
+            className="inline-flex h-11 w-11 items-center justify-center rounded-full bg-[var(--brand-navy)] text-white shadow-sm transition hover:-translate-y-0.5 md:hidden"
             onClick={() => setOpen((prev) => !prev)}
           >
             <span className="sr-only">Toggle navigation</span>
