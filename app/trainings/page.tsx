@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 
-const hero = "/training-hero.svg";
+const hero = "/training-and-development.jpg";
 const listingBg = "/service-placeholder.svg";
 
 const trainings = [
@@ -185,7 +185,8 @@ export default function TrainingsPage() {
               <Link href="/contact" className="inline-flex items-center rounded-full bg-[var(--brand-red)] px-5 py-3 text-sm font-semibold text-white shadow-lg shadow-black/25 transition hover:-translate-y-0.5">Book a cohort</Link>
               <Link
                 href="/services"
-                className="inline-flex items-center rounded-full border border-white/80 bg-white px-5 py-3 text-sm font-semibold text-[var(--brand-navy)] shadow-md shadow-black/10 transition hover:-translate-y-0.5"
+                className="inline-flex items-center rounded-full border border-white/80 bg-white px-5 py-3 text-sm font-semibold text-black shadow-md shadow-black/10 transition hover:-translate-y-0.5"
+                style={{ WebkitTextFillColor: "#0f172a" }}
               >
                 See logistics services
               </Link>
@@ -204,7 +205,7 @@ export default function TrainingsPage() {
                 <li className="flex items-start gap-3"><span className="mt-1 inline-block h-2 w-2 rounded-full bg-[var(--brand-green)]" /><span>Representation: we join audits with clear variance explanations to defend your position.</span></li>
                 <li className="flex items-start gap-3"><span className="mt-1 inline-block h-2 w-2 rounded-full bg-[var(--brand-navy)]" /><span>Remediation: we fix root causes so you do not face the same penalty twice.</span></li>
               </ul>
-              <Link href="#tracks" className="inline-flex w-fit items-center rounded-full bg-[var(--brand-navy)] px-4 py-2 text-sm font-semibold text-white shadow-lg shadow-slate-900/20 transition hover:-translate-y-0.5">
+              <Link href="#tracks" className="inline-flex w-fit items-center rounded-full bg-[var(--brand-navy)] px-4 py-2 text-sm font-semibold text-white shadow-lg shadow-slate-900/20 transition hover:-translate-y-0.5" style={{ WebkitTextFillColor: "#ffffffff" }}>
                 View tracks
               </Link>
             </div>
@@ -252,7 +253,7 @@ export default function TrainingsPage() {
                 </ul>
                 <div className="mt-auto flex flex-wrap gap-2 pt-2">
                   <Link href="/contact" className="inline-flex items-center rounded-full bg-[var(--brand-navy)] px-4 py-2 text-sm font-semibold text-white shadow-md transition hover:-translate-y-0.5">Book this track</Link>
-                  <Link href="#top" className="inline-flex items-center rounded-full border border-slate-300 px-4 py-2 text-sm font-semibold text-slate-800 transition hover:-translate-y-0.5">Back to top</Link>
+                  <Link href="#top" className="inline-flex items-center rounded-full border border-slate-300 px-4 py-2 text-sm font-semibold text-slate-800 transition hover:-translate-y-0.5" style={{ WebkitTextFillColor: "#0f172a" }}>Back to top</Link>
                 </div>
               </div>
             </article>
@@ -275,14 +276,18 @@ export default function TrainingsPage() {
               <span className="rounded-full bg-slate-100 px-3 py-1">+251 11 125 0386</span>
               <span className="rounded-full bg-slate-100 px-3 py-1">+251 913 335 596</span>
               <span className="rounded-full bg-slate-100 px-3 py-1">+251 711 335 596</span>
-              <span className="rounded-full bg-slate-100 px-3 py-1">+251903168943</span>
+              <span className="rounded-full bg-slate-100 px-3 py-1">+251 990 733 333</span>
               <span className="rounded-full bg-slate-100 px-3 py-1">On-site or virtual delivery</span>
             </div>
             <div className="flex gap-3">
               <Link href="/contact" className="inline-flex items-center rounded-full bg-[var(--brand-navy)] px-5 py-3 text-sm font-semibold text-white shadow-lg shadow-slate-900/10 transition hover:-translate-y-0.5">
                 Book a cohort
               </Link>
-              <Link href="/services" className="inline-flex items-center rounded-full border border-slate-300 px-5 py-3 text-sm font-semibold text-slate-800 transition hover:-translate-y-0.5 hover:border-slate-400 hover:bg-white">
+              <Link
+                href="/services"
+                className="inline-flex items-center rounded-full border border-slate-300 px-5 py-3 text-sm font-semibold text-slate-800 transition hover:-translate-y-0.5 hover:border-slate-400 hover:bg-white"
+                style={{ WebkitTextFillColor: "#0f172a", color: "#0f172a" }}
+              >
                 See logistics services
               </Link>
             </div>

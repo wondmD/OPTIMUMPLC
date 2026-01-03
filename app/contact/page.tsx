@@ -1,4 +1,5 @@
 import Image from "next/image";
+import SubmitButton from "../components/SubmitButton";
 import { sendContactMail } from "../actions/sendContactMail";
 
 export default async function ContactPage({
@@ -15,7 +16,7 @@ export default async function ContactPage({
       {/* Hero background */}
       <section className="relative overflow-hidden bg-slate-900 text-white shadow-2xl">
         <span suppressHydrationWarning>
-          <Image src="/service-placeholder.svg" alt="Contact cover" fill priority className="absolute inset-0 h-full w-full object-cover" />
+          <Image src="/cargo-movement.jpeg" alt="Contact cover" fill priority className="absolute inset-0 h-full w-full object-cover" />
         </span>
         <div className="absolute inset-0 bg-gradient-to-br from-slate-900/50 via-slate-800/35 to-emerald-900/30" />
         <div className="relative z-10 mx-auto max-w-6xl px-6 py-16 sm:py-20">
@@ -38,7 +39,7 @@ export default async function ContactPage({
             <span className="rounded-full bg-slate-100 px-3 py-1">Phone: +251 11 125 0386</span>
             <span className="rounded-full bg-slate-100 px-3 py-1">Phone: +251 913 335 596</span>
             <span className="rounded-full bg-slate-100 px-3 py-1">Phone: +251 711 335 596</span>
-            <span className="rounded-full bg-slate-100 px-3 py-1">Phone: +251903168943</span>
+            <span className="rounded-full bg-slate-100 px-3 py-1">Phone: +251 990 733 333</span>
             <span className="rounded-full bg-slate-100 px-3 py-1">Office: East Shewa, Adama—Soreti Mall, Ground Office 32 A2</span>
             <span className="rounded-full bg-slate-100 px-3 py-1">Office: Addis Ababa—Takilahayimanot, Sumale Tera Business Center, 6th Floor, Office 608</span>
           </div>
@@ -97,12 +98,7 @@ export default async function ContactPage({
               placeholder="Customs clearing, cargo move, training, or consulting"
             />
           </label>
-          <button
-            className="w-full rounded-full bg-slate-900 px-4 py-3 text-sm font-semibold text-white shadow-lg shadow-slate-900/10 transition hover:-translate-y-0.5 hover:bg-slate-800"
-            type="submit"
-          >
-            Send message
-          </button>
+          <SubmitButton className="w-full rounded-full bg-slate-900 px-4 py-3 text-sm font-semibold text-white shadow-lg shadow-slate-900/10 transition hover:-translate-y-0.5 hover:bg-slate-800" />
           <p className="text-[11px] text-slate-500">We reply within one business day. By submitting, you agree to be contacted about your inquiry.</p>
         </form>
       </section>

@@ -243,7 +243,7 @@ export default function HeaderNav() {
         <div className="flex items-center gap-2">
           <Link
             href="/contact"
-            className="hidden rounded-full bg-[var(--brand-red)] px-6 py-[10px] text-[15px] font-bold uppercase tracking-[0.05em] text-white shadow-md transition hover:-translate-y-0.5 md:inline-flex"
+            className="hidden rounded-full bg-[var(--brand-red)] px-6 py-[10px] text-[15px] font-bold uppercase tracking-[0.05em] text-white shadow-md transition hover:-translate-y-0.5 md:inline-flex" style={{ WebkitTextFillColor: "#fefefeff" }}
           >
             Request a quote
           </Link>
@@ -264,8 +264,8 @@ export default function HeaderNav() {
       </div>
 
       <div
-        className={`md:hidden overflow-hidden border-t border-slate-200 bg-white px-4 transition-[max-height,opacity] duration-300 ease-out ${
-          open ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
+        className={`md:hidden border-t border-slate-200 bg-white px-4 transition-[max-height,opacity] duration-300 ease-out ${
+          open ? "max-h-[80vh] overflow-y-auto opacity-100" : "max-h-0 overflow-hidden opacity-0"
         }`}
       >
         <div className="flex flex-col gap-3 py-4 text-[16px] font-semibold uppercase tracking-[0.04em] text-[var(--brand-navy)]">
@@ -282,7 +282,7 @@ export default function HeaderNav() {
                     <span className={`transition ${servicesOpen ? "rotate-180" : ""}`}>▾</span>
                   </button>
                   {servicesOpen && (
-                    <div className="mt-1 flex flex-col gap-1 rounded-lg bg-slate-50 p-1 text-[15px] normal-case">
+                    <div className="mt-1 flex max-h-72 flex-col gap-1 overflow-y-auto rounded-lg bg-slate-50 p-1 text-[15px] normal-case">
                       {serviceItems.map((item) => (
                         <Link
                           key={item.href}
@@ -310,7 +310,7 @@ export default function HeaderNav() {
                     <span className={`transition ${trainingsOpen ? "rotate-180" : ""}`}>▾</span>
                   </button>
                   {trainingsOpen && (
-                    <div className="mt-1 flex flex-col gap-1 rounded-lg bg-slate-50 p-1 text-[15px] normal-case">
+                    <div className="mt-1 flex max-h-72 flex-col gap-1 overflow-y-auto rounded-lg bg-slate-50 p-1 text-[15px] normal-case">
                       {trainingItems.map((item) => (
                         <Link
                           key={item.href}

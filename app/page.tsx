@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import SubmitButton from "./components/SubmitButton";
 import { sendContactMail } from "./actions/sendContactMail";
 
 const heroImage = "/banner.png";
@@ -370,15 +371,19 @@ export default async function Home({
               </p>
               <div className="mt-4 grid gap-2 text-sm text-white">
                 <span>contact@optimumlogisticsplc.com • info@optimumlogisticsplc.com</span>
-                <span>+251 11 125 0386 • +251 913 335 596 • +251 711 335 596 • +251903168943</span>
+                <span>+251 11 125 0386 • +251 913 335 596 • +251 711 335 596 • +251 990 733 333</span>
                 <span>Office: East Shewa, Adama—Soreti Mall, Ground Office 32 A2</span>
                 <span>Office: Addis Ababa—Takilahayimanot, Sumale Tera Business Center, 6th Floor, Office 608</span>
               </div>
               <div className="mt-5 flex gap-3">
-                <Link href="/contact" className="inline-flex items-center rounded-full bg-white px-4 py-2 text-sm font-semibold text-slate-900 shadow-md transition hover:-translate-y-0.5">
+                <Link href="/contact" className="inline-flex items-center rounded-full bg-white px-4 py-2 text-sm font-semibold text-slate-900 shadow-md transition hover:-translate-y-0.5" style={{ WebkitTextFillColor: "#0f172a" }}>
                   Request a quote
                 </Link>
-                <Link href="/services" className="inline-flex items-center rounded-full border border-white/50 px-4 py-2 text-sm font-semibold text-white transition hover:-translate-y-0.5">
+                <Link
+                  href="/services"
+                  className="inline-flex items-center rounded-full border border-white/50 bg-white px-4 py-2 text-sm font-semibold text-black transition hover:-translate-y-0.5"
+                  style={{ WebkitTextFillColor: "#0f172a" }}
+                >
                   View services
                 </Link>
               </div>
@@ -402,13 +407,19 @@ export default async function Home({
               <span className="rounded-full bg-slate-100 px-3 py-1">+251 11 125 0386</span>
               <span className="rounded-full bg-slate-100 px-3 py-1">+251 913 335 596</span>
               <span className="rounded-full bg-slate-100 px-3 py-1">+251 711 335 596</span>
-              <span className="rounded-full bg-slate-100 px-3 py-1">+251903168943</span>
+              <span className="rounded-full bg-slate-100 px-3 py-1">+251 990 733 333</span>
               <span className="rounded-full bg-slate-100 px-3 py-1">Office: East Shewa, Adama—Soreti Mall, Ground Office 32 A2</span>
               <span className="rounded-full bg-slate-100 px-3 py-1">Office: Addis Ababa—Takilahayimanot, Sumale Tera Business Center, 6th Floor, Office 608</span>
             </div>
             <div className="flex gap-3">
               <Link href="/contact" className="inline-flex items-center rounded-full bg-[var(--brand-navy)] px-5 py-3 text-sm font-semibold text-white shadow-lg transition hover:-translate-y-0.5">Full contact page</Link>
-              <Link href="/services" className="inline-flex items-center rounded-full border border-slate-300 px-5 py-3 text-sm font-semibold text-slate-800 transition hover:-translate-y-0.5 hover:border-slate-400 hover:bg-white">View services</Link>
+              <Link
+                href="/services"
+                className="inline-flex items-center rounded-full border border-slate-300 px-5 py-3 text-sm font-semibold text-slate-800 transition hover:-translate-y-0.5 hover:border-slate-400 hover:bg-white"
+                style={{ WebkitTextFillColor: "#0f172a", color: "#0f172a" }}
+              >
+                View services
+              </Link>
             </div>
           </div>
 
@@ -465,12 +476,7 @@ export default async function Home({
                 placeholder="Customs clearing, cargo move, training, or consulting"
               />
             </label>
-            <button
-              className="w-full rounded-full bg-[var(--brand-navy)] px-4 py-3 text-sm font-semibold text-white shadow-lg shadow-slate-900/10 transition hover:-translate-y-0.5"
-              type="submit"
-            >
-              Send message
-            </button>
+            <SubmitButton className="w-full rounded-full bg-[var(--brand-navy)] px-4 py-3 text-sm font-semibold text-white shadow-lg shadow-slate-900/10 transition hover:-translate-y-0.5" />
             <p className="text-[11px] text-slate-500">We reply within one business day. By submitting, you agree to be contacted about your inquiry.</p>
           </form>
         </div>

@@ -115,7 +115,7 @@ export default function RootLayout({
                 <p>+251 11 125 0386</p>
                 <p>+251 913 335 596</p>
                 <p>+251 711 335 596</p>
-                <p>+251903168943</p>
+                <p>+251 990 733 333</p>
               </div>
               <div className="text-sm text-slate-700">
                 <p className="font-semibold text-slate-900">Fast links</p>

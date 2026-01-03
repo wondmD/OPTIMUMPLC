@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   alternates: { canonical: "/services" },
 };
 
-const hero = "/service-hero.svg";
+const hero = "/services-background.webp";
 
 const services = [
   {
@@ -221,7 +221,8 @@ export default function ServicesPage() {
               <Link href="/contact" className="inline-flex items-center rounded-full bg-[var(--brand-red)] px-5 py-3 text-sm font-semibold text-white shadow-lg shadow-black/25 transition hover:-translate-y-0.5">Request a quote</Link>
               <Link
                 href="/trainings"
-                className="inline-flex items-center rounded-full border border-white/80 bg-white px-5 py-3 text-sm font-semibold text-[var(--brand-navy)] shadow-md shadow-black/10 transition hover:-translate-y-0.5"
+                className="inline-flex items-center rounded-full border border-white/80 bg-white px-5 py-3 text-sm font-semibold text-black shadow-md shadow-black/10 transition hover:-translate-y-0.5"
+                style={{ WebkitTextFillColor: "#0f172a" }}
               >
                 Train my team
               </Link>
@@ -253,7 +254,7 @@ export default function ServicesPage() {
                 <li className="flex items-start gap-3"><span className="mt-1 inline-block h-2 w-2 rounded-full bg-[var(--brand-green)]" /><span>Prepare filings and exceptions playbook so single-window submissions clear faster.</span></li>
                 <li className="flex items-start gap-3"><span className="mt-1 inline-block h-2 w-2 rounded-full bg-[var(--brand-navy)]" /><span>Track milestones from factory to POD with pre-agreed responses to delays.</span></li>
               </ul>
-              <Link href="#services" className="inline-flex w-fit items-center rounded-full bg-[var(--brand-navy)] px-4 py-2 text-sm font-semibold text-white shadow-lg shadow-slate-900/20 transition hover:-translate-y-0.5">
+              <Link href="#services" className="inline-flex w-fit items-center rounded-full bg-[var(--brand-navy)] px-4 py-2 text-sm font-semibold text-white shadow-lg shadow-slate-900/20 transition hover:-translate-y-0.5" style={{ WebkitTextFillColor: "#ffffffff" }}>
                 See the stack
               </Link>
             </div>
@@ -294,7 +295,7 @@ export default function ServicesPage() {
                   </ul>
                   <div className="flex flex-wrap gap-3 pt-2">
                     <Link href="/contact" className="inline-flex items-center rounded-full bg-[var(--brand-navy)] px-4 py-2 text-sm font-semibold text-white shadow-md transition hover:-translate-y-0.5">Talk to us</Link>
-                    <Link href="#top" className="inline-flex items-center rounded-full border border-slate-300 px-4 py-2 text-sm font-semibold text-slate-800 transition hover:-translate-y-0.5">Back to top</Link>
+                    <Link href="#top" className="inline-flex items-center rounded-full border border-slate-300 px-4 py-2 text-sm font-semibold text-slate-800 transition hover:-translate-y-0.5" style={{ WebkitTextFillColor: "#0f172a" }}>Back to top</Link>
                   </div>
                 </div>
                 <div className="relative h-64 w-full overflow-hidden rounded-2xl bg-slate-100 sm:h-72 lg:h-80">
@@ -378,7 +379,11 @@ export default function ServicesPage() {
             <Link href="/contact" className="inline-flex items-center rounded-full bg-[var(--brand-navy)] px-5 py-3 text-sm font-semibold text-white shadow-lg shadow-slate-900/10 transition hover:-translate-y-0.5">
               Request a quote
             </Link>
-            <Link href="/trainings" className="inline-flex items-center rounded-full border border-slate-300 px-5 py-3 text-sm font-semibold text-slate-800 transition hover:-translate-y-0.5 hover:border-slate-400 hover:bg-white">
+            <Link
+              href="/trainings"
+              className="inline-flex items-center rounded-full border border-slate-300 px-5 py-3 text-sm font-semibold text-slate-800 transition hover:-translate-y-0.5 hover:border-slate-400 hover:bg-white"
+              style={{ WebkitTextFillColor: "#0f172a", color: "#0f172a" }}
+            >
               Upskill my team
             </Link>
           </div>
