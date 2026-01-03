@@ -114,7 +114,7 @@ export default function HeroSlider() {
                   <div className="mt-4 flex flex-wrap items-center gap-4 text-sm font-semibold text-white/90">
                     <span className="inline-flex items-center gap-2 rounded-full bg-white/10 px-3 py-2 text-white ring-1 ring-white/20">
                       <span className="text-white">☎</span>
-                      <span>+251 11 125 0386 • +251 913 335 596 • +251 711 335 596 • +251903168943</span>
+                      <span>+251 11 125 0386 • +251 913 335 596 • +251 711 335 596 • +251 990 733 333</span>
                     </span>
                     <span className="inline-flex items-center gap-2 rounded-full bg-white/10 px-3 py-2 text-white ring-1 ring-white/20">
                       <span className="text-white">✉</span>

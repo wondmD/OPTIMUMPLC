@@ -85,42 +85,68 @@ const uniqueness = [
 ];
 
 const gallery = [
-  { src: "/partner-banner.png", alt: "Team with partner at event" },
-  { src: "/training-and-development.jpg", alt: "Leadership training session" },
-  { src: "/cutoms-singlewindow.webp", alt: "Customs and single-window prep" },
-  { src: "/cargo-movement.jpeg", alt: "Cargo movement along the corridor" },
-  { src: "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=1200&q=80", alt: "Operations team at work" },
-  { src: "https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?auto=format&fit=crop&w=1200&q=80", alt: "Team huddle during briefing" },
+  { src: "/galary/photo_2026-01-03_03-57-45.jpg", alt: "Training cohort" },
+  { src: "/galary/photo_2026-01-03_03-58-08.jpg", alt: "Logistics workshop" },
+  { src: "/galary/photo_2026-01-03_03-58-11.jpg", alt: "Team discussion" },
+  { src: "/galary/photo_2026-01-03_03-58-18.jpg", alt: "On-site review" },
+  { src: "/galary/photo_2026-01-03_03-58-24.jpg", alt: "Session wrap-up" },
+  { src: "/galary/photo_2026-01-03_03-58-27.jpg", alt: "Group briefing" },
+  { src: "/galary/photo_2026-01-03_03-58-33.jpg", alt: "Workshop breakout" },
+  { src: "/galary/photo_2026-01-03_03-58-41.jpg", alt: "Team huddle" },
+  { src: "/galary/photo_2026-01-03_03-58-44.jpg", alt: "Logistics planning" },
+  { src: "/galary/photo_2026-01-03_03-58-52.jpg", alt: "Training exercise" },
+  { src: "/galary/photo_2026-01-03_03-58-59.jpg", alt: "Closing remarks" },
 ];
 
 const team = [
   {
-    name: "Amanuel Gebremedhin",
-    role: "Managing Director",
-    focus: "Corridor strategy, key accounts, and compliance governance",
-    image:
-      "https://images.unsplash.com/photo-1531123897727-8f129e1688ce?auto=format&fit=crop&w=800&q=80",
+    name: "Sani Tuke",
+    role: "CEO and Manager",
+    focus: "Strategy, compliance, and executive partnerships",
+    image: "/profile-placeholder.jpeg",
+    certificateUrl: "/sani-tuke-profile.pdf",
   },
   {
-    name: "Liya Tesfaye",
-    role: "Head of Operations",
-    focus: "Origin coordination, bonded transit, and milestone control",
-    image:
-      "https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=800&q=80",
+    name: "Semiha Hussein",
+    role: "Deputy Manager",
+    focus: "Daily operations, client delivery, and quality control",
+    image: "/profile-placeholder.jpeg",
   },
   {
-    name: "Khalid Mohammed",
-    role: "Customs & Compliance Lead",
-    focus: "HS code validation, duty-free pathways, and audit trails",
-    image:
-      "https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?auto=format&fit=crop&w=800&q=80",
+    name: "Kedir Negeso",
+    role: "Administration & Finance Manager",
+    focus: "Budgeting, vendor contracts, and financial governance",
+    image: "/profile-placeholder.jpeg",
   },
   {
-    name: "Sara Mekonnen",
-    role: "Training & People",
-    focus: "Finance, trade, and leadership programs for client teams",
-    image:
-      "https://images.unsplash.com/photo-1544723795-3fb6469f5b39?auto=format&fit=crop&w=800&q=80",
+    name: "Abdi Dewali",
+    role: "Assistant Transporter",
+    focus: "Fleet coordination and on-corridor support",
+    image: "/profile-placeholder.jpeg",
+  },
+  {
+    name: "Tsehay Hurisa",
+    role: "Assistant Transporter",
+    focus: "Loading supervision and handoff tracking",
+    image: "/profile-placeholder.jpeg",
+  },
+  {
+    name: "Edom Gurmecha",
+    role: "Marketing & Customs Tax Expert",
+    focus: "Client outreach and duty/tax advisory",
+    image: "/profile-placeholder.jpeg",
+  },
+  {
+    name: "Welela Abesha",
+    role: "Customs Data Expert",
+    focus: "Document accuracy and declaration data integrity",
+    image: "/profile-placeholder.jpeg",
+  },
+  {
+    name: "Saba Zerga",
+    role: "Sales Coordinator",
+    focus: "Pipeline follow-up and proposal coordination",
+    image: "/profile-placeholder.jpeg",
   },
 ];
 
@@ -147,7 +173,8 @@ export default function AboutPage() {
               </Link>
               <Link
                 href="/trainings"
-                className="inline-flex items-center rounded-full border border-white/80 bg-white px-5 py-3 text-sm font-semibold text-[var(--brand-navy)] shadow-md shadow-black/10 transition hover:-translate-y-0.5"
+                className="inline-flex items-center rounded-full border border-white/80 bg-white px-5 py-3 text-sm font-semibold text-black shadow-md shadow-black/10 transition hover:-translate-y-0.5"
+                style={{ WebkitTextFillColor: "#0f172a" }}
               >
                 View trainings
               </Link>
@@ -272,7 +299,7 @@ export default function AboutPage() {
         <section className="space-y-6">
           <div className="inner flex flex-col gap-2 px-2">
             <p className="text-xs font-semibold uppercase tracking-[0.35em] text-slate-500">Team</p>
-            <h2 className="text-3xl font-bold text-slate-900">Leaders behind the work.</h2>
+            <h2 className="text-3xl font-bold text-slate-900">Teams behind the work.</h2>
             <p className="text-base text-slate-700 max-w-3xl">Operations, compliance, and training experts who ensure every shipment and engagement lands right.</p>
           </div>
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
@@ -289,6 +316,14 @@ export default function AboutPage() {
                     <p className="text-sm font-medium text-emerald-700">{member.role}</p>
                   </div>
                   <p className="text-sm text-slate-700">{member.focus}</p>
+                  {member.certificateUrl && (
+                    <a
+                      href={member.certificateUrl}
+                      className="inline-flex w-fit items-center gap-2 rounded-full bg-[var(--brand-navy)] px-4 py-2 text-sm font-semibold text-white shadow-md transition hover:-translate-y-0.5"
+                    >
+                      Download certificate
+                    </a>
+                  )}
                 </div>
               </article>
             ))}
@@ -308,7 +343,7 @@ export default function AboutPage() {
             <span className="rounded-full bg-slate-100 px-3 py-1">+251 11 125 0386</span>
             <span className="rounded-full bg-slate-100 px-3 py-1">+251 913 335 596</span>
             <span className="rounded-full bg-slate-100 px-3 py-1">+251 711 335 596</span>
-            <span className="rounded-full bg-slate-100 px-3 py-1">+251903168943</span>
+            <span className="rounded-full bg-slate-100 px-3 py-1">+251 990 733 333</span>
             <span className="rounded-full bg-slate-100 px-3 py-1">Office: East Shewa, Adama—Soreti Mall, Ground Office 32 A2</span>
             <span className="rounded-full bg-slate-100 px-3 py-1">Office: Addis Ababa—Takilahayimanot, Sumale Tera Business Center, 6th Floor, Office 608</span>
           </div>
@@ -316,7 +351,11 @@ export default function AboutPage() {
             <Link href="/contact" className="inline-flex items-center rounded-full bg-[var(--brand-navy)] px-5 py-3 text-sm font-semibold text-white shadow-lg shadow-slate-900/10 transition hover:-translate-y-0.5">
               Request a quote
             </Link>
-            <Link href="/services" className="inline-flex items-center rounded-full border border-slate-300 px-5 py-3 text-sm font-semibold text-slate-800 transition hover:-translate-y-0.5 hover:border-slate-400 hover:bg-white">
+            <Link
+              href="/services"
+              className="inline-flex items-center rounded-full border border-slate-300 px-5 py-3 text-sm font-semibold text-black transition hover:-translate-y-0.5 hover:border-slate-400 hover:bg-white"
+              style={{ WebkitTextFillColor: "#0f172a" }}
+            >
               See our services
             </Link>
           </div>
