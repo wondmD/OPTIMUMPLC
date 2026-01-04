@@ -106,7 +106,9 @@ export default function RootLayout({
               </div>
               <div className="text-sm text-slate-700">
                 <p className="font-semibold text-slate-900">Offices</p>
-                <p>Addis Ababa</p>
+                
+                <p>Addis Ababa—Takilahayimanot, Sumale Tera Business Center, 6th Floor, Office 608</p>
+                <p>East Shewa, Adama—Soreti Mall, Ground Office 32 A2</p>
               </div>
               <div className="text-sm text-slate-700">
                 <p className="font-semibold text-slate-900">Contact</p>

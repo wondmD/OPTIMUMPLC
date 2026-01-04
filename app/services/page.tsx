@@ -60,7 +60,7 @@ const services = [
   },
   {
     slug: "foreign-purchase",
-    title: "Global Purchase (Asia, ME, EU, Africa)",
+    title: "Global Purchase",
     highlight: "Supplier vetting • QC • secured payment",
     detail:
       "Eyes and ears on the ground in China, UAE, Djibouti, and beyond—removing ghost suppliers, securing quality, and locking commercial clarity before shipment.",
