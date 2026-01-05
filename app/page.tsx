@@ -15,6 +15,7 @@ const partnerLogos = [
   { src: "/partners/partener7.png", alt: "Partner logo 7" },
   { src: "/partners/partner8.png", alt: "Partner logo 8" },
   { src: "/partners/partener9.png", alt: "Partner logo 9" },
+  { src: "/partners/careland.jpg", alt: "Careland logo" },
 ];
 
 const services = [
@@ -96,7 +97,7 @@ const valuesInPractice = [
 ];
 
 const methodSteps = [
-  { title: "Assess", text: "Cargo type, INCOTERMS, HS codes, permits, and duty/tax exposure mapped upfront." },
+  { title: "Review", text: "Cargo type, INCOTERMS, HS codes, permits, and duty/tax exposure mapped upfront." },
   { title: "Prepare", text: "Invoices, certificates, packing lists, and single-window accounts aligned; space locked." },
   { title: "Move", text: "Sea, air, and land routes coordinated with milestone tracking and consolidation control." },
   { title: "Clear", text: "Port clearance under customs seal with exception playbooks and document hygiene." },
