@@ -38,16 +38,15 @@ const serviceItems = [
 
 const trainingItems = [
   { label: "Logistics & Cargo Moving", href: "/trainings#logistics-cargo-moving" },
-  { label: "Import/Export Mandatory Documents & Concepts", href: "/trainings#import-export-mandatory-documents-concepts" },
-  { label: "International Trade & Basic Terms", href: "/trainings#international-trade-basic-terms" },
-  { label: "Single Window & Online Trade Apps", href: "/trainings#single-window-online-trade-applications" },
+  { label: "Import/Export Mandatory Documents", href: "/trainings#import-export-mandatory-documents-concepts" },
+  { label: "International Trade & HS code setting", href: "/trainings#international-trade-basic-terms" },
+  { label: "Single Window Registration and application", href: "/trainings#single-window-online-trade-applications" },
   { label: "Investment & Marketing", href: "/trainings#investment-marketing" },
-  { label: "Entrepreneurship & Business Thinking", href: "/trainings#entrepreneur-business-thinking" },
-  { label: "Motivational Speaking & Communication", href: "/trainings#motivational-speaking" },
+  { label: "Entrepreneurship & Business Innovation", href: "/trainings#entrepreneur-business-thinking" },
   { label: "HR Systems & Leadership", href: "/trainings#hr-management-systems-leadership" },
   { label: "Customer Ethics", href: "/trainings#customer-ethics" },
   { label: "Kaizen Philosophy", href: "/trainings#kaizen-philosophy" },
-  { label: "Finance & Tax Administration Systems", href: "/trainings#finance-tax-administration-systems" },
+  { label: "Finance, Customs & Tax Administration", href: "/trainings#finance-tax-administration-systems" },
   { label: "Educational Psychology Training", href: "/trainings#educational-psychology-training" },
 ];
 

@@ -199,7 +199,8 @@ export default function AboutPage() {
             <p className="text-xs font-semibold uppercase tracking-[0.35em] text-slate-500">Who we are</p>
             <h2 className="text-3xl font-bold text-slate-900 sm:text-4xl">An accountable partner for modern trade.</h2>
             <p className="text-base text-slate-700 max-w-3xl">
-            Optimum Logistics company established In 2016 G.C by Young and Energetic Ethiopia Entrepreneur to participate on the different sector like Customs Clearing, Logistics, Foreign Purchase, Consulting, Packaging, Delivery  and Sales. The company has a lot of plan to participate on  Import,  Export and manufacturing and  Sisters Company in Addis Ababa and Adama which work on above sectors, like Customs Clearing, Logistics and sale. In a global market where delays are costly and regulations are complex, Optimum Logistics stands as your reliable operational partner to simplify trade. We bridge the gap between international suppliers and the Ethiopian market (Importer and Exporter) by managing the entire logistics "stack."Optimum Logistics is a specialist in End-to-End Trade Routes. We are the bridge between global suppliers and the Ethiopian market. 
+            Optimum Logistics company established In 2016 G.C by Young and Energetic Ethiopia Entrepreneur to participate on the different sector like Customs Clearing, Logistics, Foreign Purchase, Consulting, Packaging, Delivery  and Sales. The company has a lot of plan to participate on  Import,  Export and manufacturing. It has  Sister Companies in China, Djibouti, Addis Ababa and Adama which work on different sectors. In a global market where delays and bureaucracy  are costly and regulations are complex, Optimum Logistics stands as your reliable operational partner to simplify trade. 
+            We bridge the gap between international suppliers and the Ethiopian market (Importer and Exporter) by managing the entire logistics "stack."Optimum Logistics is a specialist in End-to-End Trade Routes. 
             </p>
             {/* <ul className="mt-2 space-y-2 text-[15px] text-slate-800">
               {uniqueness.map((item) => (
@@ -271,7 +272,7 @@ export default function AboutPage() {
         <section className="space-y-6">
           <div className="inner flex flex-col gap-2 px-2">
             <p className="text-xs font-semibold uppercase tracking-[0.35em] text-slate-500">Our method</p>
-            <h2 className="text-3xl font-bold text-slate-900">From assessment to handover.</h2>
+            <h2 className="text-3xl font-bold text-slate-900">From review to handover.</h2>
             <p className="text-base text-slate-700 max-w-3xl">A disciplined five-step lifecycle keeps cargo moving without hidden costs or surprises.</p>
           </div>
           <div className="grid gap-4 lg:grid-cols-5">
