@@ -18,20 +18,20 @@ const stats = [
   { label: "Team trainings", value: "500+", note: "Trade • finance • leadership" },
 ];
 
-const coreSolutions = [
-  "Single Window Registration",
-  "HS Code Alignment",
-  "Duty-Free Facilitation",
-  "Multi-Modal Logistics (Sea • Air • Land)",
-  "Professional Training & Consultancy",
+const vision = "To become very Giant Logistics and Consulting Company in East Africa in 2030";
+
+const missions = [
+  "To increase income of the owner",
+  "To solve society problems on economy and employment",
+  "To solve society problem on International trade",
 ];
 
-const valuesInPractice = [
-  "We simplify trade with clear steps.",
-  "Transparent paperwork every stage.",
-  "Proactive communication with honest timelines.",
-  "Continuous improvement and Kaizen mindset.",
-  "We partner with you, not just for you.",
+const values = [
+  "Fairness of trade",
+  "Professionalisms",
+  "Quality centered Customer service",
+  "Solving society problems by employment",
+  "Trade facilitations and supporting",
 ];
 
 const methodSteps = [
@@ -161,10 +161,10 @@ export default function AboutPage() {
         <div className="absolute inset-0 bg-gradient-to-br from-slate-950/85 via-slate-900/75 to-emerald-900/70" />
         <div className="relative z-10 grid gap-10 px-6 py-16 lg:grid-cols-[1.05fr_0.95fr] lg:items-center lg:px-12 lg:py-20 xl:px-16">
           <div className="space-y-5">
-            <p className="text-sm font-semibold uppercase tracking-[0.35em] text-emerald-200">About Optimum Logistics</p>
-            <h1 className="text-5xl font-bold leading-[1.05] sm:text-6xl">We Make Cross-Border Trade Predictable</h1>
+            <p className="text-sm font-semibold uppercase tracking-[0.35em] text-emerald-200">Overview of our work</p>
+            <h1 className="text-5xl font-bold leading-[1.05] sm:text-6xl">We simplify international trade that cross international borders</h1>
             <p className="text-lg text-white/85 max-w-2xl">
-              In a global market where delays are costly and regulations are complex, we bridge international suppliers and the Ethiopian market by managing the entire logistics stack. 
+              Major Activities of our company is Customs Clearing, Freight forwarding, Packaging, Transport, Delivery, Loading Unloading, Warehousing, International trade Documentation and others.
             </p>
             <p>Our mission is simple: we handle the complexity so you can focus on your customers.</p>
             <div className="flex flex-wrap gap-3">
@@ -199,16 +199,16 @@ export default function AboutPage() {
             <p className="text-xs font-semibold uppercase tracking-[0.35em] text-slate-500">Who we are</p>
             <h2 className="text-3xl font-bold text-slate-900 sm:text-4xl">An accountable partner for modern trade.</h2>
             <p className="text-base text-slate-700 max-w-3xl">
-              Optimum Logistics is your accountable partner for modern trade. We scout reliable partners, validate every document, secure bookings, and manage bonded transit and clearance with total transparency. Beyond moving cargo, we build capacity through consulting and training so your teams stay high-performing long after delivery.
+            Optimum Logistics company established In 2016 G.C by Young and Energetic Ethiopia Entrepreneur to participate on the different sector like Customs Clearing, Logistics, Foreign Purchase, Consulting, Packaging, Delivery  and Sales. The company has a lot of plan to participate on  Import,  Export and manufacturing and  Sisters Company in Addis Ababa and Adama which work on above sectors, like Customs Clearing, Logistics and sale. In a global market where delays are costly and regulations are complex, Optimum Logistics stands as your reliable operational partner to simplify trade. We bridge the gap between international suppliers and the Ethiopian market (Importer and Exporter) by managing the entire logistics "stack."Optimum Logistics is a specialist in End-to-End Trade Routes. We are the bridge between global suppliers and the Ethiopian market. 
             </p>
-            <ul className="mt-2 space-y-2 text-[15px] text-slate-800">
+            {/* <ul className="mt-2 space-y-2 text-[15px] text-slate-800">
               {uniqueness.map((item) => (
                 <li key={item} className="flex gap-2">
                   <span className="mt-1 inline-block h-1.5 w-1.5 rounded-full bg-emerald-500" />
                   <span>{item}</span>
                 </li>
               ))}
-            </ul>
+            </ul> */}
           </div>
           <div className="overflow-hidden rounded-2xl bg-white shadow-xl ring-1 ring-slate-200/90">
             <div className="grid grid-cols-2">
@@ -223,36 +223,45 @@ export default function AboutPage() {
           </div>
         </section>
 
-        {/* Core solutions */}
+        {/* Vision */}
+        <section className="rounded-3xl bg-white p-8 ring-1 ring-emerald-100 lg:p-10">
+          <div className="space-y-3">
+            <p className="text-xs font-semibold uppercase tracking-[0.35em] text-emerald-600">Vision</p>
+            <h2 className="text-xl font-bold text-slate-900 sm:text-3xl">
+              &quot;{vision}&quot;
+            </h2>
+          </div>
+        </section>
+
+        {/* Mission */}
         <section className="space-y-6">
           <div className="inner flex flex-col gap-2 px-2">
-            <p className="text-xs font-semibold uppercase tracking-[0.35em] text-slate-500">Core Solutions</p>
-            <h2 className="text-3xl font-bold text-slate-900">The logistics stack we manage.</h2>
-            <p className="text-base text-slate-700 max-w-3xl">From single-window readiness to multimodal execution and training, we cover the full stack that keeps cargo and teams moving.</p>
+            <p className="text-xs font-semibold uppercase tracking-[0.35em] text-slate-500">Mission</p>
+            <h2 className="text-3xl font-bold text-slate-900">Mission of the company.</h2>
+            <p className="text-base text-slate-700 max-w-3xl">Strategic focus on growth, community impact, and trade facilitation.</p>
           </div>
-          <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
-            {coreSolutions.map((item) => (
-              <div key={item} className="flex items-start gap-3 rounded-2xl border border-slate-200 bg-white px-4 py-3 shadow-sm">
-                <span className="mt-1 h-2 w-2 rounded-full bg-emerald-500" />
-                <p className="text-sm font-medium text-slate-900">{item}</p>
+          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+            {missions.map((item) => (
+              <div key={item} className="flex items-start gap-4 rounded-2xl border border-slate-200 bg-white px-6 py-6 shadow-sm transition hover:shadow-lg">
+                <span className="mt-2 h-2.5 w-2.5 shrink-0 rounded-full bg-emerald-500" />
+                <p className="text-lg font-bold leading-tight text-slate-900">{item}</p>
               </div>
             ))}
           </div>
         </section>
 
-        {/* Values in practice */}
+        {/* Values */}
         <section className="space-y-6">
           <div className="inner flex flex-col gap-2 px-2">
-            <p className="text-xs font-semibold uppercase tracking-[0.35em] text-slate-500">Values in practice</p>
+            <p className="text-xs font-semibold uppercase tracking-[0.35em] text-slate-500">Values</p>
             <h2 className="text-3xl font-bold text-slate-900">Standards we live by.</h2>
-            <p className="text-base text-slate-700 max-w-3xl">Integrity and precision drive every document, timeline, and handoff we manage.</p>
+            <p className="text-base text-slate-700 max-w-3xl">Our principles ensure ethical, professional, and customer-centric service.</p>
           </div>
-          <div className="grid gap-6 lg:grid-cols-3">
-            {valuesInPractice.map((value) => (
+          <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+            {values.map((value) => (
               <article key={value} className="relative overflow-hidden rounded-2xl bg-white p-6 shadow-xl ring-1 ring-slate-200/90">
                 <div className="pointer-events-none absolute -right-10 -top-14 h-36 w-36 rounded-full bg-gradient-to-br from-emerald-500/15 via-amber-400/10 to-sky-500/15" />
                 <h3 className="text-lg font-semibold text-slate-900">{value}</h3>
-                <p className="mt-2 text-sm text-slate-700">We apply this on every engagement—from document hygiene to proactive communication.</p>
               </article>
             ))}
           </div>
