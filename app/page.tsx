@@ -18,31 +18,27 @@ const partnerLogos = [
   { src: "/partners/careland.jpg", alt: "Careland logo" },
 ];
 
-const services = [
-  {
-    title: "Customs & duty-free",
-    description: "Single-window filings, HS code validation, and bonded warehouse orchestration.",
-  },
-  {
-    title: "International procurement",
-    description: "Supplier coordination across Asia, Middle East, Europe, and Africa—quality checks and secured payments.",
-  },
-  {
-    title: "Freight & last mile",
-    description: "Sea, air, and land freight with live tracking into Addis Ababa and regional hubs.",
-  },
-  {
-    title: "Consulting & tax",
-    description: "Import/export strategy, investment readiness, tax auditing, and EIA facilitation.",
-  },
-  {
-    title: "Marketing & sales",
-    description: "Market-entry playbooks, channel setup, and revenue-focused sales execution.",
-  },
-  {
-    title: "Training & people",
-    description: "Kaizen, leadership, HR systems, customer ethics, finance, and trade operations.",
-  },
+const customers = [
+  "Importer",
+  "Manufacturer",
+  "New entrant customers or manufacturer to the market",
+  "Exporter",
+  "Company on establishment",
+  "Government and non-government organization",
+];
+
+const coreSolutions = [
+  "Single Window Registration and Applications",
+  "HS Code and Tariff Setting",
+  "Duty-Free Facilitation",
+  "Cargo Follow Up",
+  "Customs and Port Clearance",
+  "Free zone Purchase Facilities",
+  "Import and Export Document preparations",
+  "Bank permit and Foreign Purchase",
+  "Multi-Modal Logistics (Sea, Air, Land)",
+  "Entrepreneur Training",
+  "Professional Training & consultancy",
 ];
 
 const trainings = [
@@ -81,14 +77,6 @@ const steps = [
   },
 ];
 
-const coreSolutions = [
-  "Single Window Registration",
-  "HS Code Alignment",
-  "Duty-Free Facilitation",
-  "Multi-Modal Logistics (Sea • Air • Land)",
-  "Professional Training & Consultancy",
-];
-
 const valuesInPractice = [
   "Clear steps and transparent paperwork",
   "Proactive communication with honest timelines",
@@ -115,37 +103,42 @@ export default async function Home({
   return (
     <div className="space-y-16 pb-12">
       {/* Single hero image with clear title */}
-      <section className="relative w-full overflow-hidden">
-        <div className="relative h-[88vh] md:h-[92vh] lg:h-[96vh] max-h-[1080px] bg-[#0f1115]">
-          <span suppressHydrationWarning>
-            <Image
-              src={heroImage}
-              alt="Logistics process"
-              fill
-              priority
-              className="object-cover object-center"
-              sizes="100vw"
-              style={{ filter: "invert(0)" }}
-            />
-          </span>
-          <div className="absolute inset-0 bg-gradient-to-b from-black/45 via-black/15 to-black/55" />
-          <div className="pointer-events-none absolute inset-x-0 top-0 flex flex-col items-center gap-4 p-6 sm:p-10">
-            <p className="text-center text-3xl font-bold uppercase tracking-[0.14em] text-white drop-shadow-[0_6px_18px_rgba(0,0,0,0.55)] sm:text-4xl">
-              Optimum Logistics and Consulting
-            </p>
-          </div>
-          <div className="absolute inset-x-0 bottom-0 flex flex-col items-center gap-3 bg-gradient-to-t from-black/70 via-black/55 to-transparent px-6 pb-8 pt-10 sm:px-10">
-            <p className="max-w-4xl text-center text-base font-semibold uppercase tracking-[0.12em] text-white drop-shadow-[0_4px_12px_rgba(0,0,0,0.6)] sm:text-lg">
+      <section className="relative w-full h-[calc(100vh-5rem)] overflow-hidden bg-[#0f1115]">
+        <span suppressHydrationWarning>
+          <Image
+            src={heroImage}
+            alt="Logistics process"
+            fill
+            priority
+            className="object-cover object-center"
+            sizes="100vw"
+          />
+        </span>
+        <div className="absolute inset-0 bg-black/40" />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-black/40" />
+        
+        {/* Stylish title at the top */}
+        <div className="relative h-full flex items-start justify-center p-6 text-center pt-10 sm:pt-14">
+          <div className="max-w-5xl space-y-6">
+            <h1 className="text-3xl font-extrabold tracking-tighter text-white drop-shadow-2xl sm:text-5xl lg:text-6xl">
+              <span className="block opacity-90">OPTIMUM LOGISTICS</span>
+              <span className="block text-emerald-400">AND CONSULTING</span>
+            </h1>
+            <p className="mx-auto max-w-xl text-sm font-medium uppercase tracking-[0.2em] text-white/90 drop-shadow-md sm:text-base">
               We simplify trade
             </p>
-            <div className="flex flex-wrap items-center justify-center gap-3">
-              <Link href="/contact" className="rounded-full bg-[var(--brand-red)] px-5 py-2 text-sm font-semibold text-white shadow-md transition hover:-translate-y-0.5">
-                Request a quote
-              </Link>
-              <Link href="/services" className="rounded-full border border-white/70 px-5 py-2 text-sm font-semibold text-white transition hover:-translate-y-0.5 hover:bg-white/10">
-                View services
-              </Link>
-            </div>
+          </div>
+        </div>
+
+        {/* Bottom actions */}
+        <div className="absolute inset-x-0 bottom-10 flex flex-col items-center gap-4">
+          <div className="flex flex-wrap items-center justify-center gap-3">
+            <Link href="/contact" className="rounded-full bg-[var(--brand-red)] px-8 py-3 text-sm font-bold text-white shadow-xl transition hover:-translate-y-1 hover:brightness-110">
+              Request a quote
+            </Link>
+            <Link href="/services" className="rounded-full border border-white/50 bg-white/10 px-8 py-3 text-sm font-bold text-white backdrop-blur-sm transition hover:-translate-y-1 hover:bg-white/20">
+              View services
+            </Link>
           </div>
         </div>
       </section>
@@ -225,7 +218,7 @@ export default async function Home({
         </div>
       </section>
 
-      {/* Services overview */}
+      {/* Customers and Solutions overview */}
       <section className="relative isolate w-full overflow-hidden px-6">
         <div className="pointer-events-none absolute inset-4 rounded-[32px] opacity-50 bg-dots-slate animate-dots" />
         <div className="pointer-events-none absolute inset-4 rounded-[32px] opacity-30 bg-lines-slate animate-lines" />
@@ -233,7 +226,7 @@ export default async function Home({
           <span suppressHydrationWarning>
             <Image
               src="/services-background.webp"
-              alt="Services background"
+              alt="Background"
               fill
               className="object-cover"
               priority
@@ -241,34 +234,46 @@ export default async function Home({
               style={{ filter: "invert(0)" }}
             />
           </span>
-          <div className="absolute inset-0 bg-slate-900/80" />
-          <div className="relative mx-auto flex max-w-6xl flex-col gap-8 px-6 py-10 sm:px-10">
-            <div className="space-y-2">
-              <p className="text-sm font-semibold uppercase tracking-[0.3em] text-emerald-200">Services</p>
-              <h2 className="text-3xl font-bold sm:text-4xl">End-to-end trade, cleared and delivered</h2>
-              <p className="max-w-3xl text-sm sm:text-base text-white/80">
-                Customs, procurement, freight, and team training bundled into one accountable partner. We plan, move, clear, and uplift so your cargo and teams arrive ready.
-              </p>
-            </div>
-            <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-              {services.map((service) => (
-                <article
-                  key={service.title}
-                  className="group relative overflow-hidden rounded-2xl bg-white/10 p-6 backdrop-blur-md ring-1 ring-white/10 transition hover:-translate-y-1 hover:bg-white/15"
+          <div className="absolute inset-0 bg-slate-900/85" />
+          <div className="relative mx-auto flex max-w-6xl flex-col gap-10 px-6 py-12 sm:px-10">
+            <div className="grid gap-12 lg:grid-cols-2">
+              {/* Customers We Help */}
+              <div className="space-y-6">
+                <div>
+                  <p className="text-sm font-semibold uppercase tracking-[0.3em] text-emerald-200">Partnership</p>
+                  <h2 className="text-3xl font-bold sm:text-4xl">Customers we help</h2>
+                </div>
+                <div className="grid gap-3">
+                  {customers.map((customer) => (
+                    <div key={customer} className="flex items-center gap-4 rounded-xl bg-white/10 p-4 ring-1 ring-white/10 transition hover:bg-white/15">
+                      <span className="h-2 w-2 shrink-0 rounded-full bg-emerald-400 shadow-[0_0_10px_rgba(52,211,153,0.5)]" />
+                      <p className="text-lg font-medium text-white/95">{customer}</p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              {/* Core Solutions */}
+              <div className="space-y-6">
+                <div>
+                  <p className="text-sm font-semibold uppercase tracking-[0.3em] text-amber-200">Our Expertise</p>
+                  <h2 className="text-3xl font-bold sm:text-4xl">Our Core Solutions</h2>
+                </div>
+                <div className="grid gap-2">
+                  {coreSolutions.map((solution) => (
+                    <div key={solution} className="flex items-center gap-3 rounded-lg border border-white/5 bg-white/5 px-4 py-2.5 transition hover:border-white/20">
+                      <span className="text-emerald-400 text-lg">✓</span>
+                      <p className="text-[15px] font-medium text-white/90">{solution}</p>
+                    </div>
+                  ))}
+                </div>
+                <Link
+                  href="/services"
+                  className="inline-flex items-center rounded-full bg-black px-6 py-3 text-sm font-bold text-slate-900 transition hover:scale-105"
                 >
-                  <div className="relative flex h-12 w-12 items-center justify-center rounded-xl bg-white/15 text-base font-semibold">
-                    {service.title.slice(0, 2)}
-                  </div>
-                  <h3 className="relative mt-5 text-xl font-semibold">{service.title}</h3>
-                  <p className="relative mt-2 text-sm leading-6 text-white/85">{service.description}</p>
-                  <Link
-                    className="relative mt-4 inline-flex items-center text-sm font-semibold text-emerald-200 underline underline-offset-4"
-                    href="/services"
-                  >
-                    Explore service
-                  </Link>
-                </article>
-              ))}
+                  Explore all services &rarr;
+                </Link>
+              </div>
             </div>
           </div>
         </div>

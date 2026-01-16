@@ -25,8 +25,21 @@ function transporter() {
       user: process.env.SMTP_USER,
       pass: process.env.SMTP_PASS,
     },
-    // Guard against hanging connections
-    connectionTimeout: 10000,
+    tls: {
+      // Many shared hosting providers have certificate issues
+      rejectUnauthorized: false,
+      servername: process.env.SMTP_HOST,
+      // Helps with older/finicky mail servers
+      minVersion: 'TLSv1.2',
+    },
+    // Force IPv4 as sometimes IPv6 fallback causes delays/timeouts
+    family: 4,
+    debug: true, // Show debug output in console
+    logger: true, // Log information in console
+    // High timeouts for slow server responses (Ethiopian network/shared hosting)
+    connectionTimeout: 60000,
+    greetingTimeout: 60000,
+    socketTimeout: 60000,
   });
 }
 
@@ -42,12 +55,12 @@ export async function sendContactMail(formData: FormData) {
   try {
     const tx = transporter();
     const to = process.env.CONTACT_TO || "contact@optimumlogisticsplc.com";
-    const cc = process.env.CONTACT_CC || "info@optimumlogisticsplc.com";
+    const cc = process.env.CONTACT_CC;
 
     await tx.sendMail({
-      from: `Optimum Website <${process.env.SMTP_USER}>`,
+      from: process.env.SMTP_USER,
       to,
-      cc,
+      cc: cc || undefined,
       replyTo: email !== "Not provided" ? email : undefined,
       subject: `New website inquiry from ${name}`,
       text: [
