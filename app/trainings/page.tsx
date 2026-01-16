@@ -20,7 +20,7 @@ const trainings = [
   },
   {
     slug: "import-export-mandatory-documents-concepts",
-    title: "Import/Export Mandatory Documents & Concepts",
+    title: "Import/Export Mandatory Documents",
     highlight: "Compliance • Accuracy • Speed",
     image: "/training-images/import.jpg",
     description:
@@ -48,7 +48,7 @@ const trainings = [
     slug: "single-window-online-trade-applications",
     title: "Single Window & Online Trade Apps",
     highlight: "Accounts • Roles • Clean Data",
-    image: "/cutoms-singlewindow.webp",
+    image: "/training-images/Single-Window-Registrations.png",
     description:
       "Single Window & Online Trade Apps ensures your ESW submissions are right the first time so approvals flow cleanly across bank, insurance, and customs.",
     bullets: [
@@ -71,29 +71,16 @@ const trainings = [
     ],
   },
   {
-    slug: "entrepreneur-business-thinking",
-    title: "Entrepreneurship & Business Thinking",
+    slug: "entrepreneur-business-innovation",
+    title: "Entrepreneurship & Business Innovation",
     highlight: "Mindset • Models • Execution",
     image: "/training-images/entreprenur.jpg",
     description:
-      "Entrepreneurship & Business Thinking moves teams from running a project to scaling a profitable business with disciplined models and execution.",
+      "Entrepreneurship & Business Innovation moves teams from running a project to scaling a profitable business with disciplined models and execution.",
     bullets: [
       "Business models and market fit tuned for Ethiopia.",
       "Agility, risk control, and decision speed.",
       "Scale path: scope → test → grow.",
-    ],
-  },
-  {
-    slug: "motivational-speaking",
-    title: "Motivational Speaking & Communication",
-    highlight: "Inspire • Align • Mobilize",
-    image: "/training-and-development.jpg",
-    description:
-      "Motivational Speaking & Communication equips leaders to turn facts into stories that align suppliers, banks, and regulators behind one vision.",
-    bullets: [
-      "Rule of Three with Start Strong/End Strong storytelling.",
-      "Power pose and presence in high-pressure rooms.",
-      "Closings that mobilize action, not just applause.",
     ],
   },
   {
@@ -136,8 +123,8 @@ const trainings = [
     ],
   },
   {
-    slug: "finance-tax-administration-systems",
-    title: "Finance & Tax Administration Systems",
+    slug: "finance-customs-tax-administration-systems",
+    title: "Finance, Customs & Tax Administration",
     highlight: "Landed Cost • Approvals",
     image: "/training-images/TAX.jpg",
     description:

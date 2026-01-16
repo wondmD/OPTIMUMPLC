@@ -14,8 +14,10 @@ function assertEnv() {
 
 function transporter() {
   assertEnv();
-  const port = Number(process.env.SMTP_PORT ?? 465);
-  const secure = process.env.SMTP_SECURE ? process.env.SMTP_SECURE === "true" : port === 465;
+  const port = Number(process.env.SMTP_PORT ?? 587);
+  const secure = process.env.SMTP_SECURE === "true";
+
+  console.log(`Creating transporter: host=${process.env.SMTP_HOST}, port=${port}, secure=${secure}, user=${process.env.SMTP_USER}`);
 
   return nodemailer.createTransport({
     host: process.env.SMTP_HOST,
@@ -26,18 +28,18 @@ function transporter() {
       pass: process.env.SMTP_PASS,
     },
     tls: {
-      // Many shared hosting providers have certificate issues
+      // Shared hosts often have certificate issues or mismatching hostnames
       rejectUnauthorized: false,
       servername: process.env.SMTP_HOST,
-      // Helps with older/finicky mail servers
-      minVersion: 'TLSv1.2',
     },
-    // Force IPv4 as sometimes IPv6 fallback causes delays/timeouts
+    // If using 587 (secure=false), we should upgrade the connection to TLS
+    requireTLS: port === 587,
+    // Sometimes IPv6 causes connection delays/timeouts on shared hosting
     family: 4,
-    debug: true, // Show debug output in console
-    logger: true, // Log information in console
-    // High timeouts for slow server responses (Ethiopian network/shared hosting)
-    connectionTimeout: 60000,
+    debug: true,
+    logger: true,
+    // Adjust timeouts - keep them high for slow shared hosting
+    connectionTimeout: 60000, 
     greetingTimeout: 60000,
     socketTimeout: 60000,
   });
@@ -55,12 +57,13 @@ export async function sendContactMail(formData: FormData) {
   try {
     const tx = transporter();
     const to = process.env.CONTACT_TO || "contact@optimumlogisticsplc.com";
-    const cc = process.env.CONTACT_CC;
+    const ccEnv = process.env.CONTACT_CC?.trim();
+    const cc = ccEnv && ccEnv.length > 0 ? ccEnv : undefined;
 
     await tx.sendMail({
       from: process.env.SMTP_USER,
       to,
-      cc: cc || undefined,
+      cc,
       replyTo: email !== "Not provided" ? email : undefined,
       subject: `New website inquiry from ${name}`,
       text: [
@@ -80,10 +83,13 @@ export async function sendContactMail(formData: FormData) {
         <p><strong>Message:</strong><br/>${message.replace(/\n/g, "<br/>")}</p>
       `,
     });
-
-    redirect(`${redirectTo}${redirectTo.includes("?") ? "&" : "?"}sent=1`);
   } catch (err) {
+    if (err instanceof Error && err.message === 'NEXT_REDIRECT') {
+      throw err;
+    }
     console.error("sendContactMail error", err);
     redirect(`${redirectTo}${redirectTo.includes("?") ? "&" : "?"}error=1`);
   }
+
+  redirect(`${redirectTo}${redirectTo.includes("?") ? "&" : "?"}sent=1`);
 }

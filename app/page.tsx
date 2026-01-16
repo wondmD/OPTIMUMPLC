@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import GrowthChart from "./components/GrowthChartWrapper";
 import SubmitButton from "./components/SubmitButton";
 import { sendContactMail } from "./actions/sendContactMail";
 
@@ -194,6 +195,11 @@ export default async function Home({
               </div>
             </div>
           </div>
+          
+          {/* Company Growth Chart */}
+          <div className="mt-4">
+            <GrowthChart />
+          </div>
         </div>
       </section>
 
@@ -300,11 +306,11 @@ export default async function Home({
           <div className="grid gap-10 lg:grid-cols-[1.05fr_0.95fr] lg:items-center">
             <div className="space-y-4">
               <p className="text-sm font-semibold uppercase tracking-[0.3em] text-slate-500">Training portfolio</p>
-              <h2 className="text-3xl font-bold text-slate-900 sm:text-4xl">Short-term training & tax audit readiness</h2>
+              <h2 className="text-3xl font-bold text-slate-900 sm:text-4xl">Short-term trainings</h2>
               <p className="text-base text-slate-700">
                 Practical, role-based workshops that improve performance from day one, plus tax-audit defense that keeps your filings clean and your team calm.
               </p>
-              <div className="grid gap-3 sm:grid-cols-2">
+              <div className="grid gap-3 sm:grid-cols-1">
                 <div className="flex flex-col gap-2 rounded-xl border border-slate-200 bg-white px-4 py-3 shadow-sm">
                   <p className="text-sm font-semibold text-slate-900">Short-term training</p>
                   <p className="text-xs font-semibold uppercase tracking-[0.2em] text-slate-500">Trade ops • Finance basics • Leadership</p>
@@ -312,15 +318,6 @@ export default async function Home({
                     <li className="flex gap-2"><span className="mt-1 inline-block h-1.5 w-1.5 rounded-full bg-emerald-500" />Specific tracks for warehouse staff, finance teams, and logistics officers using Ethiopian documents.</li>
                     <li className="flex gap-2"><span className="mt-1 inline-block h-1.5 w-1.5 rounded-full bg-emerald-500" />We teach teams to spot waste and improve efficiency every day.</li>
                     <li className="flex gap-2"><span className="mt-1 inline-block h-1.5 w-1.5 rounded-full bg-emerald-500" />Integrity and civic responsibility embedded into every leadership module.</li>
-                  </ul>
-                </div>
-                <div className="flex flex-col gap-2 rounded-xl border border-slate-200 bg-white px-4 py-3 shadow-sm">
-                  <p className="text-sm font-semibold text-slate-900">Tax auditing</p>
-                  <p className="text-xs font-semibold uppercase tracking-[0.2em] text-slate-500">Readiness • Representation • Remediation</p>
-                  <ul className="space-y-2 text-sm text-slate-800">
-                    <li className="flex gap-2"><span className="mt-1 inline-block h-1.5 w-1.5 rounded-full bg-emerald-500" />We spot errors in VAT, Income Tax, and Customs files before auditors do.</li>
-                    <li className="flex gap-2"><span className="mt-1 inline-block h-1.5 w-1.5 rounded-full bg-emerald-500" />We represent you during audits with clear variance explanations.</li>
-                    <li className="flex gap-2"><span className="mt-1 inline-block h-1.5 w-1.5 rounded-full bg-emerald-500" />We fix root causes so you avoid repeat penalties.</li>
                   </ul>
                 </div>
               </div>

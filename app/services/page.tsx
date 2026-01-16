@@ -17,13 +17,14 @@ const services = [
     title: "Customs Clearing",
     highlight: "Accurate entries • faster release • compliance",
     detail:
-      "Predictable clearance through ECC-aligned classifications, valuation evidence, precise eCMS/single-window entries, and rapid variance response—so cargo moves without admin delays.",
+      "Predictable clearance through document arrengment, tariff setting, registering the document on customs eCMS system and submitting document to customs",
     bullets: [
-      "Technical audit to classify items correctly under the Ethiopian Customs Tariff (no overpay or misdeclaration penalties)",
-      "Valuation Details Declaration (VDD) prepared with supporting evidence: invoices, L/C, bank permits",
-      "Precise eCMS/Single Window submissions to cut rejections",
-      "Immediate responses to queries or variances with technical explanations and proof",
-      "Full cleared-document pack for your internal records after release",
+      "Valuation Details Declaration (VDD) data filling and submission",
+      "Application of Single Window for bank, insurance and regulatory body approvals",
+      "Arrenging cargo for examination at customs",
+      "verifying additional tax payment of customers",
+      "clearing cargo from customs and delivering to customer warehouse",
+      "collecting cleared documents from customs and submitt to customer",
     ],
     image: "/service-covers/custom-clearing.webp",
     accent: "from-sky-500/15 via-indigo-500/10 to-slate-900/15",
@@ -35,9 +36,13 @@ const services = [
     detail:
       "Plan and book across state-owned and newly licensed operators, optimizing cost and speed with corridor-aware playbooks and proactive permits handling.",
     bullets: [
-      "Strategic sea-rail vs. sea-road routing, factoring inland freight valuation rules",
-      "Automated alerts to NBE and Maritime Authority so permits are ready before berth",
-      "Real-time tracking with pre-agreed Plan B for Djibouti/Berbera congestion or technical delays",
+      "Scheduling cargo shipment for the customer",
+      "Consolidate cargo at origin for shipment",
+      "Booking cargo for shipment",
+      "Arrenging freight payemnt for the customer",
+      "Online tracking of cargo shipment status",
+      "Taking permission of weavering from Maritime Authority of Ethiopia for shipments",
+      "Arrenging freezone purchase and clearance for Djbouti, China, UAE, Kenya, Somaliland and other countries",
       "Operator selection that balances cost, speed, and reliability",
     ],
     image: "/service-covers/Freight-forwarding.png",
@@ -50,6 +55,9 @@ const services = [
     detail:
       "Hands-on terminal coordination that catches manifest issues early, minimizes yard moves, and keeps dwell off the clock so cargo exits on the first window.",
     bullets: [
+      "Protecting cargo from theft and damage through on-ground supervision",
+      "Securing the cargo through comprehensive security measures",
+      "Monitoring safe loading and unloading processes",
       "Direct liaison with terminal operators to oversee handling and reduce yard moves",
       "Manifest checks to prevent documentation errors from triggering holds",
       "Active dwell monitoring with daily on-ground intervention",
@@ -63,12 +71,13 @@ const services = [
     title: "Global Purchase",
     highlight: "Supplier vetting • QC • secured payment",
     detail:
-      "Eyes and ears on the ground in China, UAE, Djibouti, and beyond—removing ghost suppliers, securing quality, and locking commercial clarity before shipment.",
+      "Foreign purchase arrengement in  China, UAE, Djibouti, and other thruogh LC, CAD, TT and other term of payment.",
     bullets: [
-      "Vetting partners: licenses, financial health, and track record",
+      "Verifying the supplier or exporter and track record",
       "Sample coordination and testing before large commitments",
       "Proforma cross-checks vs. actual production for accuracy",
-      "Factory/third-party inspections with evidence (photo/video)",
+      "Making international aggreements with suppliers to protect your interests",
+      "Checking validity of documents as per their term of trade and term of payment agreements"
     ],
     image: "/service-covers/Foreign-Purchase.png",
     accent: "from-indigo-500/15 via-emerald-500/10 to-amber-500/15",
@@ -80,6 +89,9 @@ const services = [
     detail:
       "Bonded and free-zone storage with S-Declaration workflows, palletizing to international standards, and clear inventory views so limits aren’t breached.",
     bullets: [
+      "Arranging international standard packaging for cargo moving",
+      "Moving cargo from port to warehouse and final destination and vise versa",
+      "Arranging werehouse for short-term storage",
       "Bonded & free-zone storage to defer duty under S-Declaration",
       "Packaging/crating/palletizing to international standards for rugged inland legs",
       "Inventory visibility for warehouse-in-bond status and TCS limits",
@@ -95,11 +107,11 @@ const services = [
     detail:
       "End-to-end duty-free lifecycle: qualify the project, assemble master files, submit, track, and renew—so you maximize exemptions without admin burden.",
     bullets: [
-      "Confirm legal positioning and eligibility under EIC/ECC rules",
+      "Confirming and collecting requied documents for duty-free eligibility",
       "Compile the master file: invoices, packing lists, investment permits",
-      "Draft and submit permits/exemption letters; manage bonded filings",
-      "Track approvals and variances with audit-ready evidence",
-      "Renewals with reconciliations that keep benefits intact",
+      "Online submission of duty free request application to responisble organizations.",
+      "Automatic resubmission of any requested additional documents",
+      "Submitting duty free permit to customs to collect/load cargo",
     ],
     image: "/service-covers/Duty-free-Processes-Support.jpg",
     accent: "from-red-500/15 via-emerald-500/10 to-indigo-700/15",
@@ -111,11 +123,12 @@ const services = [
     detail:
       "We manage Ethiopia Single Window (ESW) for you—clean data, correct HS alignment, continuous status tracking, and full registrations across agencies.",
     bullets: [
-      "Entity setup and role mapping so your digital presence is correct",
-      "Product classification verified to avoid overpaying or fines",
-      "Complete submissions with templates that cut rejection rates",
+      "It integrates services from 16 major cross-border regulatory agenciesinto a one-stop portal for traders.",
+      "Apply for Permits, Certificates, and Other required regulatory government organization release certificate.",
+      "Complete electronic payments for service fees through integrated banking  for insurance and government organization.",
       "Real-time tracking across agency approvals with fast exception fixes",
       "Full registration with relevant trade ministries and authorities",
+
     ],
     image: "/service-covers/Single-Window-Registrations.png",
     accent: "from-emerald-500/15 via-amber-400/10 to-sky-500/15",
@@ -127,10 +140,10 @@ const services = [
     detail:
       "We optimize your model for Customs, Tax, and Investment rules—designing controls, licenses, and cash-flow plans that prevent costly penalties.",
     bullets: [
-      "Deep-dive audits to surface efficiencies and hidden risks",
-      "Identify exposure points that trigger government penalties",
-      "Obtain/renew import-export licenses and investment permits",
-      "Smart, legal tax and duty planning to keep more revenue",
+      "Consulting on international trade, import-export, customs, foreign purchase, duty and tax-incentive and logistics,",
+      "Identify exposure points that trigger government penalties on customs and tax",
+      "Consulting new investors on staring phase and manufacturing phase",
+      "How to use government incentives in investment and manufacturing",
     ],
     image: "/service-covers/consulting.png",
     accent: "from-amber-500/15 via-rose-500/10 to-indigo-600/15",
@@ -142,24 +155,26 @@ const services = [
     detail:
       "Build a lean commercial engine that turns logistics strength into revenue—clear ICPs, tight funnels, and enablement that wins contracts.",
     bullets: [
+      "Building brands, websites and digital presence for businesses",
       "Identify best buyers in the Ethiopian context and how to reach them",
       "Set up digital workflows/CRM so no lead is forgotten",
-      "Produce one-pagers, case studies, and decks that position you as a leader",
       "Use logistics efficiency as a differentiated selling point",
     ],
     image: "/service-covers/sales-marketing.jpg",
     accent: "from-fuchsia-500/10 via-amber-500/10 to-emerald-500/10",
   },
   {
-    slug: "environmental-impact-assessment",
-    title: "Environmental Impact Assessment (EIA)",
+    slug: "Business-plan-and-environmental-impact-assessment",
+    title: "Business Plan & EIA",
     highlight: "Scoping • studies • approvals",
     detail:
-      "We coordinate full EIA workflows: scoping, baseline studies, impact analysis, mitigation plans, submissions, and tracking of conditions after approval.",
+      "We coordinate full feasiblity and EIA study: scoping, baseline studies, impact analysis, mitigation plans, submissions, and tracking of conditions after approval.",
     bullets: [
-      "Scoping, stakeholder mapping, and terms of reference",
-      "Baseline and impact studies with mitigation measures",
-      "Submission, review responses, and approval conditions tracking",
+      "Evaluating projects socio-economic impact on the environment",
+      "Financial feasibility analysis and market assessment for the project",
+      "Discussing with stakeholders and community about the project impact",
+      "Looking for alternative project or site to compile with the community",
+      "Project monitoring and evaluation up to turn key",
     ],
     image: "/service-covers/Environmental-Impact-Assessment.jpg",
     accent: "from-emerald-600/15 via-slate-500/10 to-sky-600/15",
@@ -172,9 +187,10 @@ const services = [
       "Stay audit-ready with reconciled books vs. declarations, variance defenses, and fixes that prevent repeat findings.",
     bullets: [
       "Find and fix errors in VAT, income tax, and customs files before audits",
-      "Representation with technical variance explanations during audits",
+      "Following technical variance for accounting principles",
       "Post-audit remediation and control design so issues don’t recur",
-      "Maintain bank/customs-ready evidence packs for renewals",
+      "Collecting legal receipts of all expenses paid.",
+      "Arranging good financial systems for businesses to handle their tax payment properly",
     ],
     image: "/service-covers/tax-auditing.webp",
     accent: "from-slate-600/15 via-amber-500/10 to-rose-500/10",
