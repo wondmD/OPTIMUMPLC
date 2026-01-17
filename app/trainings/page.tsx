@@ -256,29 +256,29 @@ export default function TrainingsPage() {
           </div>
           <div className="relative">
             <div className="glass-panel relative grid gap-4 bg-white/12 p-7 text-slate-900 backdrop-blur">
-              <p className="text-base font-semibold text-slate-900">Tax auditing support</p>
+              <p className="text-base font-semibold text-slate-900">Import/Export workflow</p>
               <ul className="space-y-3 text-sm text-slate-800">
                 <li className="flex items-start gap-3">
                   <span className="mt-1 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-[var(--brand-red)]/10 text-[var(--brand-red)]">
                     <Search size={12} />
                   </span>
-                  <span>Readiness: we spot errors in VAT, Income Tax, and Customs files before auditors do.</span>
+                  <span>Selection of term of payment and incoterms..</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <span className="mt-1 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-[var(--brand-green)]/10 text-[var(--brand-green)]">
                     <FileText size={12} />
                   </span>
-                  <span>Representation: we join audits with clear variance explanations to defend your position.</span>
+                  <span>Document stack anatomy and critical stamps to avoid storage fees.</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <span className="mt-1 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-[var(--brand-navy)]/10 text-[var(--brand-navy)]">
                     <ShieldCheck size={12} />
                   </span>
-                  <span>Remediation: we fix root causes so you do not face the same penalty twice.</span>
+                  <span>HS code and data accuracy to prevent rejections and penalties.</span>
                 </li>
               </ul>
               <Link href="#tracks" className="inline-flex w-fit items-center gap-2 rounded-full bg-[var(--brand-navy)] px-4 py-2 text-sm font-semibold text-white shadow-lg shadow-slate-900/20 transition hover:-translate-y-0.5" style={{ WebkitTextFillColor: "#ffffffff" }}>
-                View tracks <ArrowRight size={14} />
+                View tracks <ArrowRight size={14}  color={"#ffffffff"}/>
               </Link>
             </div>
           </div>
