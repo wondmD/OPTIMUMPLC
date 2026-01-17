@@ -1,8 +1,30 @@
 import Image from "next/image";
 import Link from "next/link";
+import ImpactCounters from "./components/ImpactCounters";
 import GrowthChart from "./components/GrowthChartWrapper";
 import SubmitButton from "./components/SubmitButton";
 import { sendContactMail } from "./actions/sendContactMail";
+import { 
+  ShieldCheck, 
+  CheckCircle2, 
+  Users, 
+  School, 
+  BarChart3, 
+  MapPin, 
+  Phone, 
+  Mail, 
+  ArrowRight,
+  Search,
+  FileText,
+  Truck,
+  FileCheck,
+  Handshake,
+  Globe,
+  Zap,
+  Map,
+  Ship,
+  Plane
+} from "lucide-react";
 
 const heroImage = "/banner.png";
 
@@ -63,21 +85,6 @@ const stats = [
   { label: "Promise", value: "We simplify trade" },
 ];
 
-const steps = [
-  {
-    title: "Plan",
-    text: "Route, HS codes, duty-free options, and timelines mapped in a single plan.",
-  },
-  {
-    title: "Clear",
-    text: "Customs, tax auditing, single-window submissions, and bonded moves handled for you.",
-  },
-  {
-    title: "Uplift",
-    text: "Teams trained on trade, finance, leadership, and customer ethics so performance sticks.",
-  },
-];
-
 const valuesInPractice = [
   "Clear steps and transparent paperwork",
   "Proactive communication with honest timelines",
@@ -135,14 +142,18 @@ export default async function Home({
         <div className="absolute inset-x-0 bottom-10 flex flex-col items-center gap-4">
           <div className="flex flex-wrap items-center justify-center gap-3">
             <Link href="/contact" className="rounded-full bg-[var(--brand-red)] px-8 py-3 text-sm font-bold text-white shadow-xl transition hover:-translate-y-1 hover:brightness-110">
-              Request a quote
+              
+              <p className="text-white">Request a Quote</p>
             </Link>
             <Link href="/services" className="rounded-full border border-white/50 bg-white/10 px-8 py-3 text-sm font-bold text-white backdrop-blur-sm transition hover:-translate-y-1 hover:bg-white/20">
-              View services
+              
+              <p className="text-white">View Services</p>
             </Link>
           </div>
         </div>
       </section>
+
+      <ImpactCounters />
 
       {/* About snapshot */}
       <section className="relative isolate w-full overflow-hidden bg-slate-50/80 py-12">
@@ -151,7 +162,7 @@ export default async function Home({
         <div className="relative mx-auto flex max-w-6xl flex-col gap-10 px-6">
           <div className="grid gap-8 lg:grid-cols-[1.1fr_0.9fr] lg:items-start">
             <div className="space-y-4">
-              <p className="text-xs font-semibold uppercase tracking-[0.35em] text-slate-500">About Optimum Logistics</p>
+              <p className="text-[13px] font-semibold uppercase tracking-[0.35em] text-slate-500">About Optimum Logistics</p>
               <h2 className="text-3xl font-bold text-slate-900 sm:text-4xl">We handle the complexity so you can serve customers.</h2>
               <p className="text-base text-slate-700">
                 We are the bridge between global suppliers and the Ethiopian market. We scout reliable partners, validate documents, secure bookings, and manage bonded transit and clearance with total transparency. Beyond moving cargo, we build capacity through consulting and training so your team stays high-performing long after delivery.
@@ -159,7 +170,7 @@ export default async function Home({
               <div className="grid gap-3 sm:grid-cols-2">
                 {valuesInPractice.map((value) => (
                   <div key={value} className="flex items-start gap-3 rounded-xl border border-slate-200 bg-white px-4 py-3 shadow-sm">
-                    <span className="mt-1 h-2 w-2 rounded-full bg-emerald-500" />
+                    <CheckCircle2 size={18} className="mt-0.5 text-emerald-500 shrink-0" />
                     <p className="text-sm font-medium text-slate-900">{value}</p>
                   </div>
                 ))}
@@ -168,37 +179,19 @@ export default async function Home({
 
             <div className="space-y-5 rounded-3xl bg-white p-6 shadow-xl ring-1 ring-slate-200/80">
               <div className="space-y-2">
-                <p className="text-xs font-semibold uppercase tracking-[0.3em] text-slate-500">Core solutions</p>
+                <p className="text-[13px] font-semibold uppercase tracking-[0.3em] text-slate-500">Core solutions</p>
                 <p className="text-lg font-semibold text-slate-900">The logistics stack we manage</p>
               </div>
               <div className="grid gap-3 sm:grid-cols-2">
                 {coreSolutions.map((item) => (
                   <div key={item} className="flex items-start gap-3 rounded-2xl border border-slate-200 bg-slate-50 px-4 py-3">
-                    <span className="mt-1 h-2 w-2 rounded-full bg-[var(--brand-navy)]" />
+                    <ShieldCheck size={18} className="mt-0.5 text-[var(--brand-navy)] shrink-0" />
                     <p className="text-sm font-medium text-slate-900">{item}</p>
                   </div>
                 ))}
               </div>
-              <div className="space-y-2">
-                <p className="text-xs font-semibold uppercase tracking-[0.25em] text-slate-500">Our method</p>
-                <div className="grid gap-2">
-                  {methodSteps.map((step) => (
-                    <div key={step.title} className="flex gap-3 rounded-xl bg-slate-900/90 px-3 py-2 text-white shadow-sm">
-                      <span className="inline-flex h-7 w-7 items-center justify-center rounded-lg bg-white text-xs font-bold text-slate-900">{step.title[0]}</span>
-                      <div>
-                        <p className="text-sm font-semibold">{step.title}</p>
-                        <p className="text-xs text-white/85">{step.text}</p>
-                      </div>
-                    </div>
-                  ))}
-                </div>
-              </div>
+              
             </div>
-          </div>
-          
-          {/* Company Growth Chart */}
-          <div className="mt-4">
-            <GrowthChart />
           </div>
         </div>
       </section>
@@ -206,7 +199,7 @@ export default async function Home({
       {/* Trusted by */}
       <section className="relative isolate w-full overflow-hidden bg-white py-10">
         <div className="relative mx-auto flex max-w-6xl flex-col items-center gap-5 px-6">
-          <p className="text-sm font-semibold uppercase tracking-[0.3em] text-slate-500">Trusted by</p>
+          <p className="text-[15px] font-semibold uppercase tracking-[0.3em] text-slate-500">Trusted by</p>
           <div className="flex flex-wrap items-center justify-center gap-x-10 gap-y-6 opacity-90">
             {partnerLogos.map((logo) => (
               <span key={logo.src} suppressHydrationWarning>
@@ -246,13 +239,13 @@ export default async function Home({
               {/* Customers We Help */}
               <div className="space-y-6">
                 <div>
-                  <p className="text-sm font-semibold uppercase tracking-[0.3em] text-emerald-200">Partnership</p>
-                  <h2 className="text-3xl font-bold sm:text-4xl">Customers we help</h2>
+                  <p className="text-[15px] font-semibold uppercase tracking-[0.3em] text-emerald-200">Partnership</p>
+                  <h2 className="text-3xl font-bold sm:text-4xl text-white">Customers we help</h2>
                 </div>
                 <div className="grid gap-3">
                   {customers.map((customer) => (
                     <div key={customer} className="flex items-center gap-4 rounded-xl bg-white/10 p-4 ring-1 ring-white/10 transition hover:bg-white/15">
-                      <span className="h-2 w-2 shrink-0 rounded-full bg-emerald-400 shadow-[0_0_10px_rgba(52,211,153,0.5)]" />
+                      <Users size={20} className="text-emerald-400 shrink-0" />
                       <p className="text-lg font-medium text-white/95">{customer}</p>
                     </div>
                   ))}
@@ -262,27 +255,32 @@ export default async function Home({
               {/* Core Solutions */}
               <div className="space-y-6">
                 <div>
-                  <p className="text-sm font-semibold uppercase tracking-[0.3em] text-amber-200">Our Expertise</p>
-                  <h2 className="text-3xl font-bold sm:text-4xl">Our Core Solutions</h2>
+                  <p className="text-[15px] font-semibold uppercase tracking-[0.3em] text-amber-200">Our Expertise</p>
+                  <h2 className="text-3xl font-bold sm:text-4xl text-white">Our Core Solutions</h2>
                 </div>
                 <div className="grid gap-2">
                   {coreSolutions.map((solution) => (
                     <div key={solution} className="flex items-center gap-3 rounded-lg border border-white/5 bg-white/5 px-4 py-2.5 transition hover:border-white/20">
-                      <span className="text-emerald-400 text-lg">✓</span>
+                      <CheckCircle2 size={18} className="text-emerald-400 shrink-0" />
                       <p className="text-[15px] font-medium text-white/90">{solution}</p>
                     </div>
                   ))}
                 </div>
                 <Link
                   href="/services"
-                  className="inline-flex items-center rounded-full bg-black px-6 py-3 text-sm font-bold text-slate-900 transition hover:scale-105"
+                  className="inline-flex items-center gap-2 rounded-full bg-black px-6 py-3 text-sm font-bold text-slate-900 transition hover:scale-105"
                 >
-                  Explore all services &rarr;
+                  Explore all services <ArrowRight size={18} />
                 </Link>
               </div>
             </div>
           </div>
         </div>
+      </section>
+
+      {/* Operation Growth Chart */}
+      <section className="relative mx-auto max-w-6xl px-6">
+        <GrowthChart />
       </section>
 
       {/* Corridor + Capabilities */}
@@ -305,27 +303,40 @@ export default async function Home({
         <div className="relative mx-auto flex max-w-6xl flex-col gap-10 px-6">
           <div className="grid gap-10 lg:grid-cols-[1.05fr_0.95fr] lg:items-center">
             <div className="space-y-4">
-              <p className="text-sm font-semibold uppercase tracking-[0.3em] text-slate-500">Training portfolio</p>
+              <p className="text-[15px] font-semibold uppercase tracking-[0.3em] text-slate-500">Training portfolio</p>
               <h2 className="text-3xl font-bold text-slate-900 sm:text-4xl">Short-term trainings</h2>
               <p className="text-base text-slate-700">
                 Practical, role-based workshops that improve performance from day one, plus tax-audit defense that keeps your filings clean and your team calm.
               </p>
               <div className="grid gap-3 sm:grid-cols-1">
                 <div className="flex flex-col gap-2 rounded-xl border border-slate-200 bg-white px-4 py-3 shadow-sm">
-                  <p className="text-sm font-semibold text-slate-900">Short-term training</p>
-                  <p className="text-xs font-semibold uppercase tracking-[0.2em] text-slate-500">Trade ops • Finance basics • Leadership</p>
+                  <p className="text-sm font-semibold text-slate-900 flex items-center gap-2">
+                    <School size={18} className="text-emerald-500" />
+                    Short-term training
+                  </p>
+                  <p className="text-[13px] font-semibold uppercase tracking-[0.2em] text-slate-500">Trade ops • Finance basics • Leadership</p>
                   <ul className="space-y-2 text-sm text-slate-800">
-                    <li className="flex gap-2"><span className="mt-1 inline-block h-1.5 w-1.5 rounded-full bg-emerald-500" />Specific tracks for warehouse staff, finance teams, and logistics officers using Ethiopian documents.</li>
-                    <li className="flex gap-2"><span className="mt-1 inline-block h-1.5 w-1.5 rounded-full bg-emerald-500" />We teach teams to spot waste and improve efficiency every day.</li>
-                    <li className="flex gap-2"><span className="mt-1 inline-block h-1.5 w-1.5 rounded-full bg-emerald-500" />Integrity and civic responsibility embedded into every leadership module.</li>
+                    <li className="flex gap-2">
+                      <CheckCircle2 size={16} className="mt-0.5 text-emerald-500 shrink-0" />
+                      <span>Specific tracks for warehouse staff, finance teams, and logistics officers using Ethiopian documents.</span>
+                    </li>
+                    <li className="flex gap-2">
+                      <CheckCircle2 size={16} className="mt-0.5 text-emerald-500 shrink-0" />
+                      <span>We teach teams to spot waste and improve efficiency every day.</span>
+                    </li>
+                    <li className="flex gap-2">
+                      <CheckCircle2 size={16} className="mt-0.5 text-emerald-500 shrink-0" />
+                      <span>Integrity and civic responsibility embedded into every leadership module.</span>
+                    </li>
                   </ul>
                 </div>
               </div>
               <Link
                 href="/trainings"
-                className="inline-flex w-fit items-center rounded-full bg-slate-900 px-5 py-3 text-sm font-semibold text-white shadow-lg shadow-slate-900/10 transition hover:-translate-y-0.5"
+                className="inline-flex w-fit items-center gap-2 rounded-full bg-slate-900 px-5 py-3 text-sm font-semibold text-white shadow-lg shadow-slate-900/10 transition hover:-translate-y-0.5"
               >
-                View all trainings
+                <p className="text-white">View all trainings</p>
+                <ArrowRight size={18} className="text-white" />
               </Link>
             </div>
 
@@ -340,93 +351,17 @@ export default async function Home({
         </div>
       </section>
 
-      {/* Training CTA + Why Optimum */}
-      <section className="relative isolate w-full overflow-hidden bg-gradient-to-br from-[var(--brand-navy)] via-[var(--brand-navy)] to-[var(--brand-green)] py-12 text-white">
-        <div className="pointer-events-none absolute inset-0 opacity-40 bg-dots-white animate-dots" />
-        <div className="pointer-events-none absolute inset-0 opacity-25 bg-lines-white animate-lines" />
-        <div className="relative mx-auto flex max-w-6xl flex-col gap-8 px-6">
-          <div className="grid gap-10 lg:grid-cols-[1.05fr_0.95fr] lg:items-start">
-            <div className="space-y-3">
-              <p className="text-sm font-semibold uppercase tracking-[0.3em] text-emerald-200">How we work</p>
-              <h3 className="text-3xl font-bold sm:text-4xl">Plan · Clear · Uplift</h3>
-              <p className="text-sm text-white/80">
-                We combine operational rigor with leadership training so every shipment moves faster and every team levels up.
-              </p>
-              <div className="grid gap-3">
-                {steps.map((step) => (
-                  <div key={step.title} className="flex gap-3 rounded-2xl bg-white/10 px-4 py-3 ring-1 ring-white/10">
-                    <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-white text-sm font-bold text-slate-900">
-                      {step.title[0]}
-                    </div>
-                    <div>
-                      <p className="text-sm font-semibold">{step.title}</p>
-                      <p className="text-sm text-white/75">{step.text}</p>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
-
-            <div className="rounded-2xl bg-white/10 p-6 shadow-xl ring-1 ring-white/10">
-              <h4 className="text-xl font-semibold">Ready for your next shipment?</h4>
-              <p className="mt-2 text-sm text-white/80">
-                Send your route, commodity, and deadline. We reply within one business day with a plan.
-              </p>
-              <div className="mt-4 grid gap-2 text-sm text-white">
-                <span>contact@optimumlogisticsplc.com • info@optimumlogisticsplc.com</span>
-                <span>+251 11 125 0386 • +251 913 335 596 • +251 711 335 596 • +251 990 733 333</span>
-                <span>Office: East Shewa, Adama—Soreti Mall, Ground Office 32 A2</span>
-                <span>Office: Addis Ababa—Takilahayimanot, Sumale Tera Business Center, 6th Floor, Office 608</span>
-              </div>
-              <div className="mt-5 flex gap-3">
-                <Link href="/contact" className="inline-flex items-center rounded-full bg-white px-4 py-2 text-sm font-semibold text-slate-900 shadow-md transition hover:-translate-y-0.5" style={{ WebkitTextFillColor: "#0f172a" }}>
-                  Request a quote
-                </Link>
-                <Link
-                  href="/services"
-                  className="inline-flex items-center rounded-full border border-white/50 bg-white px-4 py-2 text-sm font-semibold text-black transition hover:-translate-y-0.5"
-                  style={{ WebkitTextFillColor: "#0f172a" }}
-                >
-                  View services
-                </Link>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* Contact section with form */}
       <section className="relative isolate w-full overflow-hidden px-6">
         <div className="pointer-events-none absolute inset-0 opacity-45 bg-dots-slate animate-dots" />
         <div className="pointer-events-none absolute inset-0 opacity-30 bg-lines-slate animate-lines" />
-        <div className="glass-panel relative grid gap-6 p-7 lg:grid-cols-[1.05fr_1fr] lg:items-start">
+        <div className="glass-panel relative grid gap-6 p-7  lg:items-start">
           <div className="space-y-4">
-            <p className="text-sm font-semibold uppercase tracking-[0.3em] text-slate-500">Contact</p>
+            <p className="text-[15px] font-semibold uppercase tracking-[0.3em] text-slate-500">Get a Quote</p>
             <h3 className="text-2xl font-bold text-slate-900">Let’s plan your next shipment</h3>
             <p className="text-sm text-slate-700">Email us your route, commodity, and timing. We respond within one business day.</p>
-            <div className="flex flex-wrap gap-3 text-sm text-slate-800">
-              <span className="rounded-full bg-slate-100 px-3 py-1">contact@optimumlogisticsplc.com</span>
-              <span className="rounded-full bg-slate-100 px-3 py-1">info@optimumlogisticsplc.com</span>
-              <span className="rounded-full bg-slate-100 px-3 py-1">+251 11 125 0386</span>
-              <span className="rounded-full bg-slate-100 px-3 py-1">+251 913 335 596</span>
-              <span className="rounded-full bg-slate-100 px-3 py-1">+251 711 335 596</span>
-              <span className="rounded-full bg-slate-100 px-3 py-1">+251 990 733 333</span>
-              <span className="rounded-full bg-slate-100 px-3 py-1">Office: East Shewa, Adama—Soreti Mall, Ground Office 32 A2</span>
-              <span className="rounded-full bg-slate-100 px-3 py-1">Office: Addis Ababa—Takilahayimanot, Sumale Tera Business Center, 6th Floor, Office 608</span>
-            </div>
-            <div className="flex gap-3">
-              <Link href="/contact" className="inline-flex items-center rounded-full bg-[var(--brand-navy)] px-5 py-3 text-sm font-semibold text-white shadow-lg transition hover:-translate-y-0.5">Full contact page</Link>
-              <Link
-                href="/services"
-                className="inline-flex items-center rounded-full border border-slate-300 px-5 py-3 text-sm font-semibold text-slate-800 transition hover:-translate-y-0.5 hover:border-slate-400 hover:bg-white"
-                style={{ WebkitTextFillColor: "#0f172a", color: "#0f172a" }}
-              >
-                View services
-              </Link>
-            </div>
-          </div>
-
-          <form action={sendContactMail} className="w-full space-y-4 rounded-2xl bg-slate-50 p-6 shadow-inner ring-1 ring-slate-200">
+            
+             <form action={sendContactMail} className="w-full space-y-4 rounded-2xl bg-slate-50 p-6 shadow-inner ring-1 ring-slate-200">
             <input type="hidden" name="redirect" value="/" />
             <input type="hidden" name="source" value="Home contact section" />
             {sent && <div className="rounded-lg bg-emerald-50 px-3 py-2 text-sm font-semibold text-emerald-700">Message sent. We will reply within one business day.</div>}
@@ -482,7 +417,21 @@ export default async function Home({
             <SubmitButton className="w-full rounded-full bg-[var(--brand-navy)] px-4 py-3 text-sm font-semibold text-white shadow-lg shadow-slate-900/10 transition hover:-translate-y-0.5" />
             <p className="text-[11px] text-slate-500">We reply within one business day. By submitting, you agree to be contacted about your inquiry.</p>
           </form>
-        </div>
+
+              
+            <div className="flex gap-3 pt-2">
+              <Link href="/contact" className="inline-flex items-center rounded-full bg-[var(--brand-navy)] px-5 py-3 text-sm font-semibold text-white shadow-lg transition hover:-translate-y-0.5"><p className="text-white">Full contact page</p></Link>
+              <Link
+                href="/services"
+                className="inline-flex items-center rounded-full border border-slate-300 px-5 py-3 text-sm font-semibold text-slate-800 transition hover:-translate-y-0.5 hover:border-slate-400 hover:bg-white"
+                style={{ WebkitTextFillColor: "#0f172a", color: "#0f172a" }}
+              >
+                View services
+              </Link>
+            </div>
+          </div>
+
+                 </div>
       </section>
     </div>
   );
