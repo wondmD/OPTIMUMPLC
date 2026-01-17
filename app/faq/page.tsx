@@ -1,3 +1,5 @@
+import { HelpCircle, ChevronRight, Mail, MessageCircle } from "lucide-react";
+
 export default function FAQPage() {
   const faqs = [
     {
@@ -45,16 +47,24 @@ export default function FAQPage() {
   return (
     <div className="space-y-10 pb-12">
       <section className="glass-panel p-7">
-        <h1 className="text-3xl font-bold text-slate-900">Frequently Asked Questions</h1>
-        <p className="mt-2 text-sm text-slate-700">Don’t see your question here? Email contact@optimumlogisticsplc.com or info@optimumlogisticsplc.com and we’ll help. We simplify trade.</p>
-        <div className="mt-6 divide-y divide-slate-200">
+        <div className="flex items-center gap-3">
+          <HelpCircle size={32} className="text-emerald-600" />
+          <h1 className="text-3xl font-bold text-slate-900">Frequently Asked Questions</h1>
+        </div>
+        <p className="mt-4 text-sm text-slate-700">Don’t see your question here? Email contact@optimumlogisticsplc.com or info@optimumlogisticsplc.com and we’ll help. We simplify trade.</p>
+        <div className="mt-8 divide-y divide-slate-200">
           {faqs.map((f) => (
             <details key={f.q} className="group">
-              <summary className="flex cursor-pointer list-none items-center justify-between py-4 text-left text-sm font-semibold text-slate-900">
-                {f.q}
-                <span className="ml-3 rounded-full bg-slate-100 px-2 py-1 text-[10px] text-slate-700 group-open:rotate-90">›</span>
+              <summary className="flex cursor-pointer list-none items-center justify-between py-5 text-left text-base font-semibold text-slate-900 transition hover:text-emerald-700">
+                <div className="flex items-center gap-3">
+                  <MessageCircle size={18} className="text-slate-400 group-open:text-emerald-600" />
+                  {f.q}
+                </div>
+                <ChevronRight size={18} className="ml-3 text-slate-400 transition-transform group-open:rotate-90" />
               </summary>
-              <p className="pb-4 text-sm text-slate-700">{f.a}</p>
+              <div className="pb-5 pl-8 text-sm leading-relaxed text-slate-700 border-l-2 border-emerald-100 ml-2">
+                {f.a}
+              </div>
             </details>
           ))}
         </div>

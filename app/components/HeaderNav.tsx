@@ -3,6 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
+import { ChevronDown, Menu, X, ArrowRight } from "lucide-react";
 
 type NavLink = {
   href: string;
@@ -37,17 +38,18 @@ const serviceItems = [
 ];
 
 const trainingItems = [
-  { label: "Logistics & Cargo Moving", href: "/trainings#logistics-cargo-moving" },
-  { label: "Import/Export Mandatory Documents", href: "/trainings#import-export-mandatory-documents-concepts" },
-  { label: "International Trade & HS code setting", href: "/trainings#international-trade-basic-terms" },
+  { label: "Import/Export Workflow", href: "/trainings#import-export-mandatory-documents-concepts" },
+  { label: "International Trade & Customs", href: "/trainings#international-trade-basic-terms" },
   { label: "Single Window Registration and application", href: "/trainings#single-window-online-trade-applications" },
-  { label: "Investment & Marketing", href: "/trainings#investment-marketing" },
   { label: "Entrepreneurship & Business Innovation", href: "/trainings#entrepreneur-business-thinking" },
-  { label: "HR Systems & Leadership", href: "/trainings#hr-management-systems-leadership" },
+  { label: "Logistics & Cargo Moving", href: "/trainings#logistics-cargo-moving" },
+  { label: "Investment & Marketing", href: "/trainings#investment-marketing" },
+  { label: "HR, Emotional intelligence & Leadership", href: "/trainings#hr-management-systems-leadership" },
   { label: "Customer Ethics", href: "/trainings#customer-ethics" },
   { label: "Kaizen Philosophy", href: "/trainings#kaizen-philosophy" },
   { label: "Finance, Customs & Tax Administration", href: "/trainings#finance-tax-administration-systems" },
   { label: "Educational Psychology Training", href: "/trainings#educational-psychology-training" },
+  { label: "Training man power for local and foreign employers", href: "/training-man-power-for-local-and-foreign-employers"},
 ];
 
 export default function HeaderNav() {

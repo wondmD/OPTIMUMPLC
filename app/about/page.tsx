@@ -2,6 +2,26 @@ import Image from "next/image";
 import Link from "next/link";
 import type { Metadata } from "next";
 import GallerySlider from "../components/GallerySlider";
+import { 
+  CheckCircle2, 
+  ArrowRight, 
+  Eye, 
+  Target, 
+  Users, 
+  TrendingUp, 
+  ShieldCheck, 
+  Briefcase,
+  Search,
+  FileText,
+  Truck,
+  Handshake,
+  Map,
+  FileCheck,
+  Award,
+  Globe,
+  Settings,
+  Scale
+} from "lucide-react";
 
 export const metadata: Metadata = {
   title: "About | Optimum Logistics",
@@ -120,13 +140,13 @@ const team = [
   },
   {
     name: "Abdi Dewali",
-    role: "Assistant Transporter",
+    role: "Assistant Transiter",
     focus: "Fleet coordination and on-corridor support",
     image: "/profile-placeholder.jpeg",
   },
   {
     name: "Tsehay Hurisa",
-    role: "Assistant Transporter",
+    role: "Assistant Transiter",
     focus: "Loading supervision and handoff tracking",
     image: "/profile-placeholder.jpeg",
   },
@@ -161,7 +181,7 @@ export default function AboutPage() {
         <div className="absolute inset-0 bg-gradient-to-br from-slate-950/85 via-slate-900/75 to-emerald-900/70" />
         <div className="relative z-10 grid gap-10 px-6 py-16 lg:grid-cols-[1.05fr_0.95fr] lg:items-center lg:px-12 lg:py-20 xl:px-16">
           <div className="space-y-5">
-            <p className="text-sm font-semibold uppercase tracking-[0.35em] text-emerald-200">Overview of our work</p>
+            <p className="text-[15px] font-semibold uppercase tracking-[0.35em] text-emerald-200">Overview of our work</p>
             <h1 className="text-5xl font-bold leading-[1.05] sm:text-6xl">We simplify international trade that cross international borders</h1>
             <p className="text-lg text-white/85 max-w-2xl">
               Major Activities of our company is Customs Clearing, Freight forwarding, Packaging, Transport, Delivery, Loading Unloading, Warehousing, International trade Documentation and others.
@@ -183,9 +203,18 @@ export default function AboutPage() {
           <div className="glass-panel grid gap-4 bg-white/12 p-7 text-slate-900 backdrop-blur">
             <p className="text-base font-semibold text-slate-900">What we deliver</p>
             <ul className="grid gap-3 text-sm text-slate-800">
-              <li className="rounded-xl bg-white/90 px-3 py-2 font-semibold text-slate-900">Customs Clearing & Freight Forwarding</li>
-              <li className="rounded-xl bg-white/90 px-3 py-2 font-semibold text-slate-900">Sea, air, and land moves with transparent milestones</li>
-              <li className="rounded-xl bg-white/90 px-3 py-2 font-semibold text-slate-900">Consulting and training that sustain performance</li>
+              <li className="flex items-center gap-3 rounded-xl bg-white/90 px-3 py-2.5 font-semibold text-slate-900 shadow-sm">
+                <ShieldCheck size={18} className="text-[var(--brand-red)] shrink-0" />
+                <span>Customs Clearing & Freight Forwarding</span>
+              </li>
+              <li className="flex items-center gap-3 rounded-xl bg-white/90 px-3 py-2.5 font-semibold text-slate-900 shadow-sm">
+                <Truck size={18} className="text-[var(--brand-green)] shrink-0" />
+                <span>Sea, air, and land moves with transparent milestones</span>
+              </li>
+              <li className="flex items-center gap-3 rounded-xl bg-white/90 px-3 py-2.5 font-semibold text-slate-900 shadow-sm">
+                <Award size={18} className="text-[var(--brand-navy)] shrink-0" />
+                <span>Consulting and training that sustain performance</span>
+              </li>
             </ul>
           </div>
         </div>
@@ -196,7 +225,7 @@ export default function AboutPage() {
         {/* Who we are + stats */}
         <section className="grid gap-8 lg:grid-cols-[1.2fr_0.8fr] lg:items-start">
           <div className="space-y-4">
-            <p className="text-xs font-semibold uppercase tracking-[0.35em] text-slate-500">Who we are</p>
+            <p className="text-[13px] font-semibold uppercase tracking-[0.35em] text-slate-500">Who we are</p>
             <h2 className="text-3xl font-bold text-slate-900 sm:text-4xl">An accountable partner for modern trade.</h2>
             <p className="text-base text-slate-700 max-w-3xl">
             Optimum Logistics company established In 2016 G.C by Young and Energetic Ethiopia Entrepreneur to participate on the different sector like Customs Clearing, Logistics, Foreign Purchase, Consulting, Packaging, Delivery  and Sales. The company has a lot of plan to participate on  Import,  Export and manufacturing. It has  Sister Companies in China, Djibouti, Addis Ababa and Adama which work on different sectors. In a global market where delays and bureaucracy  are costly and regulations are complex, Optimum Logistics stands as your reliable operational partner to simplify trade. 
@@ -226,35 +255,66 @@ export default function AboutPage() {
 
         {/* Vision */}
         <section className="rounded-3xl bg-white p-8 ring-1 ring-emerald-100 lg:p-10">
-          <div className="space-y-3">
-            <p className="text-xs font-semibold uppercase tracking-[0.35em] text-emerald-600">Vision</p>
-            <h2 className="text-xl font-bold text-slate-900 sm:text-3xl">
-              &quot;{vision}&quot;
-            </h2>
+          <div className="flex items-start gap-4">
+            <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-emerald-50 text-emerald-600">
+              <Eye size={28} />
+            </div>
+            <div className="space-y-3">
+              <p className="text-[13px] font-semibold uppercase tracking-[0.35em] text-emerald-600">Vision</p>
+              <h2 className="text-xl font-bold text-slate-900 sm:text-3xl">
+                &quot;{vision}&quot;
+              </h2>
+            </div>
           </div>
         </section>
 
         {/* Mission */}
         <section className="space-y-6">
           <div className="inner flex flex-col gap-2 px-2">
-            <p className="text-xs font-semibold uppercase tracking-[0.35em] text-slate-500">Mission</p>
+            <p className="text-[13px] font-semibold uppercase tracking-[0.35em] text-slate-500">Mission</p>
             <h2 className="text-3xl font-bold text-slate-900">Mission of the company.</h2>
             <p className="text-base text-slate-700 max-w-3xl">Strategic focus on growth, community impact, and trade facilitation.</p>
           </div>
           <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-            {missions.map((item) => (
-              <div key={item} className="flex items-start gap-4 rounded-2xl border border-slate-200 bg-white px-6 py-6 shadow-sm transition hover:shadow-lg">
-                <span className="mt-2 h-2.5 w-2.5 shrink-0 rounded-full bg-emerald-500" />
-                <p className="text-lg font-bold leading-tight text-slate-900">{item}</p>
-              </div>
-            ))}
+            {missions.map((item, idx) => {
+              const Icons = [TrendingUp, Users, Globe];
+              const Icon = Icons[idx] || Target;
+              return (
+                <div key={item} className="group flex items-start gap-4 rounded-2xl border border-slate-200 bg-white px-6 py-6 shadow-sm transition hover:shadow-lg hover:border-emerald-200">
+                  <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-slate-50 text-slate-600 group-hover:bg-emerald-50 group-hover:text-emerald-600">
+                    <Icon size={20} />
+                  </div>
+                  <p className="text-lg font-bold leading-tight text-slate-900">{item}</p>
+                </div>
+              );
+            })}
           </div>
         </section>
 
         {/* Values */}
         <section className="space-y-6">
           <div className="inner flex flex-col gap-2 px-2">
-            <p className="text-xs font-semibold uppercase tracking-[0.35em] text-slate-500">Values</p>
+            <p className="text-[13px] font-semibold uppercase tracking-[0.35em] text-slate-500">Core Values</p>
+            <h2 className="text-3xl font-bold text-slate-900">What we believe in.</h2>
+          </div>
+          <div className="flex flex-wrap gap-3">
+            {values.map((item, idx) => {
+              const Icons = [Scale, Briefcase, CheckCircle2, Users, Handshake];
+              const Icon = Icons[idx] || ShieldCheck;
+              return (
+                <div key={item} className="flex items-center gap-3 rounded-full border border-slate-200 bg-white px-5 py-3 shadow-sm transition hover:-translate-y-1">
+                  <Icon size={18} className="text-emerald-600" />
+                  <p className="text-base font-semibold text-slate-900">{item}</p>
+                </div>
+              );
+            })}
+          </div>
+        </section>
+
+        {/* Values */}
+        <section className="space-y-6">
+          <div className="inner flex flex-col gap-2 px-2">
+            <p className="text-[13px] font-semibold uppercase tracking-[0.35em] text-slate-500">Values</p>
             <h2 className="text-3xl font-bold text-slate-900">Standards we live by.</h2>
             <p className="text-base text-slate-700 max-w-3xl">Our principles ensure ethical, professional, and customer-centric service.</p>
           </div>
@@ -271,34 +331,40 @@ export default function AboutPage() {
         {/* Method */}
         <section className="space-y-6">
           <div className="inner flex flex-col gap-2 px-2">
-            <p className="text-xs font-semibold uppercase tracking-[0.35em] text-slate-500">Our method</p>
+            <p className="text-[13px] font-semibold uppercase tracking-[0.35em] text-slate-500">Our method</p>
             <h2 className="text-3xl font-bold text-slate-900">From review to handover.</h2>
             <p className="text-base text-slate-700 max-w-3xl">A disciplined five-step lifecycle keeps cargo moving without hidden costs or surprises.</p>
           </div>
           <div className="grid gap-4 lg:grid-cols-5">
-            {methodSteps.map((step, idx) => (
-              <article key={step.title} className="flex flex-col gap-3 rounded-2xl bg-white p-5 text-slate-900 shadow-lg ring-1 ring-slate-200/90">
-                <div className="flex items-center justify-between">
-                  <p className="text-sm font-semibold text-emerald-700">{idx + 1}. {step.title}</p>
-                  <span className="inline-flex h-8 w-8 items-center justify-center rounded-lg bg-slate-900 text-sm font-bold text-white">{step.title[0]}</span>
-                </div>
-                <ul className="space-y-2 text-sm text-slate-700">
-                  {step.points.map((point) => (
-                    <li key={point} className="flex gap-2">
-                      <span className="mt-1 inline-block h-1.5 w-1.5 rounded-full bg-emerald-500" />
-                      <span>{point}</span>
-                    </li>
-                  ))}
-                </ul>
-              </article>
-            ))}
+            {methodSteps.map((step, idx) => {
+              const Icons = [Search, FileCheck, Truck, ShieldCheck, Handshake];
+              const Icon = Icons[idx] || CheckCircle2;
+              return (
+                <article key={step.title} className="flex flex-col gap-4 rounded-2xl bg-white p-5 text-slate-900 shadow-lg ring-1 ring-slate-200/90 transition hover:ring-emerald-200">
+                  <div className="flex items-center justify-between">
+                    <p className="text-sm font-bold text-emerald-700">{idx + 1}. {step.title}</p>
+                    <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-slate-900 text-white shadow-md">
+                      <Icon size={16} />
+                    </div>
+                  </div>
+                  <ul className="space-y-3 text-sm text-slate-700">
+                    {step.points.map((point) => (
+                      <li key={point} className="flex gap-2">
+                        <CheckCircle2 size={14} className="mt-0.5 text-emerald-500 shrink-0" />
+                        <span>{point}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </article>
+              );
+            })}
           </div>
         </section>
 
         {/* Photo gallery */}
         <section className="space-y-6">
           <div className="inner flex flex-col gap-2 px-2">
-            <p className="text-xs font-semibold uppercase tracking-[0.35em] text-slate-500">Gallery</p>
+            <p className="text-[13px] font-semibold uppercase tracking-[0.35em] text-slate-500">Gallery</p>
             <h2 className="text-3xl font-bold text-slate-900">Team, operations, and events.</h2>
             <p className="text-base text-slate-700 max-w-3xl">A look at the people and moments behind our logistics and consulting work.</p>
           </div>
@@ -308,7 +374,7 @@ export default function AboutPage() {
         {/* Team profiles */}
         <section className="space-y-6">
           <div className="inner flex flex-col gap-2 px-2">
-            <p className="text-xs font-semibold uppercase tracking-[0.35em] text-slate-500">Team</p>
+            <p className="text-[13px] font-semibold uppercase tracking-[0.35em] text-slate-500">Team</p>
             <h2 className="text-3xl font-bold text-slate-900">Teams behind the work.</h2>
             <p className="text-base text-slate-700 max-w-3xl">Operations, compliance, and training experts who ensure every shipment and engagement lands right.</p>
           </div>
@@ -331,7 +397,8 @@ export default function AboutPage() {
                       href={member.certificateUrl}
                       className="inline-flex w-fit items-center gap-2 rounded-full bg-[var(--brand-navy)] px-4 py-2 text-sm font-semibold text-white shadow-md transition hover:-translate-y-0.5"
                     >
-                      Download certificate
+                      
+                      <p className="text-white">Download certificate</p>
                     </a>
                   )}
                 </div>
@@ -340,34 +407,25 @@ export default function AboutPage() {
           </div>
         </section>
 
-        {/* CTA */}
-        <section className="glass-panel flex flex-col gap-5 p-7 md:p-8">
-          <div>
-            <p className="text-xs font-semibold uppercase tracking-[0.35em] text-slate-500">Get a plan</p>
-            <h3 className="text-2xl font-semibold text-slate-900">Tell us your route, cargo, and timing.</h3>
-            <p className="text-base text-slate-700 max-w-3xl">We respond within one business day with steps, documents, and cost scenarios.</p>
+        {/* Location Map */}
+        <section className="space-y-6">
+          <div className="inner flex flex-col gap-2 px-2">
+            <p className="text-[13px] font-semibold uppercase tracking-[0.35em] text-slate-500">Our Location</p>
+            <h2 className="text-3xl font-bold text-slate-900">Visit our office.</h2>
+            <p className="text-base text-slate-700 max-w-3xl">Find us at Takilahayimanot, Sumale Tera Business Center, 6th Floor, Office 608. We are ready to host you and discuss your logistics needs.</p>
           </div>
-          <div className="flex flex-wrap gap-3 text-sm text-slate-700">
-            <span className="rounded-full bg-slate-100 px-3 py-1">contact@optimumlogisticsplc.com</span>
-            <span className="rounded-full bg-slate-100 px-3 py-1">info@optimumlogisticsplc.com</span>
-            <span className="rounded-full bg-slate-100 px-3 py-1">+251 11 125 0386</span>
-            <span className="rounded-full bg-slate-100 px-3 py-1">+251 913 335 596</span>
-            <span className="rounded-full bg-slate-100 px-3 py-1">+251 711 335 596</span>
-            <span className="rounded-full bg-slate-100 px-3 py-1">+251 990 733 333</span>
-            <span className="rounded-full bg-slate-100 px-3 py-1">Office: East Shewa, Adama—Soreti Mall, Ground Office 32 A2</span>
-            <span className="rounded-full bg-slate-100 px-3 py-1">Office: Addis Ababa—Takilahayimanot, Sumale Tera Business Center, 6th Floor, Office 608</span>
-          </div>
-          <div className="flex gap-3">
-            <Link href="/contact" className="inline-flex items-center rounded-full bg-[var(--brand-navy)] px-5 py-3 text-sm font-semibold text-white shadow-lg shadow-slate-900/10 transition hover:-translate-y-0.5">
-              Request a quote
-            </Link>
-            <Link
-              href="/services"
-              className="inline-flex items-center rounded-full border border-slate-300 px-5 py-3 text-sm font-semibold text-black transition hover:-translate-y-0.5 hover:border-slate-400 hover:bg-white"
-              style={{ WebkitTextFillColor: "#0f172a" }}
-            >
-              See our services
-            </Link>
+          <div className="overflow-hidden rounded-3xl bg-white shadow-xl ring-1 ring-slate-200">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3940.528340156942!2d38.74128507577587!3d9.033785489146244!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x164b85f09670f59b%3A0xe53c070c7974e64!2sGobena%20Aba%20Tigu%20St%2C%20Addis%20Ababa!5e0!3m2!1sen!2set!4v1705500000000!5m2!1sen!2set"
+              width="100%"
+              height="450"
+              style={{ border: 0 }}
+              allowFullScreen
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              title="Optimum Logistics Location"
+              className="grayscale-[0.2] hover:grayscale-0 transition-all duration-500"
+            />
           </div>
         </section>
       </div>

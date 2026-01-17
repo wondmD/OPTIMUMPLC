@@ -1,6 +1,26 @@
 import Image from "next/image";
 import Link from "next/link";
 import type { Metadata } from "next";
+import { 
+  ShieldCheck, 
+  Globe, 
+  Clock, 
+  Zap, 
+  CheckCircle2, 
+  ArrowRight, 
+  FileCheck, 
+  Ship, 
+  Plane, 
+  Truck, 
+  Anchor,
+  Box,
+  Scale,
+  Settings,
+  TrendingUp,
+  BarChart3,
+  Search,
+  Users
+} from "lucide-react";
 
 export const metadata: Metadata = {
   title: "Services | Optimum Logistics",
@@ -228,13 +248,13 @@ export default function ServicesPage() {
         <div className="absolute bottom-0 right-0 h-72 w-72 translate-x-16 translate-y-10 rounded-full bg-[radial-gradient(circle_at_70%_70%,rgba(20,113,62,0.38),transparent_55%)] blur-2xl" />
         <div className="relative z-10 grid gap-10 px-6 py-14 lg:grid-cols-[1.05fr_0.95fr] lg:items-center lg:px-12 xl:px-16">
           <div className="space-y-5">
-            <p className="text-sm font-semibold uppercase tracking-[0.35em] text-emerald-100">Services</p>
+            <p className="text-[15px] font-semibold uppercase tracking-[0.35em] text-emerald-100">Services</p>
             <h1 className="text-4xl font-bold leading-[1.08] sm:text-5xl lg:text-6xl">We make cross-border trade predictable.</h1>
             <p className="max-w-2xl text-lg text-white/85">
               We bridge global suppliers and the Ethiopian market by managing the entire logistics stack: single-window readiness, HS alignment, duty-free facilitation, multimodal moves, consulting, and training. One accountable partner, no surprises.
             </p>
             <div className="flex flex-wrap gap-3">
-              <Link href="/contact" className="inline-flex items-center rounded-full bg-[var(--brand-red)] px-5 py-3 text-sm font-semibold text-white shadow-lg shadow-black/25 transition hover:-translate-y-0.5">Request a quote</Link>
+              <Link href="/contact" className="inline-flex items-center rounded-full bg-[var(--brand-red)] px-5 py-3 text-sm font-semibold shadow-lg shadow-black/25 transition hover:-translate-y-0.5  text-white">Request a quote</Link>
               <Link
                 href="/trainings"
                 className="inline-flex items-center rounded-full border border-white/80 bg-white px-5 py-3 text-sm font-semibold text-black shadow-md shadow-black/10 transition hover:-translate-y-0.5"
@@ -245,19 +265,31 @@ export default function ServicesPage() {
             </div>
             <div className="grid grid-cols-2 gap-3 text-sm text-white/90 sm:grid-cols-4">
               <div className="rounded-xl border border-white/20 bg-white/10 p-3">
-                <p className="text-[11px] uppercase tracking-[0.2em] text-white/70">Primary lane</p>
+                <div className="flex items-center gap-2">
+                  <Globe size={14} className="text-emerald-400" />
+                  <p className="text-[13px] uppercase tracking-[0.2em] text-white/70">Primary lane</p>
+                </div>
                 <p className="mt-1 text-lg font-semibold text-white">Global hubs → Addis</p>
               </div>
               <div className="rounded-xl border border-white/20 bg-white/10 p-3">
-                <p className="text-[11px] uppercase tracking-[0.2em] text-white/70">Modes</p>
+                <div className="flex items-center gap-2">
+                  <Ship size={14} className="text-emerald-400" />
+                  <p className="text-[13px] uppercase tracking-[0.2em] text-white/70">Modes</p>
+                </div>
                 <p className="mt-1 text-lg font-semibold text-white">Sea · Air · Land</p>
               </div>
               <div className="rounded-xl border border-white/20 bg-white/10 p-3">
-                <p className="text-[11px] uppercase tracking-[0.2em] text-white/70">Regulatory</p>
+                <div className="flex items-center gap-2">
+                  <FileCheck size={14} className="text-emerald-400" />
+                  <p className="text-[13px] uppercase tracking-[0.2em] text-white/70">Regulatory</p>
+                </div>
                 <p className="mt-1 text-lg font-semibold text-white">Single window</p>
               </div>
               <div className="rounded-xl border border-white/20 bg-white/10 p-3">
-                <p className="text-[11px] uppercase tracking-[0.2em] text-white/70">Promise</p>
+                <div className="flex items-center gap-2">
+                  <ShieldCheck size={14} className="text-emerald-400" />
+                  <p className="text-[13px] uppercase tracking-[0.2em] text-white/70">Promise</p>
+                </div>
                 <p className="mt-1 text-lg font-semibold text-white">Predictable moves</p>
               </div>
             </div>
@@ -266,12 +298,27 @@ export default function ServicesPage() {
             <div className="glass-panel relative grid gap-4 bg-white/12 p-7 text-slate-900 backdrop-blur">
               <p className="text-base font-semibold text-slate-900">How we de-risk shipments</p>
               <ul className="space-y-3 text-sm text-slate-800">
-                <li className="flex items-start gap-3"><span className="mt-1 inline-block h-2 w-2 rounded-full bg-[var(--brand-red)]" /><span>Map HS codes, duty-free options, and documentary requirements before purchase.</span></li>
-                <li className="flex items-start gap-3"><span className="mt-1 inline-block h-2 w-2 rounded-full bg-[var(--brand-green)]" /><span>Prepare filings and exceptions playbook so single-window submissions clear faster.</span></li>
-                <li className="flex items-start gap-3"><span className="mt-1 inline-block h-2 w-2 rounded-full bg-[var(--brand-navy)]" /><span>Track milestones from factory to POD with pre-agreed responses to delays.</span></li>
+                <li className="flex items-start gap-3">
+                  <span className="mt-1 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-[var(--brand-red)]/10 text-[var(--brand-red)]">
+                    <Search size={12} />
+                  </span>
+                  <span>Map HS codes, duty-free options, and documentary requirements before purchase.</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="mt-1 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-[var(--brand-green)]/10 text-[var(--brand-green)]">
+                    <FileCheck size={12} />
+                  </span>
+                  <span>Prepare filings and exceptions playbook so single-window submissions clear faster.</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="mt-1 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-[var(--brand-navy)]/10 text-[var(--brand-navy)]">
+                    <Clock size={12} />
+                  </span>
+                  <span>Track milestones from factory to POD with pre-agreed responses to delays.</span>
+                </li>
               </ul>
-              <Link href="#services" className="inline-flex w-fit items-center rounded-full bg-[var(--brand-navy)] px-4 py-2 text-sm font-semibold text-white shadow-lg shadow-slate-900/20 transition hover:-translate-y-0.5" style={{ WebkitTextFillColor: "#ffffffff" }}>
-                See the stack
+              <Link href="#services" className="inline-flex w-fit items-center gap-2 rounded-full bg-[var(--brand-navy)] px-4 py-2 text-sm font-semibold text-white shadow-lg shadow-slate-900/20 transition hover:-translate-y-0.5" style={{ WebkitTextFillColor: "#ffffffff" }}>
+                See the stack <ArrowRight size={14} />
               </Link>
             </div>
           </div>
@@ -281,7 +328,7 @@ export default function ServicesPage() {
       {/* Service stack */}
       <section id="services" className="mx-auto flex max-w-7xl flex-col gap-10 px-6 lg:px-10">
         <div className="flex flex-col gap-2">
-          <p className="text-xs font-semibold uppercase tracking-[0.35em] text-slate-600">What we deliver</p>
+          <p className="text-[13px] font-semibold uppercase tracking-[0.35em] text-slate-600">What we deliver</p>
           <h2 className="text-3xl font-bold text-slate-900 sm:text-4xl">Services built to ship faster and cleaner.</h2>
           <p className="max-w-3xl text-base text-slate-700">Each service is a focused package—stack them together for one accountable plan.</p>
         </div>
@@ -296,7 +343,7 @@ export default function ServicesPage() {
               <div className={`pointer-events-none absolute -right-24 -top-24 h-72 w-72 rounded-full blur-3xl bg-gradient-to-br ${item.accent}`} />
               <div className="grid gap-8 p-6 lg:grid-cols-[1.1fr_0.9fr] lg:items-center lg:p-10">
                 <div className="relative space-y-4">
-                  <div className="inline-flex w-fit items-center gap-2 rounded-full bg-slate-900/85 px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.18em] text-white shadow-sm">
+                  <div className="inline-flex w-fit items-center gap-2 rounded-full bg-slate-900/85 px-3 py-1 text-[13px] font-semibold uppercase tracking-[0.18em] text-white shadow-sm">
                     <span>{item.highlight}</span>
                   </div>
                   <h3 className="text-2xl font-semibold text-slate-900 sm:text-3xl">{idx + 1}. {item.title}</h3>
@@ -304,13 +351,16 @@ export default function ServicesPage() {
                   <ul className="space-y-2 text-sm text-slate-800">
                     {item.bullets.map((b) => (
                       <li key={b} className="flex gap-2">
-                        <span className="mt-1 inline-block h-1.5 w-1.5 rounded-full bg-[var(--brand-green)]" />
+                        <CheckCircle2 size={16} className="mt-0.5 text-[var(--brand-green)] shrink-0" />
                         <span>{b}</span>
                       </li>
                     ))}
                   </ul>
                   <div className="flex flex-wrap gap-3 pt-2">
-                    <Link href="/contact" className="inline-flex items-center rounded-full bg-[var(--brand-navy)] px-4 py-2 text-sm font-semibold text-white shadow-md transition hover:-translate-y-0.5">Talk to us</Link>
+                    <Link href="/contact" className="inline-flex items-center gap-2 rounded-full bg-black px-4 py-2 text-sm font-semibold text-white shadow-md transition hover:-translate-y-0.5">
+                      <p className="text-white">Talk to us</p>
+                      <ArrowRight size={16} className="text-white" />
+                    </Link>
                     <Link href="#top" className="inline-flex items-center rounded-full border border-slate-300 px-4 py-2 text-sm font-semibold text-slate-800 transition hover:-translate-y-0.5" style={{ WebkitTextFillColor: "#0f172a" }}>Back to top</Link>
                   </div>
                 </div>
@@ -333,36 +383,49 @@ export default function ServicesPage() {
         <div className="pointer-events-none absolute bottom-0 right-0 h-64 w-64 translate-x-16 translate-y-10 rounded-full bg-[radial-gradient(circle_at_70%_70%,rgba(20,113,62,0.32),transparent_55%)] blur-2xl" />
         <div className="relative grid gap-10 lg:grid-cols-[1.05fr_0.95fr] lg:items-center">
           <div className="space-y-3">
-            <p className="text-xs font-semibold uppercase tracking-[0.35em] text-emerald-100">Corridors</p>
+            <p className="text-[13px] font-semibold uppercase tracking-[0.35em] text-emerald-100">Corridors</p>
             <h2 className="text-3xl font-bold sm:text-4xl">We run the lanes that matter.</h2>
             <p className="max-w-2xl text-base text-white/85">Aligned documents, bonded transit, and synchronized handoffs keep high-stakes cargo predictable across global hubs, Djibouti, UAE, Addis, and GCC destinations.</p>
             <div className="grid gap-3 sm:grid-cols-2">
-              {lanes.map((lane) => (
-                <div key={lane.name} className="rounded-2xl border border-white/15 bg-white/10 p-5 shadow-lg shadow-slate-900/30 backdrop-blur">
-                  <p className="text-sm font-semibold text-white">{lane.name}</p>
-                  <p className="mt-2 text-sm text-white/80">{lane.body}</p>
-                </div>
-              ))}
+              {lanes.map((lane, idx) => {
+                const Icons = [Globe, Plane, Anchor];
+                const Icon = Icons[idx] || Ship;
+                return (
+                  <div key={lane.name} className="rounded-2xl border border-white/15 bg-white/10 p-5 shadow-lg shadow-slate-900/30 backdrop-blur">
+                    <div className="flex items-center gap-2 mb-2">
+                      <Icon size={18} className="text-emerald-400" />
+                      <p className="text-sm font-semibold text-white">{lane.name}</p>
+                    </div>
+                    <p className="text-sm text-white/80">{lane.body}</p>
+                  </div>
+                );
+              })}
             </div>
           </div>
           <div className="relative h-full rounded-3xl border border-white/15 bg-white/5 p-6 shadow-2xl shadow-slate-900/30 backdrop-blur">
             <div className="flex flex-col gap-3 text-sm text-white/85">
-              <div className="flex items-center gap-2 rounded-2xl border border-white/15 bg-white/10 p-4">
-                <span className="inline-flex h-10 w-10 items-center justify-center rounded-xl bg-white/15 text-lg font-semibold">1</span>
+              <div className="flex items-center gap-3 rounded-2xl border border-white/15 bg-white/10 p-4">
+                {/* <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-white/15 text-lg font-semibold text-white">
+                  <FileText size={20} />
+                </span> */}
                 <div>
                   <p className="text-sm font-semibold text-white">Pre-alert & documents</p>
                   <p className="text-white/75">HS, valuation, permits, and single-window data prepared before cargo moves.</p>
                 </div>
               </div>
-              <div className="flex items-center gap-2 rounded-2xl border border-white/15 bg-white/10 p-4">
-                <span className="inline-flex h-10 w-10 items-center justify-center rounded-xl bg-white/15 text-lg font-semibold">2</span>
+              <div className="flex items-center gap-3 rounded-2xl border border-white/15 bg-white/10 p-4">
+                <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-white/15 text-lg font-semibold text-white">
+                  <Truck size={20} />
+                </span>
                 <div>
                   <p className="text-sm font-semibold text-white">Move & monitor</p>
                   <p className="text-white/75">Factory to port to Addis with bonded options, exception playbooks, and live milestones.</p>
                 </div>
               </div>
-              <div className="flex items-center gap-2 rounded-2xl border border-white/15 bg-white/10 p-4">
-                <span className="inline-flex h-10 w-10 items-center justify-center rounded-xl bg-white/15 text-lg font-semibold">3</span>
+              <div className="flex items-center gap-3 rounded-2xl border border-white/15 bg-white/10 p-4">
+                <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-white/15 text-lg font-semibold text-white">
+                  <ShieldCheck size={20} />
+                </span>
                 <div>
                   <p className="text-sm font-semibold text-white">Clear & close</p>
                   <p className="text-white/75">Inspections, duty/tax, handover, and audit-ready reconciliation to prevent repeats.</p>
@@ -377,7 +440,7 @@ export default function ServicesPage() {
       <section className="mx-auto max-w-7xl overflow-hidden rounded-[28px] bg-gradient-to-r from-[#e2f3eb] via-white to-[#fef2e8] p-[1px] shadow-2xl">
         <div className="glass-panel flex flex-col gap-5 rounded-[26px] bg-white/95 p-7 md:p-8">
           <div>
-            <p className="text-xs font-semibold uppercase tracking-[0.35em] text-slate-600">Get a plan</p>
+            <p className="text-[13px] font-semibold uppercase tracking-[0.35em] text-slate-600">Get a plan</p>
             <h3 className="text-2xl font-semibold text-slate-900">Tell us your route, cargo, and timing.</h3>
             <p className="text-base text-slate-700 max-w-3xl">We respond within one business day with steps, documents, and cost scenarios tailored to your lane.</p>
           </div>
@@ -393,7 +456,8 @@ export default function ServicesPage() {
           </div>
           <div className="flex gap-3">
             <Link href="/contact" className="inline-flex items-center rounded-full bg-[var(--brand-navy)] px-5 py-3 text-sm font-semibold text-white shadow-lg shadow-slate-900/10 transition hover:-translate-y-0.5">
-              Request a quote
+              
+              <p className="text-white">Request a Quote</p>
             </Link>
             <Link
               href="/trainings"
