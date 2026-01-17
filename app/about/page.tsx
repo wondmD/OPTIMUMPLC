@@ -182,7 +182,7 @@ export default function AboutPage() {
         <div className="relative z-10 grid gap-10 px-6 py-16 lg:grid-cols-[1.05fr_0.95fr] lg:items-center lg:px-12 lg:py-20 xl:px-16">
           <div className="space-y-5">
             <p className="text-[15px] font-semibold uppercase tracking-[0.35em] text-emerald-200">Overview of our work</p>
-            <h1 className="text-5xl font-bold leading-[1.05] sm:text-6xl">We simplify international trade that cross international borders</h1>
+            <h1 className="text-5xl font-bold leading-[1.05] sm:text-6xl">We simplify trade that cross international borders</h1>
             <p className="text-lg text-white/85 max-w-2xl">
               Major Activities of our company is Customs Clearing, Freight forwarding, Packaging, Transport, Delivery, Loading Unloading, Warehousing, International trade Documentation and others.
             </p>
@@ -200,23 +200,36 @@ export default function AboutPage() {
               </Link>
             </div>
           </div>
-          <div className="glass-panel grid gap-4 bg-white/12 p-7 text-slate-900 backdrop-blur">
-            <p className="text-base font-semibold text-slate-900">What we deliver</p>
-            <ul className="grid gap-3 text-sm text-slate-800">
-              <li className="flex items-center gap-3 rounded-xl bg-white/90 px-3 py-2.5 font-semibold text-slate-900 shadow-sm">
-                <ShieldCheck size={18} className="text-[var(--brand-red)] shrink-0" />
-                <span>Customs Clearing & Freight Forwarding</span>
-              </li>
-              <li className="flex items-center gap-3 rounded-xl bg-white/90 px-3 py-2.5 font-semibold text-slate-900 shadow-sm">
-                <Truck size={18} className="text-[var(--brand-green)] shrink-0" />
-                <span>Sea, air, and land moves with transparent milestones</span>
-              </li>
-              <li className="flex items-center gap-3 rounded-xl bg-white/90 px-3 py-2.5 font-semibold text-slate-900 shadow-sm">
-                <Award size={18} className="text-[var(--brand-navy)] shrink-0" />
-                <span>Consulting and training that sustain performance</span>
-              </li>
-            </ul>
+          <div className="space-y-6">
+            <div className="glass-panel grid gap-4 bg-white/12 p-7 text-slate-900 backdrop-blur">
+              <p className="text-base font-semibold text-slate-900">What we deliver</p>
+              <ul className="grid gap-3 text-sm text-slate-800">
+                <li className="flex items-center gap-3 rounded-xl bg-white/90 px-3 py-2.5 font-semibold text-slate-900 shadow-sm">
+                  <ShieldCheck size={18} className="text-[var(--brand-red)] shrink-0" />
+                  <span>Customs Clearing & Freight Forwarding</span>
+                </li>
+                <li className="flex items-center gap-3 rounded-xl bg-white/90 px-3 py-2.5 font-semibold text-slate-900 shadow-sm">
+                  <Truck size={18} className="text-[var(--brand-green)] shrink-0" />
+                  <span>Sea, air, and land moves with transparent milestones</span>
+                </li>
+                <li className="flex items-center gap-3 rounded-xl bg-white/90 px-3 py-2.5 font-semibold text-slate-900 shadow-sm">
+                  <Award size={18} className="text-[var(--brand-navy)] shrink-0" />
+                  <span>Consulting and training that sustain performance</span>
+                </li>
+              </ul>
+            </div>
+
+            <div className="flex items-center gap-3 rounded-2xl border border-white/10 bg-white/5 p-4 backdrop-blur-sm">
+              <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-emerald-500/20 text-emerald-400">
+                <Globe size={20} />
+              </span>
+              <p className="text-xl font-bold italic tracking-wide text-white drop-shadow-sm">
+                &quot;Logistics is the brain of international Trade&quot;
+              </p>
+            </div>
           </div>
+
+         
         </div>
       </section>
 

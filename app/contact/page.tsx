@@ -49,8 +49,8 @@ export default async function ContactPage({
                 <Mail size={20} />
               </div>
               <div className="text-sm">
-                <p className="font-semibold text-slate-900">Email us</p>
-                <a href="mailto:contact@optimumlogisticsplc.com" className="text-slate-600 hover:text-emerald-600">contact@optimumlogisticsplc.com</a>
+                <p className="font-semibold text-black">Email us</p>
+                <a href="mailto:contact@optimumlogisticsplc.com" className="text-black "><p className="text-black">contact@optimumlogisticsplc.com</p></a>
               </div>
             </div>
             <div className="flex items-center gap-4 rounded-2xl bg-slate-50 p-4 ring-1 ring-slate-200/60">
@@ -59,7 +59,7 @@ export default async function ContactPage({
               </div>
               <div className="text-sm">
                 <p className="font-semibold text-slate-900">Call us</p>
-                <a href="tel:+251111250386" className="text-slate-600 hover:text-emerald-600">+251 11 125 0386</a>
+                <a href="tel:+251111250386" className="text-slate-600 hover:text-emerald-600"><p className="text-black">+251 11 125 0386</p></a>
               </div>
             </div>
           </div>
