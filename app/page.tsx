@@ -163,7 +163,7 @@ export default async function Home({
           <div className="grid gap-8 lg:grid-cols-[1.1fr_0.9fr] lg:items-start">
             <div className="space-y-4">
               <p className="text-[13px] font-semibold uppercase tracking-[0.35em] text-slate-500">About Optimum Logistics</p>
-              <h2 className="text-3xl font-bold text-slate-900 sm:text-4xl">We handle the complexity so you can serve customers.</h2>
+              <h2 className="text-3xl font-bold text-slate-900 sm:text-4xl">We move cargo easily and safely on international trade.</h2>
               <p className="text-base text-slate-700">
                 We are the bridge between global suppliers and the Ethiopian market. We scout reliable partners, validate documents, secure bookings, and manage bonded transit and clearance with total transparency. Beyond moving cargo, we build capacity through consulting and training so your team stays high-performing long after delivery.
               </p>
