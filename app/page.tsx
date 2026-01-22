@@ -252,26 +252,23 @@ export default async function Home({
                 </div>
               </div>
 
-              {/* Core Solutions */}
-              <div className="space-y-6">
-                <div>
-                  <p className="text-[15px] font-semibold uppercase tracking-[0.3em] text-amber-200">Our Expertise</p>
-                  <h2 className="text-3xl font-bold sm:text-4xl text-white">Our Core Solutions</h2>
+              {/* Commitment & CTA */}
+              <div className="space-y-8 flex flex-col justify-center">
+                <div className="space-y-4">
+                  <p className="text-[15px] font-semibold uppercase tracking-[0.3em] text-amber-200">Our Commitment</p>
+                  <h2 className="text-3xl font-bold sm:text-4xl text-white">Seamless Logistics, Absolute Peace of Mind</h2>
+                  <p className="text-lg text-white/80 leading-relaxed">
+                    We handle the complexities of international trade and customs so you can focus on scale. Whether it's a single shipment or a multi-year project, we deliver with precision.
+                  </p>
                 </div>
-                <div className="grid gap-2">
-                  {coreSolutions.map((solution) => (
-                    <div key={solution} className="flex items-center gap-3 rounded-lg border border-white/5 bg-white/5 px-4 py-2.5 transition hover:border-white/20">
-                      <CheckCircle2 size={18} className="text-emerald-400 shrink-0" />
-                      <p className="text-[15px] font-medium text-white/90">{solution}</p>
-                    </div>
-                  ))}
+                <div className="flex flex-wrap gap-4">
+                  <Link
+                    href="/contact"
+                    className="inline-flex items-center gap-2 rounded-full bg-emerald-500 px-8 py-3 text-sm font-bold text-white transition hover:scale-105 shadow-lg shadow-emerald-500/20"
+                  >
+                    Start Your Shipment <ArrowRight size={18} />
+                  </Link>
                 </div>
-                <Link
-                  href="/services"
-                  className="inline-flex items-center gap-2 rounded-full bg-black px-6 py-3 text-sm font-bold text-slate-900 transition hover:scale-105"
-                >
-                  Explore all services <ArrowRight size={18} />
-                </Link>
               </div>
             </div>
           </div>
