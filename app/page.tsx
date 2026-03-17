@@ -129,7 +129,7 @@ export default async function Home({
         <div className="relative h-full flex items-start justify-center p-6 text-center pt-10 sm:pt-14">
           <div className="max-w-5xl space-y-6">
             <h1 className="text-3xl font-extrabold tracking-tighter text-white drop-shadow-2xl sm:text-5xl lg:text-6xl">
-              <span className="block opacity-90">OPTIMUM LOGISTICS</span>
+              <span className="notranslate block opacity-90" translate="no">OPTIMUM LOGISTICS</span>
               <span className="block text-emerald-400">AND CONSULTING</span>
             </h1>
             <p className="mx-auto max-w-xl text-sm font-medium uppercase tracking-[0.2em] text-white/90 drop-shadow-md sm:text-base">
