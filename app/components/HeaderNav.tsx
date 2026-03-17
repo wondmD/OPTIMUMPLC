@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 import { ChevronDown, Menu, X, ArrowRight } from "lucide-react";
+import LanguageSwitcher from "./LanguageSwitcher";
 
 type NavLink = {
   href: string;
@@ -49,7 +50,7 @@ const trainingItems = [
   { label: "Kaizen Philosophy", href: "/trainings#kaizen-philosophy" },
   { label: "Finance, Customs & Tax Administration", href: "/trainings#finance-tax-administration-systems" },
   { label: "Educational Psychology Training", href: "/trainings#educational-psychology-training" },
-  { label: "Training man power for local and foreign employers", href: "/training-man-power-for-local-and-foreign-employers"},
+  { label: "Training man power for local and foreign employers", href: "/trainings#training-man-power-for-local-and-foreign-employers" },
 ];
 
 export default function HeaderNav() {
@@ -110,7 +111,7 @@ export default function HeaderNav() {
   }, []);
 
   return (
-    <header className="sticky top-0 z-50 w-full bg-white/95 text-[var(--brand-navy)] shadow-lg ring-1 ring-slate-200/80 backdrop-blur-md">
+    <header className="sticky top-0 z-50 w-full bg-white/95 text-(--brand-navy) shadow-lg ring-1 ring-slate-200/80 backdrop-blur-md">
       <div className="flex h-20 w-full items-center justify-between px-4 sm:px-6">
         <Link href="/" className="flex items-center gap-4">
           <span suppressHydrationWarning>
@@ -139,7 +140,7 @@ export default function HeaderNav() {
                   onBlurCapture={() => scheduleCloseServices(120)}
                 >
                   <button
-                    className="inline-flex items-center gap-1 pb-1 transition hover:text-[var(--brand-red)]"
+                    className="inline-flex items-center gap-1 pb-1 transition hover:text-(--brand-red)"
                     aria-haspopup="menu"
                     aria-expanded={servicesOpen}
                     onClick={() => (servicesOpen ? setServicesOpen(false) : openServices())}
@@ -189,7 +190,7 @@ export default function HeaderNav() {
                   onBlurCapture={() => scheduleCloseTrainings(120)}
                 >
                   <button
-                    className="inline-flex items-center gap-1 pb-1 transition hover:text-[var(--brand-red)]"
+                    className="inline-flex items-center gap-1 pb-1 transition hover:text-(--brand-red)"
                     aria-haspopup="menu"
                     aria-expanded={trainingsOpen}
                     onClick={() => (trainingsOpen ? setTrainingsOpen(false) : openTrainings())}
@@ -232,33 +233,34 @@ export default function HeaderNav() {
               <Link
                 key={link.href}
                 href={link.href}
-                className="relative pb-1 transition hover:text-[var(--brand-red)]"
+                className="relative pb-1 transition hover:text-(--brand-red)"
               >
                 {link.label}
-                <span className="absolute inset-x-0 -bottom-1 h-[2px] scale-x-0 bg-[var(--brand-red)] transition duration-200 group-hover/link:scale-x-100" />
+                <span className="absolute inset-x-0 -bottom-1 h-0.5 scale-x-0 bg-(--brand-red) transition duration-200 group-hover/link:scale-x-100" />
               </Link>
             );
           })}
         </nav>
 
         <div className="flex items-center gap-2">
+          <LanguageSwitcher />
           <Link
             href="/contact"
-            className="hidden rounded-full bg-[var(--brand-red)] px-6 py-[10px] text-[15px] font-bold uppercase tracking-[0.05em] text-white shadow-md transition hover:-translate-y-0.5 md:inline-flex" style={{ WebkitTextFillColor: "#fefefeff" }}
+            className="hidden rounded-full bg-(--brand-red) px-6 py-2.5 text-[15px] font-bold uppercase tracking-[0.05em] text-white shadow-md transition hover:-translate-y-0.5 md:inline-flex" style={{ WebkitTextFillColor: "#fefefeff" }}
           >
             Request a quote
           </Link>
           <button
             type="button"
             aria-label="Toggle menu"
-            className="inline-flex h-11 w-11 items-center justify-center rounded-full bg-[var(--brand-navy)] text-white shadow-sm transition hover:-translate-y-0.5 md:hidden"
+            className="inline-flex h-11 w-11 items-center justify-center rounded-full bg-(--brand-navy) text-white shadow-sm transition hover:-translate-y-0.5 md:hidden"
             onClick={() => setOpen((prev) => !prev)}
           >
             <span className="sr-only">Toggle navigation</span>
             <div className="space-y-1.5">
-              <span className={`block h-[2px] w-5 rounded-full bg-current transition ${open ? "translate-y-[7px] rotate-45" : ""}`} />
-              <span className={`block h-[2px] w-5 rounded-full bg-current transition ${open ? "opacity-0" : ""}`} />
-              <span className={`block h-[2px] w-5 rounded-full bg-current transition ${open ? "-translate-y-[7px] -rotate-45" : ""}`} />
+              <span className={`block h-0.5 w-5 rounded-full bg-current transition ${open ? "translate-y-[7px] rotate-45" : ""}`} />
+              <span className={`block h-0.5 w-5 rounded-full bg-current transition ${open ? "opacity-0" : ""}`} />
+              <span className={`block h-0.5 w-5 rounded-full bg-current transition ${open ? "-translate-y-[7px] -rotate-45" : ""}`} />
             </div>
           </button>
         </div>
@@ -269,13 +271,13 @@ export default function HeaderNav() {
           open ? "max-h-[80vh] overflow-y-auto opacity-100" : "max-h-0 overflow-hidden opacity-0"
         }`}
       >
-        <div className="flex flex-col gap-3 py-4 text-[16px] font-semibold uppercase tracking-[0.04em] text-[var(--brand-navy)]">
+        <div className="flex flex-col gap-3 py-4 text-[16px] font-semibold uppercase tracking-[0.04em] text-(--brand-navy)">
           {links.map((link) => {
             if (link.dropdown) {
               return (
                 <div key={link.href} className="rounded-lg">
                   <button
-                    className="flex w-full items-center justify-between rounded-lg px-2 py-2 text-[var(--brand-navy)]"
+                    className="flex w-full items-center justify-between rounded-lg px-2 py-2 text-(--brand-navy)"
                     onClick={() => setServicesOpen((v) => !v)}
                     aria-expanded={servicesOpen}
                   >
@@ -288,7 +290,7 @@ export default function HeaderNav() {
                         <Link
                           key={item.href}
                           href={item.href}
-                          className="rounded-md px-3 py-2 text-[var(--brand-navy)] hover:bg-slate-100"
+                          className="rounded-md px-3 py-2 text-(--brand-navy) hover:bg-slate-100"
                           onClick={() => setOpen(false)}
                         >
                           {item.label}
@@ -303,7 +305,7 @@ export default function HeaderNav() {
               return (
                 <div key={link.href} className="rounded-lg">
                   <button
-                    className="flex w-full items-center justify-between rounded-lg px-2 py-2 text-[var(--brand-navy)]"
+                    className="flex w-full items-center justify-between rounded-lg px-2 py-2 text-(--brand-navy)"
                     onClick={() => setTrainingsOpen((v) => !v)}
                     aria-expanded={trainingsOpen}
                   >
@@ -316,7 +318,7 @@ export default function HeaderNav() {
                         <Link
                           key={item.href}
                           href={item.href}
-                          className="rounded-md px-3 py-2 text-[var(--brand-navy)] hover:bg-slate-100"
+                          className="rounded-md px-3 py-2 text-(--brand-navy) hover:bg-slate-100"
                           onClick={() => setOpen(false)}
                         >
                           {item.label}
@@ -331,7 +333,7 @@ export default function HeaderNav() {
               <Link
                 key={link.href}
                 href={link.href}
-                className="rounded-lg px-2 py-2 text-[var(--brand-navy)] hover:bg-slate-100"
+                className="rounded-lg px-2 py-2 text-(--brand-navy) hover:bg-slate-100"
                 onClick={() => setOpen(false)}
               >
                 {link.label}
@@ -340,7 +342,7 @@ export default function HeaderNav() {
           })}
           <Link
             href="/contact"
-            className="inline-flex items-center justify-center rounded-full bg-[var(--brand-red)] px-5 py-[10px] text-[15px] font-bold uppercase tracking-[0.05em] text-white shadow-md"
+            className="inline-flex items-center justify-center rounded-full bg-(--brand-red) px-5 py-2.5 text-[15px] font-bold uppercase tracking-[0.05em] text-white shadow-md"
             onClick={() => setOpen(false)}
           >
             Request a quote
