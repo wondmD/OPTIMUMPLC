@@ -41,22 +41,35 @@ const COOKIE_MAX_AGE = 60 * 60 * 24 * 365;
 function getCookieLanguage(): LanguageCode | null {
   if (typeof document === "undefined") return null;
 
-  const match = document.cookie.match(/(?:^|; )googtrans=\/en\/([^;]+)/);
+  const match = document.cookie.match(/(?:^|; )googtrans=([^;]+)/);
   if (!match) return null;
 
-  const googleCode = decodeURIComponent(match[1]);
+  const value = decodeURIComponent(match[1]);
+  const googleCode = value.split("/").filter(Boolean).at(-1) ?? "en";
   return LANGUAGE_OPTIONS.find((option) => option.googleCode === googleCode)?.code ?? null;
 }
 
 function setGoogleTranslateCookie(googleCode: string) {
   const value = `/en/${googleCode}`;
   const hostname = window.location.hostname;
-  const cookie = `googtrans=${encodeURIComponent(value)}; path=/; max-age=${COOKIE_MAX_AGE}`;
+  const cookie = `googtrans=${value}; path=/; max-age=${COOKIE_MAX_AGE}`;
 
   document.cookie = cookie;
 
   if (hostname.includes(".")) {
     document.cookie = `${cookie}; domain=.${hostname}`;
+  }
+}
+
+function clearGoogleTranslateCookie() {
+  const hostname = window.location.hostname;
+  const expired = "googtrans=; path=/; expires=Thu, 01 Jan 1970 00:00:00 GMT";
+
+  document.cookie = expired;
+  document.cookie = `${expired}; domain=${hostname}`;
+
+  if (hostname.includes(".")) {
+    document.cookie = `${expired}; domain=.${hostname}`;
   }
 }
 
@@ -155,14 +168,19 @@ export default function LanguageSwitcher() {
     const syncLanguage = async () => {
       const activeLanguage = (window.localStorage.getItem(STORAGE_KEY) as LanguageCode | null) ?? language;
       const selectedOption = LANGUAGE_OPTIONS.find((option) => option.code === activeLanguage) ?? LANGUAGE_OPTIONS[0];
+      const select = await waitForTranslateSelect();
 
       if (activeLanguage === "en") {
+        clearGoogleTranslateCookie();
         setGoogleTranslateCookie("en");
+        if (select && select.value !== "en") {
+          select.value = "en";
+          select.dispatchEvent(new Event("change", { bubbles: true }));
+        }
         setLanguage("en");
         return;
       }
 
-      const select = await waitForTranslateSelect();
       if (!select) return;
 
       setGoogleTranslateCookie(selectedOption.googleCode);
@@ -188,6 +206,7 @@ export default function LanguageSwitcher() {
     setIsOpen(false);
 
     if (nextLanguage === "en") {
+      clearGoogleTranslateCookie();
       setGoogleTranslateCookie("en");
       window.location.reload();
       return;
@@ -222,7 +241,7 @@ export default function LanguageSwitcher() {
       </button>
 
       {isOpen && (
-        <div className="absolute right-0 top-full z-50 mt-2 min-w-[170px] rounded-2xl border border-slate-200 bg-white p-2 shadow-xl">
+        <div className="absolute right-0 top-full z-50 mt-2 min-w-44 rounded-2xl border border-slate-200 bg-white p-2 shadow-xl">
           {LANGUAGE_OPTIONS.map((option) => (
             <button
               key={option.code}
