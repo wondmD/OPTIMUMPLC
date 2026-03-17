@@ -18,7 +18,7 @@ declare global {
   }
 }
 
-type LanguageCode = "en" | "fr" | "zh";
+type LanguageCode = "en" | "fr" | "zh" | "am" | "om" | "ar";
 
 type LanguageOption = {
   code: LanguageCode;
@@ -31,6 +31,9 @@ const LANGUAGE_OPTIONS: LanguageOption[] = [
   { code: "en", label: "English", shortLabel: "EN", googleCode: "en" },
   { code: "fr", label: "Francais", shortLabel: "FR", googleCode: "fr" },
   { code: "zh", label: "中文", shortLabel: "ZH", googleCode: "zh-CN" },
+  { code: "am", label: "Amharic", shortLabel: "AM", googleCode: "am" },
+  { code: "om", label: "Afaan Oromoo", shortLabel: "OM", googleCode: "om" },
+  { code: "ar", label: "العربية", shortLabel: "AR", googleCode: "ar" },
 ];
 
 const STORAGE_KEY = "optimum-language";
@@ -136,7 +139,7 @@ export default function LanguageSwitcher() {
       new window.google.translate.TranslateElement(
         {
           pageLanguage: "en",
-          includedLanguages: "en,fr,zh-CN",
+          includedLanguages: "en,fr,zh-CN,am,om,ar",
           autoDisplay: false,
           layout: 0,
         },
