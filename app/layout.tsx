@@ -6,6 +6,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import HeaderNav from "./components/HeaderNav";
 import FloatingContact from "./components/FloatingContact";
+import ClientLayoutWrapper from "./components/ClientLayoutWrapper";
 import { Instagram, Facebook, Send, MapPin, Mail, Phone, ExternalLink } from "lucide-react";
 
 const geistSans = Geist({
@@ -85,6 +86,7 @@ export const metadata: Metadata = {
   },
 };
 
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -93,120 +95,18 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`} suppressHydrationWarning>
-        <div className="page-shell">
-          <HeaderNav />
-
-          <main className="content-grid pb-16 pt-6">{children}</main>
-          <FloatingContact />
-
-          <footer className="content-grid pb-10">
-            <div className="glass-panel mt-10 grid gap-8 px-6 py-6 sm:grid-cols-2 lg:grid-cols-4">
-              <div className="space-y-4">
-                <span suppressHydrationWarning>
-                  <Image src="/logo2.png" alt="Optimum Logistics" width={140} height={52} />
-                </span>
-                <p className="text-sm text-slate-600 px-3">We simplify trade.</p>
-                <div className="flex gap-4">
-                  <a
-                    href="https://www.instagram.com/optimum_logistics_/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-slate-500 hover:text-[var(--brand-red)] transition-colors"
-                    aria-label="Instagram"
-                  >
-                    <Instagram size={20} />
-                  </a>
-                  <a
-                    href="https://www.facebook.com/optimum_logistics_/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-slate-500 hover:text-[var(--brand-red)] transition-colors"
-                    aria-label="Facebook"
-                  >
-                    <Facebook size={20} />
-                  </a>
-                  <a
-                    href="https://t.me/optimumlogistics"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-slate-500 hover:text-[var(--brand-red)] transition-colors"
-                    aria-label="Telegram"
-                  >
-                    <Send size={20} />
-                  </a>
-                </div>
+        <ClientLayoutWrapper>
+          <div className="page-shell">
+            <HeaderNav />
+            <main className="content-grid pb-16 pt-6">{children}</main>
+            <FloatingContact />
+            <footer className="content-grid pb-10">
+              <div className="glass-panel mt-10 grid gap-8 px-6 py-6 sm:grid-cols-2 lg:grid-cols-4">
+                {/* ...existing code... */}
               </div>
-              <div className="text-sm text-slate-700">
-                <p className="font-semibold text-slate-900 mb-3 flex items-center gap-2">
-                  <MapPin size={18} className="text-[var(--brand-red)]" />
-                  Offices
-                </p>
-                <div className="space-y-4">
-                  <div className="flex gap-2">
-                    <MapPin size={16} className="text-slate-400 mt-1 shrink-0" />
-                    <p className="leading-relaxed">
-                      <span className="font-medium text-slate-900 block">Addis Ababa</span>
-                      Takilahayimanot, Sumale Tera Business Center, 6th Floor, Office 608
-                    </p>
-                  </div>
-                  <div className="flex gap-2">
-                    <MapPin size={16} className="text-slate-400 mt-1 shrink-0" />
-                    <p className="leading-relaxed">
-                      <span className="font-medium text-slate-900 block">East Shewa, Adama</span>
-                      Soreti Mall, Ground Office 32 A2
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <div className="text-sm text-slate-700">
-                <p className="font-semibold text-slate-900 mb-3 flex items-center gap-2">
-                  <Phone size={18} className="text-[var(--brand-red)]" />
-                  Contact
-                </p>
-                <div className="space-y-2">
-                  <div className="flex items-center gap-2">
-                    <Mail size={16} className="text-slate-400" />
-                    <a href="mailto:contact@optimumlogisticsplc.com" className="hover:text-[var(--brand-red)] transition-colors">contact@optimumlogisticsplc.com</a>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <Mail size={16} className="text-slate-400" />
-                    <a href="mailto:info@optimumlogisticsplc.com" className="hover:text-[var(--brand-red)] transition-colors">info@optimumlogisticsplc.com</a>
-                  </div>
-                  <div className="pt-2 space-y-2">
-                    <div className="flex items-center gap-2">
-                      <Phone size={16} className="text-slate-400" />
-                      <a href="tel:+251111250386" className="hover:text-[var(--brand-red)] transition-colors">+251 11 125 0386</a>
-                    </div>
-                    <div className="flex items-center gap-2">
-                      <Phone size={16} className="text-slate-400" />
-                      <a href="tel:+251913335596" className="hover:text-[var(--brand-red)] transition-colors">+251 913 335 596</a>
-                    </div>
-                    <div className="flex items-center gap-2">
-                      <Phone size={16} className="text-slate-400" />
-                      <a href="tel:+251711335596" className="hover:text-[var(--brand-red)] transition-colors">+251 711 335 596</a>
-                    </div>
-                    <div className="flex items-center gap-2">
-                      <Phone size={16} className="text-slate-400" />
-                      <a href="tel:+251990733333" className="hover:text-[var(--brand-red)] transition-colors">+251 990 733 333</a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div className="text-sm text-slate-700">
-                <p className="font-semibold text-slate-900 mb-3 flex items-center gap-2">
-                  <ExternalLink size={18} className="text-[var(--brand-red)]" />
-                  Fast links
-                </p>
-                <div className="flex flex-col gap-2">
-                  <Link href="/services" className="hover:text-[var(--brand-red)] transition-colors">Customs & duty-free</Link>
-                  <Link href="/trainings" className="hover:text-[var(--brand-red)] transition-colors">Training catalog</Link>
-                  <Link href="/faq" className="hover:text-[var(--brand-red)] transition-colors">FAQ</Link>
-                  <Link href="/contact" className="hover:text-[var(--brand-red)] transition-colors">Request a quote</Link>
-                </div>
-              </div>
-            </div>
-          </footer>
-        </div>
+            </footer>
+          </div>
+        </ClientLayoutWrapper>
         <Script id="org-schema" type="application/ld+json" strategy="afterInteractive">
           {JSON.stringify({
             '@context': 'https://schema.org',
@@ -230,6 +130,21 @@ export default function RootLayout({
             ],
           })}
         </Script>
+        {/* Start of Tawk.to Script */}
+        <Script id="tawkto-livechat" strategy="afterInteractive">
+          {`
+            var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+            (function(){
+            var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+            s1.async=true;
+            s1.src='https://embed.tawk.to/69c29acb46a6c41c341aaa2a/1jkg2pbqa';
+            s1.charset='UTF-8';
+            s1.setAttribute('crossorigin','*');
+            s0.parentNode.insertBefore(s1,s0);
+            })();
+          `}
+        </Script>
+        {/* End of Tawk.to Script */}
       </body>
     </html>
   );
